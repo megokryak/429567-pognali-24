@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Андрей Митрофанов](https://up.htmlacademy.ru/adaptive/24/user/429567).
-* Наставник: `Неизвестно`.
+* Наставник: [Карина Карапетян](https://github.com/KarinaKarapetyanWeb).
 
 ---
 

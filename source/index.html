@@ -7,14 +7,10 @@
   <body class="page">
     <!--Header start-->
     <header class="header">
-      <!--Logo start-->
-      <div class="header__item-logo logo">
-        <a class="logo__link" href="/">Погнали?</a>
-      </div>
-      <!--Logo end-->
+      <a class="header__item-logo-link" href="/">Погнали?</a>
 
       <!--Main Menu start-->
-      <nav class="header__item--navigation main-nav">
+      <nav class="header__item__navigation main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -27,22 +23,36 @@
             <a href="catalog.html" class="site-list__link">Попутчики</a>
           </li>
         </ul>
+
+        <a href="#" class="main-nav__link-auth">Авторизация</a>
+
+        <!--contacts-list start-->
+        <ul class="main-nav__contacts-list contacts-list">
+          <li class="contacts-list__item">
+            <a href="tel:88005558628" class="contacts-list__link">8 800 555-86-28</a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <!--contacts list end-->
+
+        <!-- socials-menu start -->
+        <ul class="main-nav__socials-menu socials-menu">
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Facebook</a>
+          </li>
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Вконтакте</a>
+          </li>
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Инстаграм</a>
+          </li>
+        </ul>
+        <!-- socials-menu end -->
       </nav>
       <!--Main Menu end-->
 
-      <!--User-list start-->
-      <ul class="header__item__list user-list">
-        <li class="user-list__item">
-          <a href="#" class="user-list__link">Телефон</a>
-        </li>
-        <li class="user-list__item">
-          <a href="#" class="user-list__link">E-mail</a>
-        </li>
-        <li class="user-list__item">
-          <a href="#" class="user-list__link">Авторизация</a>
-        </li>
-      </ul>
-      <!--User list end-->
     </header>
     <!--Header end-->
 
@@ -50,7 +60,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Погнали - Сервис для поиска попутчиков для путешествий</h1>
       <!--Promo block start-->
-      <section class="page-main-promo promo">
+      <section class="page-main__promo promo">
         <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
         <img src="#" alt="Путешествие в радость" class="promo__img" width="192" height="255">
         <p class="promo__text">«Лучшее приложение, что я видел в жизни!»</p>
@@ -59,24 +69,45 @@
         <ul class="promo__list sequence">
           <li class="sequence__item">
             <p class="sequence__description">Выберите направление</p>
-            <span class="sequence__number">1</span>
           </li>
           <li class="sequence__item">
             <p class="sequence__description">Изучите идеи путешественников</p>
-            <span class="sequence__number">2</span>
           </li>
           <li class="sequence__item">
             <p class="sequence__description">Находите тех, кто похож на вас</p>
-            <span class="sequence__number">3</span>
           </li>
           <li class="sequence__item">
             <p class="sequence__description">Путешествуйте вместе!</p>
-            <span class="sequence__number">4</span>
           </li>
         </ul>
         <!--Sequence end-->
       </section>
       <!--Promo block end-->
+
+      <!--contacts-list start-->
+      <ul class="page-main__contacts-list contacts-list">
+        <li class="contacts-list__item">
+          <a href="tel:88005558628" class="contacts-list__link">8 800 555-86-28</a>
+        </li>
+        <li class="contacts-list__item">
+          <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+        </li>
+        <li class="contacts-list__item">
+          <a href="№" class="contacts-list__link">Авторизация</a>
+        </li>
+      </ul>
+      <!--contacts list end-->
+
+      <!--contacts-list start-->
+      <ul class="header__contacts-list contacts-list">
+        <li class="contacts-list__item">
+          <a href="tel:88005558628" class="contacts-list__link">8 800 555-86-28</a>
+        </li>
+        <li class="contacts-list__item">
+          <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <!--contacts list end-->
 
       <!--About block-->
       <section class="page-main-about about">
@@ -141,35 +172,48 @@
         <ul class="companion__list user-card">
           <li class="user-card__item">
             <img src="#" alt="Фотография Тани Фирсовой" class="user-card__avatar" width="270" height="270">
+            <div class="user-card__mark">
+              <b>99</b>
+              <span>level</span>
+            </div>
             <div class="user-card__counries">
               <img src="#" alt="Sri-Lanka" width="35" height="25">
               <img src="#" alt="Thailand" width="35" height="25">
               <img src="#" alt="Seychelles" width="35" height="25">
             </div>
-            <h3 class="user-card__user-name">Таня Фирсова</h3>
-            <p class="user-card__meta">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <a href="#" class="user-card__user-name">Таня Фирсова</a>
+            <p class="user-card__meta meta">
+              <a href="#" class="meta__link">#ЗОЖ</a>
+              <a href="#" class="meta__link">#ПП</a>
+              <a href="#" class="meta__link">#Фитнес</a>
+              <a href="#" class="meta__link">#пляж</a>
+              <a href="#" class="meta__link">#авокадо</a>
+              <a href="#" class="meta__link">#смузи</a>
+            </p>
             <div class="user-card__icons">
 
-            </div>
-            <div class="user-card__mark">
-              <b>99</b>
-              <span>level</span>
             </div>
           </li>
           <li class="user-card__item">
             <img src="#" alt="Фотография Тани Фирсовой" class="user-card__avatar" width="270" height="270">
+            <div class="user-card__mark">
+              <b>80</b>
+              <span>level</span>
+            </div>
             <div class="user-card__counries">
               <img src="#" alt="Germany" width="35" height="25">
               <img src="#" alt="France" width="35" height="25">
             </div>
-            <h3 class="user-card__user-name">Петя Демин</h3>
-            <p class="user-card__meta">#бургер #бар #футбол #концерт #крафт</p>
+            <a href="#" class="user-card__user-name">Петя Демин</a>
+            <p class="user-card__meta meta">
+              <a href="#" class="meta__link">#бургер</a>
+              <a href="#" class="meta__link">#бар</a>
+              <a href="#" class="meta__link">#футбол</a>
+              <a href="#" class="meta__link">#концерт</a>
+              <a href="#" class="meta__link">#крафт</a>
+            </p>
             <div class="user-card__icons">
 
-            </div>
-            <div class="user-card__mark">
-              <b>99</b>
-              <span>level</span>
             </div>
           </li>
         </ul>
@@ -181,24 +225,18 @@
       <!-- Profile start -->
       <section class="page-main__profile profile">
         <h2 class="profile__title">Добавьте свой профиль</h2>
-        <div class="profile__avatar">
-          <img src="#" alt="Пример фотографии" width="100" height="100">
-        </div>
         <ul class="profile__list">
           <li class="profile__item">
             <p class="profile__benefit">Базовое размещение</p>
             <p class="profile__price">Бесплатное</p>
-            <span class="progile__benefit-number">1</span>
           </li>
           <li class="profile__item">
             <p class="profile__benefit">Вывод на первых позициях</p>
             <p class="profile__price">99 руб./мес</p>
-            <span class="progile__benefit-number">2</span>
           </li>
           <li class="profile__item">
             <p class="profile__benefit">Кастомный цвет карточки</p>
             <p class="profile__price">59 руб./мес</p>
-            <span class="progile__benefit-number">3</span>
           </li>
         </ul>
         <a href="#" class="profile__link">Показать тарифы для бизнеса</a>
@@ -218,31 +256,37 @@
         </form>
         <!-- Subscribe end -->
         <p class="feedback__text">Остались вопросы?<br/>Мы с радостью на них ответим!</p>
-        <a href="tel:88005558628" class="feedback__link">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru" class="feedback__link">mail@htmlacademy.ru</a>
+
+        <!--contacts-list start-->
+        <ul class="feedback__contacts-list contacts-list">
+          <li class="contacts-list__item">
+            <a href="tel:88005558628" class="contacts-list__link">8 800 555-86-28</a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <!--contacts list end-->
       </section>
       <!-- Feedback end -->
-    </main>
-    <!-- Main end -->
 
-    <!-- Footer start -->
-    <footer class="page-footer">
       <!-- contacts start  -->
-      <div class="page-footer__contacts contacts">
+      <div class="page-main__contacts contacts">
         <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
         <a href="#" class="contacts__link button">Проложить маршрут</a>
         <img src="#" alt="Адресс на карате" class="cocntats__map">
       </div>
       <!-- contacts end -->
+    </main>
+    <!-- Main end -->
 
+    <!-- Footer start -->
+    <footer class="page-footer">
       <!-- info start  -->
       <div class="page-footer__info info">
-        <!-- Logo start  -->
-        <div class="info__logo logo">
-          <a class="logo__link" href="/">Погнали?</a>
-        </div>
-        <!-- Logo end  -->
-        <!-- Socials start  -->
+
+        <a class="info__logo-link" href="/">Погнали?</a>
+
         <div class="page-footer__socials socials">
           <a href="#" class="socials__link">Мы в Facebook</a>
           <a href="#" class="socials__link">Мы в Вконтакте</a>

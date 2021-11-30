@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body class="page">
+    <!--Header start-->
+    <header class="header">
+      <a class="header__item-logo-link" href="/">Погнали?</a>
+
+      <!--Main Menu start-->
+      <nav class="header__item__navigation main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#" class="site-list__link">О сервисе</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html" class="site-list__link">Направления</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html" class="site-list__link">Попутчики</a>
+          </li>
+        </ul>
+
+        <a href="#" class="main-nav__link-auth">Авторизация</a>
+
+        <!--contacts-list start-->
+        <ul class="main-nav__contacts-list contacts-list">
+          <li class="contacts-list__item">
+            <a href="tel:88005558628" class="contacts-list__link">8 800 555-86-28</a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <!--contacts list end-->
+
+        <!-- socials-menu start -->
+        <ul class="main-nav__socials-menu socials-menu">
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Facebook</a>
+          </li>
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Вконтакте</a>
+          </li>
+          <li class="socials_menu__item">
+            <a href="#" class="socials_menu__link">Мы в Инстаграм</a>
+          </li>
+        </ul>
+        <!-- socials-menu end -->
+      </nav>
+      <!--Main Menu end-->
+
+    </header>
+    <!--Header end-->
+
+    <!--Main start-->
+    <main class="page-form">
+      <h1 class="page-form__title">Направления</h1>
+
+      <!--User-profile start-->
+      <section class="page-form__user-profile user-profile">
+        <form action="https://echo.htmlacademy.ru/" class="user-profile__form" method="post">
+          <fieldset class="user-profile__fieldset">
+            <legend class="visually-hidden">Профиль пользователя</legend>
+            <div class="user-profile__progress">
+              <b>99</b>
+              <span>level</span>
+            </div>
+            <img src="#" alt="Аватар пользователя" class="user-profile__avatar" width="100" height="100">
+            <button class="user-profile__change-avatar" type="button">Сменить аватар</button>
+
+            <legend>Тэги</legend>
+            <label for="hashtags" class="user-profile__label">Тэги</label>
+            <textarea name="hashtags" id="hashtags" cols="30" rows="10" class="user-profile__hashtags-description">#бургер #бар #футбол #концерт #крафт</textarea>
+
+            <legend>Транспорт</legend>
+            <!--Transport start-->
+            <ul class="user-profile__transport-list transport">
+              <li class="transport__item">
+                <label class="transport__title">
+                  <input class="visually-hidden transport__input" type="checkbox" name="plane" checked>
+                  <span class="visually-hidden">Самолет</span>
+                </label>
+              </li>
+              <li class="transport__item">
+                <label class="transport__title">
+                  <input class="visually-hidden transport__input" type="checkbox" name="bus" checked>
+                  <span class="visually-hidden">Автобус</span>
+                </label>
+              </li>
+              <li class="transport__item">
+                <label class="transport__title">
+                  <input class="visually-hidden transport__input" type="checkbox" name="bycicle">
+                  <span class="visually-hidden">Велосипед</span>
+                </label>
+              </li>
+              <li class="transport__item">
+                <label class="transport__title">
+                  <input class="visually-hidden transport__input" type="checkbox" name="pidestrian" checked>
+                  <span class="visually-hidden">Пешеход</span>
+                </label>
+              </li>
+            </ul>
+            <!--transport end-->
+
+            <legend>Планы</legend>
+            <div class="user-profile__wrapper">
+              <h2 class="user-profile__title">Мои планы:</h2>
+              <!--plans start-->
+              <ol class="user-profile__plans plans">
+                <li class="plans__item">
+                  Франция, Италия
+                  <p class="plans__companions">3 попутчика</p>
+                  <p class="plans__date">26 мар — 29 мар</p>
+                  <a href="#" class="plans__change-link">Изменить</a>
+                </li>
+                <li class="plans__item">
+                  Таиланд, Индонезия
+                  <p class="plans__companions">1 попутчик</p>
+                  <p class="plans__date">1 июл — 15 июл</p>
+                  <a href="#" class="plans__change-link">Изменить</a>
+                </li>
+              </ol>
+              <!--plans end-->
+            </div>
+
+            <div class="user-profile__wrapper-inner">
+              <h2 class="user-profile__title">Добавить план:</h2>
+              <!--Steps start-->
+              <ol class="user-profile__steps steps">
+                <li class="steps__item">
+                  <p class="steps__title">Шаг 1.<br/>Даты пребывания</p>
+                  <p class="steps__descriptions">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+                  <label class="steps__label">Ищу попутчиков:
+                    <input type="number" class="steps__input" value="2">
+                  </label>
+                  <label class="steps__label">:Длительность:
+                    <input type="number" class="steps__input" value="3">
+                  </label>
+                  <label class="steps__label-box">
+                    <input class="visually-hidden steps__input" type="checkbox" name="product-group" value="yes" checked>
+                    <span class="steps__mark"></span>
+                    <span class="steps__text">Можно с детьми</span>
+                  </label>
+
+                  <!--calendar start-->
+                  <div class="user-profile__calendar calendar">
+                    <div class="clanedar__month">
+                      <button class="calendar__prev">Предыдущий месяц</button>
+                      <span class="calendar__month-today">Март 2019</span>
+                      <button class="calendar__next">Следующий месяц</button>
+                    </div>
+                    <div class="calendar__days">
+                      <!--пока не знаю-->
+                    </div>
+                  </div>
+                  <!--calendar end-->
+                  <a href="#" class="steps__next-step">Следующий шаг</a>
+                </li>
+                <li class="steps__item">
+                  <p class="steps__title">Шаг 2.<br/>Маршрут</p>
+                  <p class="steps__descriptions">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                  <!--country-visit start-->
+                  <div class="steps__country-visit country-visit">
+                    <ul class="country-visit__list">
+                      <li class="country-visit__item">
+                        <a href="#" class="country-visit__country">Босния и Герцеговина</a>
+                        <span class="country-visit__flag-country">Флаг Боснии</span>
+                        <button class="country-visit__close-button" type="button">Убрать страну</button>
+                      </li>
+                      <li class="steps__country-item">
+                        <a href="#" class="steps__lint-country">Чехия</a>
+                        <span class="steps__flag-country">Флаг Чехии</span>
+                        <button class="steps__close-button" type="button">Убрать страну</button>
+                      </li>
+                      <li class="steps__country-item">
+                        <a href="#" class="steps__lint-country">Добавить страну</a>
+                        <span class="steps__flag-country"></span>
+                        <button class="steps__close-button" type="button">Убрать страну</button>
+                      </li>
+                    </ul>
+                    <button class="steps__add-country">Добавить стану</button>
+                  </div>
+                   <!--country-visit end-->
+                  <a href="#" class="steps__next-step">Следующий шаг</a>
+                  <a href="#" class="steps__prev-step">на шаг назад</a>
+                </li>
+                <li class="steps__item">
+                  <p class="steps__title">Шаг 3.<br/>Развлечения</p>
+                  <p class="steps__descriptions">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                  <!--action-plan start-->
+                  <ul class="steps__action-plan-list ation-plan">
+                    <li class="ation-plan__item">
+                      <div class="ation-plane__at-country">
+                        <span class="action-plane__start-country">Босния и Герцеговина</span>
+                        <textarea class="action-plane__plan" placeholder="План действий">
+
+                        </textarea>
+                        <span class="action-plan__end-country">Чехия</span>
+                        <textarea class="action-plan__comment">
+                          Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                        </textarea>
+                      </div>
+                    </li>
+                  </ul>
+                  <!--action-plan end-->
+              </ol>
+            </div>
+            <button class="user-profile__submit" type="submit">Отправить</button>
+            <a href="#" class="user-profile__prev-step">на шаг назад</a>
+          </fieldset>
+        </form>
+      </section>
+      <!--User-profile end-->
+
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer class="page-footer">
+      <!-- info start  -->
+      <div class="page-footer__info info">
+
+        <a class="info__logo-link" href="/">Погнали?</a>
+
+        <div class="page-footer__socials socials">
+          <a href="#" class="socials__link">Мы в Facebook</a>
+          <a href="#" class="socials__link">Мы в Вконтакте</a>
+          <a href="#" class="socials__link">Мы в Instagram</a>
+        </div>
+        <!-- Socials end  -->
+        <p class="page-footer__text">Разработано<a class="page-footer__link" href="https://htmlacademy.ru/">html academy</a></p>
+      </div>
+      <!-- info end  -->
+    </footer>
+  </body>
+</html>

@@ -57,13 +57,13 @@
     <!--Header end-->
 
     <!--Main start-->
-    <main class="page-form">
-      <h1 class="page-form__title">Направления</h1>
+    <main class="main">
+      <h1 class="main__title">Направления</h1>
 
       <!--User-profile start-->
-      <section class="page-form__user-profile user-profile">
+      <section class="main__user-profile user-profile">
         <form action="https://echo.htmlacademy.ru/" class="user-profile__form" method="post">
-          <fieldset class="user-profile__fieldset">
+          <fieldset>
             <legend class="visually-hidden">Профиль пользователя</legend>
             <div class="user-profile__progress">
               <b>99</b>
@@ -72,11 +72,11 @@
             <img src="#" alt="Аватар пользователя" class="user-profile__avatar" width="100" height="100">
             <button class="user-profile__change-avatar" type="button">Сменить аватар</button>
 
-            <legend>Тэги</legend>
-            <label for="hashtags" class="user-profile__label">Тэги</label>
-            <textarea name="hashtags" id="hashtags" cols="30" rows="10" class="user-profile__hashtags-description">#бургер #бар #футбол #концерт #крафт</textarea>
+            <div class="user-profile__hashtags">
+              <label for="hashtags" class="user-profile__label">Тэги</label>
+              <textarea name="hashtags" id="hashtags" cols="30" rows="10" class="user-profile__hashtags-description">#бургер #бар #футбол #концерт #крафт</textarea>
+            </div>
 
-            <legend>Транспорт</legend>
             <!--Transport start-->
             <ul class="user-profile__transport-list transport">
               <li class="transport__item">
@@ -105,110 +105,248 @@
               </li>
             </ul>
             <!--transport end-->
+          </fieldset>
 
+          <fieldset>
             <legend>Планы</legend>
-            <div class="user-profile__wrapper">
-              <h2 class="user-profile__title">Мои планы:</h2>
-              <!--plans start-->
-              <ol class="user-profile__plans plans">
-                <li class="plans__item">
+            <!-- my-plans start -->
+            <div class="user-profile__my-plans">
+              <h2 class="my-plans-title">Мои планы:</h2>
+              <ol class="my-plans-list">
+                <li class="my-plans__item">
                   Франция, Италия
-                  <p class="plans__companions">3 попутчика</p>
-                  <p class="plans__date">26 мар — 29 мар</p>
-                  <a href="#" class="plans__change-link">Изменить</a>
+                  <p class="my-plans__companions">3 попутчика</p>
+                  <p class="my-plans__date">26 мар — 29 мар</p>
+                  <a href="#" class="my-plans__change-link">Изменить</a>
                 </li>
-                <li class="plans__item">
+                <li class="user-profile__my-plans__item">
                   Таиланд, Индонезия
-                  <p class="plans__companions">1 попутчик</p>
-                  <p class="plans__date">1 июл — 15 июл</p>
-                  <a href="#" class="plans__change-link">Изменить</a>
+                  <p class="my-plans__companions">1 попутчик</p>
+                  <p class="my-plans__date">1 июл — 15 июл</p>
+                  <a href="#" class="my-plans__change-link">Изменить</a>
                 </li>
               </ol>
-              <!--plans end-->
             </div>
+            <!-- my-plans end -->
+          </fieldset>
 
-            <div class="user-profile__wrapper-inner">
-              <h2 class="user-profile__title">Добавить план:</h2>
-              <!--Steps start-->
-              <ol class="user-profile__steps steps">
-                <li class="steps__item">
-                  <p class="steps__title">Шаг 1.<br/>Даты пребывания</p>
-                  <p class="steps__descriptions">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-                  <label class="steps__label">Ищу попутчиков:
-                    <input type="number" class="steps__input" value="2">
-                  </label>
-                  <label class="steps__label">:Длительность:
-                    <input type="number" class="steps__input" value="3">
-                  </label>
-                  <label class="steps__label-box">
-                    <input class="visually-hidden steps__input" type="checkbox" name="product-group" value="yes" checked>
-                    <span class="steps__mark"></span>
-                    <span class="steps__text">Можно с детьми</span>
-                  </label>
+          <fieldset>
+            <legend>Добавить план:</legend>
+            <!--arrival start-->
+            <div class="user-profile__arrival arrival">
+                <p class="arrival__title">Шаг 1.<br/>Даты пребывания</p>
+                <p class="arrival__descriptions">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+                <label class="arrival__label">Ищу попутчиков:
+                  <input type="number" class="arrival__input" value="2">
+                </label>
+                <label class="arrival__label">:Длительность:
+                  <input type="number" class="arrival__input" value="3">
+                </label>
+                <label class="arrival__label-box">
+                  <input class="visually-hidden" type="checkbox" name="product-group" value="yes" checked>
+                  <span class="arrival__mark"></span>
+                  <span class="arrival__text">Можно с детьми</span>
+                </label>
 
-                  <!--calendar start-->
-                  <div class="user-profile__calendar calendar">
-                    <div class="clanedar__month">
-                      <button class="calendar__prev">Предыдущий месяц</button>
-                      <span class="calendar__month-today">Март 2019</span>
-                      <button class="calendar__next">Следующий месяц</button>
-                    </div>
-                    <div class="calendar__days">
-                      <!--пока не знаю-->
-                    </div>
+                <!--calendar start-->
+                <div class="arrival__calendar calendar">
+                  <div class="clanedar__month">
+                    <button class="calendar__prev">Предыдущий месяц</button>
+                    <span class="calendar__month-today">Март 2019</span>
+                    <button class="calendar__next">Следующий месяц</button>
                   </div>
-                  <!--calendar end-->
-                  <a href="#" class="steps__next-step">Следующий шаг</a>
-                </li>
-                <li class="steps__item">
-                  <p class="steps__title">Шаг 2.<br/>Маршрут</p>
-                  <p class="steps__descriptions">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-                  <!--country-visit start-->
-                  <div class="steps__country-visit country-visit">
-                    <ul class="country-visit__list">
-                      <li class="country-visit__item">
-                        <a href="#" class="country-visit__country">Босния и Герцеговина</a>
-                        <span class="country-visit__flag-country">Флаг Боснии</span>
-                        <button class="country-visit__close-button" type="button">Убрать страну</button>
+                  <div class="calendar__days">
+                    <ul class="calendar__list">
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">23</button>
                       </li>
-                      <li class="steps__country-item">
-                        <a href="#" class="steps__lint-country">Чехия</a>
-                        <span class="steps__flag-country">Флаг Чехии</span>
-                        <button class="steps__close-button" type="button">Убрать страну</button>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">24</button>
                       </li>
-                      <li class="steps__country-item">
-                        <a href="#" class="steps__lint-country">Добавить страну</a>
-                        <span class="steps__flag-country"></span>
-                        <button class="steps__close-button" type="button">Убрать страну</button>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">25</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">26</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">27</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">28</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">1</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">2</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">3</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">4</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">5</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">6</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">7</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">8</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">9</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">10</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">11</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">12</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">13</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">14</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">15</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">16</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">17</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">18</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">19</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">20</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">21</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">22</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">23</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">24</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--past" type="button">25</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--current" type="button">26</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--current" type="button">27</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date calendar__date--current" type="button">28</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">29</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">30</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">31</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">1</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">2</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">3</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">4</button>
+                      </li>
+                      <li class="calendar__item">
+                        <button class="calendar__date" type="button">5</button>
                       </li>
                     </ul>
-                    <button class="steps__add-country">Добавить стану</button>
                   </div>
-                   <!--country-visit end-->
-                  <a href="#" class="steps__next-step">Следующий шаг</a>
-                  <a href="#" class="steps__prev-step">на шаг назад</a>
-                </li>
-                <li class="steps__item">
-                  <p class="steps__title">Шаг 3.<br/>Развлечения</p>
-                  <p class="steps__descriptions">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-                  <!--action-plan start-->
-                  <ul class="steps__action-plan-list ation-plan">
-                    <li class="ation-plan__item">
-                      <div class="ation-plane__at-country">
-                        <span class="action-plane__start-country">Босния и Герцеговина</span>
-                        <textarea class="action-plane__plan" placeholder="План действий">
-
-                        </textarea>
-                        <span class="action-plan__end-country">Чехия</span>
-                        <textarea class="action-plan__comment">
-                          Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                        </textarea>
-                      </div>
-                    </li>
-                  </ul>
-                  <!--action-plan end-->
-              </ol>
+                </div>
+                <!--calendar end-->
+                <a href="#" class="arrival__next-step">Следующий шаг</a>
             </div>
+            <!--arrival end-->
+          </fieldset>
+
+          <fieldset>
+            <legend>Добавить план:</legend>
+            <!-- rout start -->
+            <div class="user-profile__rout rout">
+              <p class="rout__title">Шаг 2.<br/>Маршрут</p>
+              <p class="rout__descriptions">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <!--country-visit start-->
+              <div class="rout__country-visit country-visit">
+                <ul class="country-visit__list">
+                  <li class="country-visit__item">
+                    <a href="#" class="country-visit__country">Босния и Герцеговина</a>
+                    <span class="country-visit__flag-country">Флаг Боснии</span>
+                    <button class="country-visit__close-button" type="button">Убрать страну</button>
+                  </li>
+                  <li class="steps__country-item">
+                    <a href="#" class="steps__lint-country">Чехия</a>
+                    <span class="steps__flag-country">Флаг Чехии</span>
+                    <button class="steps__close-button" type="button">Убрать страну</button>
+                  </li>
+                  <li class="steps__country-item">
+                    <a href="#" class="steps__lint-country">Добавить страну</a>
+                    <span class="steps__flag-country"></span>
+                    <button class="steps__close-button" type="button">Убрать страну</button>
+                  </li>
+                </ul>
+                <button class="country-visit__add-country">Добавить стану</button>
+              </div>
+              <!--country-visit end-->
+              <a href="#" class="rout__next-step">Следующий шаг</a>
+              <a href="#" class="rout__prev-step">на шаг назад</a>
+            </div>
+            <!-- rout end -->
+          </fieldset>
+
+          <fieldset>
+            <!-- entertainment start -->
+            <div class="user-profile__entertainment entertainment">
+              <p class="entertainment__title">Шаг 3.<br/>Развлечения</p>
+              <p class="entertainment__descriptions">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="entertainment__list">
+                <li class="entertainment__item">
+                  <div class="entertainment__at-country">
+                    <span class="entertainment__start-country">Босния и Герцеговина</span>
+                    <textarea class="entertainment__plan" placeholder="План действий">
+
+                    </textarea>
+                    <span class="entertainment__end-country">Чехия</span>
+                    <textarea class="entertainment__comment">
+                      Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                    </textarea>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- entertainment end -->
             <button class="user-profile__submit" type="submit">Отправить</button>
             <a href="#" class="user-profile__prev-step">на шаг назад</a>
           </fieldset>

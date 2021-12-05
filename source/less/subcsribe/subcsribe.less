@@ -1,0 +1,44 @@
+.subcsribe {
+  display: flex;
+}
+
+.subscribe__input {
+  display: block;
+  width: 220px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 22px 25px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+.subscribe__input::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.subcsribe button {
+  width: 60px;
+  background-color: #ffd74b;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-left: -15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.subcsribe button::before {
+  content: "";
+  width: 14px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url("../img/polygon.svg");
+  background-repeat: no-repeat;
+  margin: -7px 0 0 -7px;
+}

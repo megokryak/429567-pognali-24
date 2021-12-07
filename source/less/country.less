@@ -1,0 +1,43 @@
+.country {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: -15px;
+}
+
+.country__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.country__flag {
+  display: block;
+}
+
+.country__slogan,
+.country__users {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.country__users {
+  padding: 0 0 0 29px;
+  position: relative;
+}
+
+.country__users::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/icon_user.svg");
+  background-repeat: no-repeat;
+  margin: -7px 0 0 0;
+}

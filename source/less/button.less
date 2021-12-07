@@ -1,0 +1,31 @@
+.button {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: #1d2e5b;
+  margin: 0;
+  padding: 22px 35px 22px 22px;
+  position: relative;
+  text-decoration: none;
+  background-color: #ffd74b;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/polygon.svg");
+  background-repeat: no-repeat;
+  margin: -7px 0 0 0;
+}
+
+.button--border {
+  border: 3px solid #192144;
+}

@@ -1,0 +1,49 @@
+.clanedar__month {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar__prev,
+.calendar__next {
+  display: block;
+  width: 9px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/arrow-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.calendar__next {
+  transform: rotate(180deg);
+}
+
+.calendar__month-today {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b;
+}
+
+.calendar__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(7, 31px);
+  grid-template-rows: repeat(6, 31px);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.calendar__date {
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+}

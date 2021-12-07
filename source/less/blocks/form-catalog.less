@@ -1,0 +1,132 @@
+.form-catalog__filter-group {
+  background-color: #ffd74b;
+  border: none;
+}
+
+.fotm-catalog__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #1d2e5b;
+  letter-spacing: 0.02em;
+}
+
+.form-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form-catalog__interests-group {
+  border: none;
+}
+
+.form-catalog__link-dropdown {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.form-catalog__interests-list,
+.form-catalog__range {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form-catalog__interests-item {
+  position: relative;
+}
+
+.form-catalog__interests-list--open,
+.form-catalog__range--open {
+  display: block;
+}
+
+.form-catalog__input-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.form-catalog__control-mark {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + .form-catalog__control-mark {
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-catalog__control-mark-transport-airplane,
+.form-catalog__control-mark-transport-bus,
+.form-catalog__control-mark-transport-bicycle,
+.form-catalog__control-mark-transport-pedestrian {
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-catalog__control-mark-transport-airplane::before,
+.form-catalog__control-mark-transport-bus::before,
+.form-catalog__control-mark-transport-bicycle::before,
+.form-catalog__control-mark-transport-pedestrian::before {
+  content: "";
+  width: 21px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-catalog__control-mark-transport-airplane::before {
+  background-image: url("../img/icon_plane--active.svg");
+  margin: -12px 0 0 -11px;
+}
+
+.form-catalog__control-mark-transport-bus::before {
+  background-image: url("../img/icon_bus--deactive.svg");
+  margin: -12px 0 0 -11px;
+}
+
+.form-catalog__control-mark-transport-bicycle::before {
+  background-image: url("../img/icon_bicycle--deactive.svg");
+  margin: -12px 0 0 -11px;
+}
+
+.form-catalog__control-mark-transport-pedestrian::before {
+  background-image: url("../img/icon_run--deactive.svg");
+  margin: -12px 0 0 -11px;
+}
+
+.form-catalog__submit {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: #161c35;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 25px;
+}

@@ -1,0 +1,76 @@
+.main__wrapper-title {
+  background-color: #182044;
+  color: #ffffff;
+}
+
+.main__title {
+  margin: 0;
+  padding: 0 25px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.main__button-more {
+  display: block;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main__wrapper-buttons {
+  display: flex;
+}
+
+.main__pagintion-bottons {
+  display: block;
+  width: 135px;
+  height: 51px;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.main__pagintion-bottons--prev {
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid #edeff6;
+}
+
+.main__pagintion-bottons--prev::before {
+  content: "";
+  width: 10px;
+  height: 18px;
+  background-image: url("../img/page_arrows.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -9px;
+}
+
+.main__pagintion-bottons--next::before {
+  content: "";
+  width: 10px;
+  height: 18px;
+  background-image: url("../img/page_arrows.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -9px;
+}
+
+.main__pagintion-bottons--next {
+  border-radius: 0 20px 20px 0;
+}

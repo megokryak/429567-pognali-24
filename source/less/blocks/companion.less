@@ -1,8 +1,17 @@
 .companion {
+  margin-top: -30px;
+  padding: 105px 0 30px 0;
   background-color: #192144;
   background-image: url("../img/back-companions.png");
   background-repeat: no-repeat;
   color: #ffffff;
+}
+
+.companion__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .companion__title {
@@ -14,6 +23,25 @@
   color: #ff8d30;
 }
 
+.companion__description {
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
 .companion__text {
   font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.companion__button {
+  margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
 }

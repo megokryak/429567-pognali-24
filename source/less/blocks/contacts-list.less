@@ -1,10 +1,23 @@
 .contacts-list {
   list-style-type: none;
   color: #192144;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.contacts-list__item {
+  display: flex;
 }
 
 .contacts-list--color-text {
   color: #ffd74b;
+  margin-top: 30px;
+}
+
+.contacts-list--color-text .contacts-list__item:last-child {
+  margin-top: 23px;
 }
 
 .contacts-list__icon {

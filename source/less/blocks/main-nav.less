@@ -1,13 +1,40 @@
-.main-nav--activ {
-  background-color: #ffffff;
+.main-nav {
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.main-nav__toggle {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper-open-menu {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
-.main-nav__link-auth {
+.main-nav__wrapper-open-menu--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.main-nav__link {
   display: block;
+  padding: 12px 79px;
   font-family: "Blogger Sans", sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -15,4 +42,40 @@
   color: #161c35;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.main-nav__link--auth {
+  background-color: #ffd74b;
+  border-radius: 25px;
+  height: fit-content;
+}
+
+.main-nav__link--phone,
+.main-nav__link--email {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  fill: #161c35;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main-nav__link--phone {
+  background-color: #ff8d30;
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+  }
+}
+
+.main-nav__link--email {
+  background-color: #ffbd30;
 }

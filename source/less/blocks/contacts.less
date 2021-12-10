@@ -1,9 +1,24 @@
 .contacts {
-  background-color: #ffd74b;
   color: #1d2e5b;
+  margin-top: -30px;
+  position: relative;
+}
+
+.contacts__container {
+  background-color: #ffd74b;
+  padding-top: 60px;
+  padding-bottom: 35px;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .contacts__address {
+  margin: 0;
   padding: 0 65px 0 60px;
   display: block;
   position: relative;
@@ -26,6 +41,11 @@
   border-radius: 50%;
 }
 
+.contacts__link {
+  margin-top: 32px;
+}
+
 .contacts__map {
   display: block;
+  margin-top: -30px;
 }

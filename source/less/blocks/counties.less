@@ -1,5 +1,16 @@
 .countries {
   background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+}
+
+.countries__container {
+  padding-bottom: 34px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .counties__title {
@@ -14,4 +25,12 @@
 .countries__description {
   color: #444444;
   padding: 0 25px;
+}
+
+.countries__button {
+  margin-top: 27px;
+
+  @media (min-width: @desktop-width) {
+    grid-row: 4/5;
+  }
 }

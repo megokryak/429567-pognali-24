@@ -79,6 +79,20 @@
   display: block;
 }
 
+.user-card__wrapper-name {
+  display: flex;
+  align-items: center;
+}
+
+.user-card__status {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #f97676;
+  border-radius: 50%;
+  margin: 0;
+}
+
 .user-card__user-name {
   margin: 0;
   padding: 0;
@@ -93,20 +107,7 @@
   line-height: 21px;
   color: #1d2e5b;
   text-decoration: none;
-  padding: 0 0 0 16px;
-  position: relative;
-}
-
-.user-card__user-name a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  background-color: #f97676;
-  border-radius: 50%;
-  margin: -3px 0 0 0;
+  padding: 0;
 }
 
 .user-card__icons {

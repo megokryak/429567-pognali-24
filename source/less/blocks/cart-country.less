@@ -1,9 +1,32 @@
 .cart-country {
   margin: 0;
-  padding: 0 25px;
+  padding: 0;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    max-width: 560px;
+    grid-column: 1/2;
+    grid-row: 1/5;
+  }
+}
+
+.cart-country__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.cart-country__item:not(:first-child) {
+  margin-top: 8px;
 }
 
 .cart-country__img {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }

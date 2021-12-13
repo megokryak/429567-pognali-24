@@ -1,7 +1,15 @@
 .arrival {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 24px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 585px 245px;
+    grid-template-rows: 50px 110px 70px 70px 570px 80px;
+  }
 }
 
 .arrival__title {
@@ -11,19 +19,71 @@
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-template-rows: 1/2;
+  }
 }
 
 .arrival__descriptions {
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-template-rows: 2/3;
+  }
 }
 
-.arrival__label {
+.arrival__label-companion,
+.arrival__label-duration {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1d2e5b;
+}
+
+.arrival__label-companion {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-template-rows: 3/4;
+  }
+}
+
+.arrival__label-box {
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-template-rows: 3/4;
+  }
+}
+
+.arrival__label-duration {
+  @media (min-width: @tablet-width) {
+    order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-template-rows: 4/5;
+  }
 }
 
 .arrival__input {
@@ -87,6 +147,17 @@
   background-position: center;
 }
 
+.arrival__calendar {
+  @media (min-width: @tablet-width) {
+    order: 6;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+    grid-template-rows: 5/6;
+  }
+}
+
 .arrival__next-step {
   display: block;
   font-weight: 700;
@@ -100,4 +171,13 @@
   box-sizing: border-box;
   border-radius: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 7;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-template-rows: 6/7;
+  }
 }

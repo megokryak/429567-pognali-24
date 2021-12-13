@@ -1,10 +1,17 @@
 .subcsribe {
   display: flex;
+  margin: 30px 0 0 0;
+}
+
+.subscribe__label {
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .subscribe__input {
   display: block;
-  width: 220px;
+  width: 100%;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -20,8 +27,20 @@
   color: rgba(68, 68, 68, 0.3);
 }
 
+.subscribe__registration {
+  display: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #1d2e5b;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
 .subcsribe button {
-  width: 60px;
+  width: 330px;
   background-color: #ffd74b;
   outline: none;
   border: 1px solid transparent;
@@ -29,6 +48,10 @@
   margin-left: -15px;
   position: relative;
   cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .subcsribe button::before {
@@ -41,4 +64,9 @@
   background-image: url("../img/polygon.svg");
   background-repeat: no-repeat;
   margin: -7px 0 0 -7px;
+
+  @media (min-width: @desktop-width) {
+    left: auto;
+    right: 10px;
+  }
 }

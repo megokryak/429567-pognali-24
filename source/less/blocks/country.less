@@ -1,7 +1,19 @@
 .country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: -15px;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    flex-grow: 1;
+    flex-direction: column;
+  }
 }
 
 .country__title {
@@ -14,20 +26,40 @@
 }
 
 .country__flag {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  margin: -12px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    top: 17px;
+    right: 0;
+    left: auto;
+  }
 }
 
 .country__slogan,
 .country__users {
+  margin: 0;
+  padding: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
 }
 
+.country__slogan {
+  margin: 2px 0 0 0;
+  flex-grow: 1;
+}
+
 .country__users {
   padding: 0 0 0 29px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
 }
 
 .country__users::before {

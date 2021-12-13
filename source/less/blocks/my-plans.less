@@ -1,16 +1,25 @@
-.my-plans-title {
+.my-plans__title {
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
-.my-plans-list {
-  margin: 0;
+.my-plans__list {
+  margin: 20px 0 0 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 48px;
+  }
 }
 
 .my-plans__item {
@@ -21,6 +30,35 @@
   color: #1d2e5b;
   background-color: #ffffff;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 94px;
+  }
+}
+
+.my-plans__subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    width: 100%;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
 }
 
 .my-plans__companions,
@@ -34,11 +72,54 @@
   padding: 0;
 }
 
+.my-plans__companions {
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.my-plans__date {
+  margin-top: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
 .my-plans__change-link {
+  display: block;
+  margin: 24px 0 0 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }

@@ -2,8 +2,45 @@
   background-color: #182044;
   margin: 0;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.header--activ-menu {
+  background-color: #ffffff;
 }
 
 .header__item-logo-link svg {
   fill: #ffffff;
+}
+
+.header__item-logo-link--activ svg {
+  fill: #192144;
+}
+
+.header__link-auth {
+  display: none;
+  margin: 0;
+  padding: 16px 29px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #161c35;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffd74b;
+  border-radius: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

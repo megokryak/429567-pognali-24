@@ -1,5 +1,9 @@
 .profile {
   background-color: #edeff6;
+  padding: 0 0 38px 0;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .profile__content {
@@ -11,12 +15,12 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
-  margin: 0;
+  margin: 53px 0 0 0;
   padding: 0 100px 0 0;
 }
 
 .profile__list {
-  margin: 0;
+  margin: 56px 0 0 0;
   padding: 0;
   list-style-type: none;
 }
@@ -24,6 +28,11 @@
 .profile__item {
   line-height: 16px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .profile__item:not(:first-child) {
@@ -38,6 +47,7 @@
 
 .profile__link {
   display: block;
+  margin: 46px 0 0 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;

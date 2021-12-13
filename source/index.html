@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
     <!--Header start-->
-    <header class="header container">
-      <a class="header__item-logo-link" href="/">
+    <header class="header container"><!--.header--activ-menu при открытом меню-->
+      <a class="header__item-logo-link" href="/"><!--header__item-logo-link--activ при открытом меню-->
         <svg aria-hidden="true" focusable="false" width="96" height="15" viewBox="0 0 96 15"xmlns="http://www.w3.org/2000/svg">
           <path d="M94.9113 6.18874C95.6371 5.72747 96 5.01634 96 4.05535C96 2.79967 95.4774 1.81306 94.4322 1.09552C93.4161 0.365174 92.2185 0 90.8394 0C89.4894 0 88.2555 0.397207 87.1378 1.19162C86.0345 1.97322 85.4829 3.01749 85.4829 4.32443C85.4829 4.81133 85.6353 5.21494 85.9402 5.53527C86.245 5.84278 86.6805 5.99654 87.2467 5.99654C87.7983 5.99654 88.2193 5.84278 88.5096 5.53527C88.8144 5.21494 88.9668 4.81133 88.9668 4.32443C88.9378 3.95285 89.0612 3.57486 89.337 3.19047C89.6128 2.79326 90.1136 2.59466 90.8394 2.59466C91.4491 2.60747 91.8846 2.76123 92.1459 3.05593C92.4217 3.35063 92.5451 3.64533 92.5161 3.94003C92.5161 4.14504 92.4435 4.35005 92.2983 4.55506C92.1532 4.76007 92.0008 4.92024 91.8411 5.03556C91.6959 5.15088 91.4564 5.31745 91.1225 5.53527C90.7886 5.75309 90.5564 5.90685 90.4257 5.99654C89.6709 6.54751 89.2935 7.27785 89.2935 8.18758C89.2935 8.63604 89.4531 9.01403 89.7725 9.32155C90.1064 9.61625 90.5491 9.7636 91.1007 9.7636C91.6524 9.7636 92.0878 9.61625 92.4072 9.32155C92.7411 9.01403 92.908 8.63604 92.908 8.18758C92.908 7.99539 92.9443 7.816 93.0169 7.64943C93.0895 7.48286 93.2056 7.32911 93.3653 7.18816C93.5395 7.04722 93.6846 6.9319 93.8008 6.84221C93.9314 6.75252 94.1201 6.6372 94.3669 6.49625C94.6282 6.35531 94.8097 6.2528 94.9113 6.18874Z" />
           <path d="M76.3053 10.2354L80.1618 5.46351C80.5573 4.88748 81.0941 4.56674 81.7722 4.50128C82.4502 4.42273 83.0435 4.58638 83.5521 4.99221C84.0606 5.39805 84.3008 5.94135 84.2725 6.62211V13.4559C84.2725 13.8879 84.103 14.2545 83.764 14.5556C83.4391 14.8436 83.0435 14.9876 82.5774 14.9876C82.1112 14.9876 81.7086 14.8436 81.3696 14.5556C81.0447 14.2545 80.8822 13.8879 80.8822 13.4559V9.21424L77.0257 13.9861C76.6302 14.5622 76.0934 14.8829 75.4153 14.9484C74.7373 15.0269 74.144 14.8633 73.6354 14.4574C73.1269 14.0516 72.8867 13.5083 72.915 12.8275V6.01336C72.915 5.58133 73.0774 5.21477 73.4023 4.91367C73.7413 4.61256 74.144 4.46201 74.6101 4.46201C75.0763 4.46201 75.4718 4.61256 75.7967 4.91367C76.1358 5.21477 76.3053 5.58133 76.3053 6.01336V10.2354Z" />
@@ -23,9 +24,9 @@
       </a>
 
       <!--Main Menu start-->
-      <nav class="header__item__navigation main-nav"> <!--main-nav--activ открытое меню-->
+      <nav class="header__item__navigation main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper-open-menu">
+        <div class="main-nav__wrapper-open-menu"><!--main-nav__wrapper-open-menu--active Открыть меню-->
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#" class="site-list__link">О сервисе</a>
@@ -38,7 +39,20 @@
             </li>
           </ul>
 
-          <a href="#" class="main-nav__link-auth">Авторизация</a>
+          <a href="tel:88005558628" class="main-nav__link main-nav__link--phone">
+            <span class="visually-hidden">Телефон</span>
+            <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.77417 8.22389C9.77417 8.41289 9.92779 8.56139 10.1155 8.56139C10.5047 8.56139 10.8188 8.87526 10.8188 9.25664C10.8188 9.44226 10.9724 9.59414 11.1602 9.59414C11.3479 9.59414 11.5015 9.44226 11.5015 9.25664C11.5015 8.50064 10.8802 7.88639 10.1155 7.88639C9.92779 7.88639 9.77417 8.03827 9.77417 8.22389ZM15.3318 9.59414C15.523 9.59414 15.6732 9.44226 15.6732 9.25664C15.6732 6.22589 13.1811 3.76215 10.1155 3.76215C9.92779 3.76215 9.77417 3.914 9.77417 4.09965C9.77417 4.28527 9.92779 4.43715 10.1155 4.43715C12.8056 4.43715 14.9905 6.60051 14.9905 9.25664C14.9905 9.44226 15.1441 9.59414 15.3318 9.59414Z"/>
+              <path d="M12.9047 9.25661C12.9047 9.44223 13.0583 9.59411 13.2461 9.59411C13.4339 9.59411 13.5875 9.44223 13.5875 9.25661C13.5875 7.36324 12.0308 5.82424 10.1157 5.82424C9.9279 5.82424 9.77427 5.97612 9.77427 6.16174C9.77427 6.35074 9.9279 6.49924 10.1157 6.49924C11.6553 6.49924 12.9047 7.73786 12.9047 9.25661ZM10.1157 1.69998C9.9279 1.69998 9.77427 1.85186 9.77427 2.03748C9.77427 2.22312 9.9279 2.37498 10.1157 2.37498C13.9562 2.37498 17.0798 5.46312 17.0798 9.25661C17.0798 9.44223 17.23 9.59411 17.4212 9.59411C17.6089 9.59411 17.7626 9.44223 17.7626 9.25661C17.7626 5.0885 14.3317 1.69998 10.1157 1.69998ZM13.4509 12.8139L13.0037 13.0535C12.2493 13.4619 11.6622 14.5812 10.7312 13.7375L8.30011 11.3L6.20004 9.25661C5.14495 7.92348 6.32635 7.60623 6.73941 6.85699L6.98179 6.41825C7.25489 5.91873 7.35388 5.35849 7.27196 4.79823C7.19345 4.23799 6.93741 3.72836 6.52775 3.32336C6.02935 2.83062 5.36707 2.56062 4.66042 2.56062C3.95376 2.56062 3.28807 2.83062 2.78964 3.32336L2.61556 3.49886C1.69383 4.41012 1.588 5.97948 2.31514 7.92348C3.0013 9.77973 4.3839 11.7912 6.20004 13.5867C8.96862 16.3239 12.0513 17.9 14.2634 17.9C15.1373 17.9 15.8781 17.6536 16.4039 17.1339L16.5814 16.9584C17.0764 16.469 17.3529 15.8142 17.3563 15.1089C17.3529 14.4204 17.0695 13.7454 16.5814 13.2627C15.7587 12.4494 14.4717 12.2671 13.4509 12.8139Z"/>
+            </svg>
+          </a>
+          <a href="mailto:mail@htmlacademy.ru" class="main-nav__link main-nav__link--email">
+            <span class="visually-hidden">E-mail для связи</span>
+            <svg aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.0166 3.32528L8.7666 7.55572C8.9934 7.69747 9.2868 7.76467 9.582 7.76467C9.8772 7.76467 10.1706 7.69747 10.3974 7.55572L17.1474 3.32528C17.5875 3.04913 18.0033 1.97498 17.196 1.97498H1.9689C1.1616 1.97498 1.5774 3.04913 2.0166 3.32528ZM17.3517 5.63842L10.3974 9.86677C10.0914 10.0537 9.8772 10.0757 9.582 10.0757C9.2868 10.0757 9.0726 10.0537 8.7666 9.86677C8.4606 9.67987 2.3469 5.94082 1.8474 5.63737C1.4964 5.42317 1.5 5.67412 1.5 5.86732V13.525C1.5 13.966 2.0094 14.575 2.4 14.575H16.8C17.1906 14.575 17.7 13.966 17.7 13.525V5.86837C17.7 5.67517 17.7036 5.42422 17.3517 5.63842Z"/>
+            </svg>
+          </a>
+          <a href="#" class="main-nav__link main-nav__link--auth">Авторизация</a>
 
           <!--contacts-list start-->
           <ul class="main-nav__contacts-list contacts-list">
@@ -95,6 +109,8 @@
       </nav>
       <!--Main Menu end-->
 
+      <a href="#" class="header__link-auth">Авторизация</a>
+
     </header>
     <!--Header end-->
 
@@ -103,7 +119,7 @@
       <h1 class="visually-hidden">Погнали - Сервис для поиска попутчиков для путешествий</h1>
       <!--Promo block start-->
       <section class="main__promo promo">
-        <div class="container">
+        <div class="promo_container container">
           <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
           <!--additional-contacts start-->
           <ul class="promo__additional-contacts additional-contacts">
@@ -130,8 +146,10 @@
             </li>
           </ul>
           <!--additional-contacts end-->
-          <p class="promo__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <p class="promo__author">Мурат Эльтазин<br/>главный редактор<br/>газеты «гаджетлайф»</p>
+          <div class="promo_wrapper_author">
+            <p class="promo__text">«Лучшее приложение, что я видел в жизни!»</p>
+            <p class="promo__author">Мурат Эльтазин<br/>главный редактор<br/>газеты «гаджетлайф»</p>
+          </div>
           <!--Sequence start-->
           <ul class="promo__list sequence">
             <li class="sequence__item">
@@ -154,35 +172,35 @@
 
       <!--About block-->
       <section class="main-about about">
-        <div class="container">
+        <div class="about__container container">
           <h2 class="about__title">О сервисе</h2>
           <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
           <p class="about__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a href="#" class="about-link button">Подробнее</a>
+          <a href="#" class="about-link button about-link--active">Подробнее</a>
         </div>
       </section>
       <!--About block end-->
 
       <!--Countries start-->
       <section class="main__countries countries">
-        <div class="container">
+        <div class="countries__container container">
           <h2 class="counties__title">Направления</h2>
           <p class="countries__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           <!--Cart-country start-->
           <ul class="countries__list cart-country">
             <li class="cart-country__item">
-              <img src="img/thailand-mobile.jpg" alt="Тайланд" class="cart-country__img" width="210" height="110">
+              <img src="img/thailand-mobile.jpg" alt="Тайланд" class="cart-country__img" width="270" height="110">
               <!--Country start-->
               <div class="cart-country__description country">
-                <h3 class="country__title">Таиланд</h3>
                 <img src="img/thailand-flag.jpg" alt="Флаг Тайланда" class="country__flag" width="35" height="24">
-                <p class="country__slogan">Джунгли зовут!</p>
+                <h3 class="country__title">Таиланд</h3>
                 <span class="country__users">18321</span>
+                <p class="country__slogan">Джунгли зовут!</p>
               </div>
               <!--Country end-->
             </li>
             <li class="cart-country__item">
-              <img src="img/france-mobile.jpg" alt="Франция" class="cart-country__img" width="210" height="110">
+              <img src="img/france-mobile.jpg" alt="Франция" class="cart-country__img" width="270" height="110">
               <!--Country start-->
               <div class="cart-country__description country">
                 <h3 class="country__title">Франция</h3>
@@ -193,7 +211,7 @@
               <!--Country end-->
             </li>
             <li class="cart-country__item">
-              <img src="img/czech-mobile.jpg" alt="Чехия" class="cart-country__img" width="210" height="110">
+              <img src="img/czech-mobile.jpg" alt="Чехия" class="cart-country__img" width="270" height="110">
               <!--Country start-->
               <div class="cart-country__description country">
                 <h3 class="country__title">Чехия</h3>
@@ -212,7 +230,7 @@
 
       <!-- Companion start -->
       <section class="main__companion companion">
-        <div class="container">
+        <div class="companion__container container">
           <h2 class="companion__title">Попутчики</h2>
           <p class="companion__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
           <p class="companion__text">Теперь можно легко найти единомышленников!</p>
@@ -229,9 +247,12 @@
                 <img src="img/thailand-flag.jpg" alt="Thailand" width="35" height="25">
                 <img src="img/seychelles-flag.jpg" alt="Seychelles" width="35" height="25">
               </div>
-              <h3 class="user-card__user-name">
-                <a href="#">Таня Фирсова</a>
-              </h3>
+              <div class="user-card__wrapper-name">
+                <span class="user-card__status"></span>
+                <h3 class="user-card__user-name">
+                  <a href="#">Таня Фирсова</a>
+                </h3>
+              </div>
               <p class="user-card__meta meta">
                 <a href="#" class="meta__link">#ЗОЖ</a>
                 <a href="#" class="meta__link">#ПП</a>
@@ -248,7 +269,7 @@
               </div>
             </li>
             <li class="user-card__item">
-              <img src="img/avatar_02.jpg" alt="Фотография Тани Фирсовой" class="user-card__avatar" width="270" height="270">
+              <img src="img/avatar_02.jpg" alt="Фотография Петя Демин" class="user-card__avatar" width="270" height="270">
               <div class="user-card__mark">
                 <b>80</b>
                 <span>level</span>
@@ -257,9 +278,12 @@
                 <img src="img/belgium-flag.jpg" alt="Belgium" width="35" height="25">
                 <img src="img/czech-flag.svg" alt="Чехия" width="35" height="25">
               </div>
-              <h3 class="user-card__user-name">
-                <a href="#">Петя Демин</a>
-              </h3>
+              <div class="user-card__wrapper-name">
+                <span class="user-card__status"></span>
+                <h3 class="user-card__user-name">
+                  <a href="#">Петя Демин</a>
+                </h3>
+              </div>
               <p class="user-card__meta meta">
                 <a href="#" class="meta__link">#бургер</a>
                 <a href="#" class="meta__link">#бар</a>
@@ -312,7 +336,7 @@
               <input type="text" class="subscribe__input" id="subscribe__input" placeholder="E-mail">
             </label>
             <button type="submit">
-              <span class="visually-hidden">Отправить форму</span>
+              <span class="subscribe__registration">Регистрация</span>
             </button>
           </form>
           <!-- Subscribe end -->
@@ -344,7 +368,7 @@
 
       <!-- contacts start  -->
       <section class="main__contacts contacts">
-        <div class="container">
+        <div class="contacts__container container">
           <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
           <a href="#" class="contacts__link button button--border">Проложить маршрут</a>
         </div>
@@ -395,7 +419,7 @@
           </a>
         </div>
         <!-- Socials end  -->
-        <div class="page-footer__wrapepr">
+        <div class="page-footer__wrapper">
           <p class="page-footer__text">Разработано</p>
           <a class="page-footer__link" href="https://htmlacademy.ru/">
             <span class="visually-hidden">html academy</span>

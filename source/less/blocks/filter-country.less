@@ -1,6 +1,27 @@
-.filter-country__wrapper {
+.filter-country {
+  margin: -30px 0 0 0;
+  padding: 50px 0 15px 0;
   background-color: #e2e5f2;
+  border-radius: 0 0 30px 30px;
+}
+
+.filter-country__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.filter-country__wrapper {
+  padding-bottom: 15px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .filter-country__link {
@@ -11,12 +32,72 @@
   color: #192144;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    order: 0;
+  }
 }
 
 .filter-counrty__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    order: 1;
+  }
+}
+
+.filter-country__button {
+  display: block;
+  background-color: transparent;
+  background-image: url("../img/filter_expand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 17px;
+  height: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+.filter-country__alphabet {
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+}
+
+.filter-country__country-letter {
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
+}
+
+.filter-country__button-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #192144;
+    text-transform: uppercase;
+  }
 }
 
 .filter-country__link-part-world {
@@ -27,6 +108,11 @@
   color: rgba(25, 33, 68, 0.3);
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .filter-country__link-part-world--current {
@@ -48,4 +134,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+  }
 }

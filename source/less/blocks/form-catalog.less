@@ -19,6 +19,10 @@
 
 .form-catalog__interests-group {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .form-catalog__link-dropdown {
@@ -37,6 +41,16 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form-catalog__range {
+  width: 100%;
 }
 
 .form-catalog__interests-item {
@@ -48,11 +62,21 @@
   display: block;
 }
 
+.range__wrapper-inputs {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
 .form-catalog__input-text {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+}
+
+.form-catalog__label {
+  display: flex;
 }
 
 .form-catalog__control-mark {

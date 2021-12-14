@@ -279,14 +279,21 @@
                       <label class="form-catalog__label">
                         <input type="checkbox" class="visually-hidden" name="hobby" value="hobby1">
                         <span class="form-catalog__control-mark"></span>
-                        <span class="form-catalog__input-text">Хобби 1</span>
+                        <span class="form-catalog__input-text">Спортзал</span>
                       </label>
                     </li>
                     <li class="form-catalog__interests-item">
                       <label class="form-catalog__label">
                         <input type="checkbox" class="visually-hidden" name="hobby" value="hobby2">
                         <span class="form-catalog__control-mark"></span>
-                        <span class="form-catalog__input-text">Хобби 2</span>
+                        <span class="form-catalog__input-text">Кальян</span>
+                      </label>
+                    </li>
+                    <li class="form-catalog__interests-item">
+                      <label class="form-catalog__label">
+                        <input type="checkbox" class="visually-hidden" name="hobby" value="hobby3">
+                        <span class="form-catalog__control-mark"></span>
+                        <span class="form-catalog__input-text">Диван</span>
                       </label>
                     </li>
                   </ul>
@@ -296,7 +303,7 @@
                 <fieldset class="form-catalog__interests-group">
                   <legend class="visually-hidden">Музыка</legend>
                   <a href="#" class="form-catalog__link-dropdown form-catalog__link-dropdown--open">Музыка</a>
-                  <ul class="form-catalog__interests-list form-catalog__interests-list--open">
+                  <ul class="form-catalog__interests-list"> <!--form-catalog__interests-list--open для моб версии открытия-->
                     <li class="form-catalog__interests-item">
                       <label class="form-catalog__label">
                         <input type="checkbox" class="visually-hidden" name="music" value="heavy" checked>
@@ -330,14 +337,21 @@
                       <label class="form-catalog__label">
                         <input type="checkbox" class="visually-hidden" name="music" value="eat1">
                         <span class="form-catalog__control-mark"></span>
-                        <span class="form-catalog__input-text">Еда 1</span>
+                        <span class="form-catalog__input-text">Мясоед</span>
                       </label>
                     </li>
                     <li class="form-catalog__interests-item">
                       <label class="form-catalog__label">
                         <input type="checkbox" class="visually-hidden" name="music" value="eat2">
                         <span class="form-catalog__control-mark"></span>
-                        <span class="form-catalog__input-text">Еда 2</span>
+                        <span class="form-catalog__input-text">Сидит на ПП</span>
+                      </label>
+                    </li>
+                    <li class="form-catalog__interests-item">
+                      <label class="form-catalog__label">
+                        <input type="checkbox" class="visually-hidden" name="music" value="eat3">
+                        <span class="form-catalog__control-mark"></span>
+                        <span class="form-catalog__input-text">Веган-сыроед</span>
                       </label>
                     </li>
                   </ul>
@@ -347,7 +361,7 @@
                 <fieldset class="form-catalog__interests-group">
                   <legend class="visually-hidden">Транспорт</legend>
                   <a href="#" class="form-catalog__link-dropdown form-catalog__link-dropdown--open">Транспорт</a>
-                  <ul class="form-catalog__interests-list form-catalog__interests-list--open">
+                  <ul class="form-catalog__interests-list"> <!--form-catalog__interests-list--open для открытия в моб версии-->
                     <li class="form-catalog__interests-item">
                       <label class="form-catalog__label">
                         <input type="checkbox" class="form-catalog__input-transport visually-hidden" name="transport" value="airplane" checked>
@@ -382,8 +396,8 @@
               <li class="form-catalog__item">
                 <fieldset class="form-catalog__interests-group">
                   <legend class="visually-hidden">Левел</legend>
-                  <a href="#" class="form-catalog__link-dropdown form-catalog__link-dropdown--open">Левел</a>
-                  <div class="form-catalog__range form-catalog__range--open range">
+                  <a href="#" class="form-catalog__link-dropdown">Левел</a> <!--form-catalog__link-dropdown--open для открытия в моб версии-->
+                  <div class="form-catalog__range range"> <!--form-catalog__range--open для открытия в моб версии-->
                     <div class="range__wrapper-inputs">
                       <label class="range__label">
                         <input class="range__input" type="number" value="30" name="min-price">
@@ -394,10 +408,10 @@
                     </div>
                     <div class="range__scale">
                       <div class="range__bar">
-                        <button class="range__toggle toggle-min">
+                        <button class="range__toggle range__toggle-min">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range__toggle toggle-max">
+                        <button class="range__toggle range__toggle-max">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>

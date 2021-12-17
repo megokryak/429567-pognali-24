@@ -1,6 +1,9 @@
 .form-catalog__filter-group {
+  margin: 21px 0 0 0;
+  padding-bottom: 20px;
   background-color: #ffd74b;
   border: none;
+  border-radius: 30px;
 }
 
 .fotm-catalog__title {
@@ -35,7 +38,21 @@
   text-decoration: none;
 }
 
-.form-catalog__interests-list,
+.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-music,
+.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-hobby,
+.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-eat {
+  display: block;
+}
+
+.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-transport,
+.form-catalog__link-dropdown--open + div.form-catalog__range {
+  display: flex;
+}
+
+.form-catalog__interests-list-music,
+.form-catalog__interests-list-hobby,
+.form-catalog__interests-list-eat,
+.form-catalog__interests-list-transport,
 .form-catalog__range {
   display: none;
   margin: 0;
@@ -47,6 +64,10 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.form-catalog__interests-list-transport .form-catalog__interests-item:not(:last-child) {
+  margin-right: 2px;
 }
 
 .form-catalog__range {
@@ -144,7 +165,7 @@ input[type="checkbox"]:checked + .form-catalog__control-mark {
 .form-catalog__submit {
   display: block;
   width: 100%;
-  margin: 0;
+  margin: 25px 0 0 0;
   padding: 14px;
   font-weight: 700;
   font-size: 17px;

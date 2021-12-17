@@ -1,5 +1,5 @@
 .main__wrapper-title {
-  background-color: #182044;
+  background-color: #161c36;
   color: #ffffff;
   border-radius: 0 0 30px 30px;
   position: relative;
@@ -30,21 +30,36 @@
 
 .main__wrapper-buttons {
   display: flex;
+  background-color: #ffffff;
+  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px;
+  }
 }
 
 .main__pagintion-bottons {
   display: block;
   width: 135px;
-  height: 51px;
+  height: 50px;
   border: none;
   outline: none;
   background-color: #ffffff;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 10px;
+  }
 }
 
 .main__pagintion-bottons--prev {
   border-radius: 20px 0 0 20px;
   border-right: 1px solid #edeff6;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: 27px;
+  }
 }
 
 .main__pagintion-bottons--prev::before {
@@ -76,4 +91,44 @@
 
 .main__pagintion-bottons--next {
   border-radius: 0 20px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
+  }
+}
+
+.main__catalog-wrapper {
+  padding-bottom: 46px;
+}
+
+.main__pagination-catalog-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main__pagination-catalog-items {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.main__pagination-catalog-link {
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b;
+  text-decoration: none;
+}
+
+.main__pagination-catalog-items--active {
+  background-color: #ffd74b;
 }

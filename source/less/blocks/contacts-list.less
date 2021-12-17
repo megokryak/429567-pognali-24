@@ -1,9 +1,12 @@
 .contacts-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   color: #192144;
 
   @media (min-width: @desktop-width) {
     display: none;
+    margin-left: auto;
   }
 }
 
@@ -33,4 +36,8 @@
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

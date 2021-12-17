@@ -4,3 +4,22 @@
   padding: 0;
   list-style-type: none;
 }
+
+.transport__control-makr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.transport__control-svg {
+  fill: #1d2e5b;
+}
+
+.transport__input:checked + .transport__control-makr svg.transport__control-svg {
+  fill: #101d41;
+}

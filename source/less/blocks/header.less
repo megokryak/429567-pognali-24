@@ -1,5 +1,5 @@
 .header {
-  background-color: #182044;
+  background-color: rgb(22, 28, 54);
   margin: 0;
   box-sizing: border-box;
   display: flex;
@@ -11,16 +11,57 @@
   }
 }
 
+.header--change-color {
+  display: none;
+  background-color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .header--activ-menu {
   background-color: #ffffff;
 }
 
-.header__item-logo-link svg {
+.header__item-logo-link {
+  margin: 19px 0 0 0;
+}
+
+.header__item-logo-link-mobile {
+  fill: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__item-logo-link-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.header__item-logo-link-tablet g {
   fill: #ffffff;
 }
 
-.header__item-logo-link--activ svg {
+.header--activ-menu .header__item-logo-link-mobile {
   fill: #192144;
+}
+
+.header--activ-menu .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
+  fill: #192144;
+}
+
+.header--change-color .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
+  fill: #192144;
+}
+
+.header__item__navigation {
+  margin: 23px 0 0 0;
 }
 
 .header__link-auth {
@@ -43,4 +84,51 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.header--activ-menu .main-nav__wrapper-open-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 61px;
+  }
+}
+
+.header--activ-menu .main-nav__toggle {
+  display: none;
+}
+
+.header--activ-menu .main-nav__close-menu {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+  }
+}
+
+.header--activ-menu .main-nav__link--auth {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -52px;
+    right: 25px;
+  }
+}
+
+header.header--activ-menu .main-nav__list,
+header.header--activ-menu .main-nav__contacts-list {
+  display: block;
+}
+
+header.header--activ-menu .main-nav__socials-menu {
+  display: flex;
 }

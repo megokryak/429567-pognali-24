@@ -31,6 +31,8 @@
 }
 
 .arrival__descriptions {
+  margin: 16px 0 0 0;
+  padding: 0;
   color: #444444;
 
   @media (min-width: @tablet-width) {
@@ -45,6 +47,9 @@
 
 .arrival__label-companion,
 .arrival__label-duration {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -65,6 +70,8 @@
 }
 
 .arrival__label-box {
+  margin: 28px 0 0 0;
+
   @media (min-width: @tablet-width) {
     order: 4;
   }
@@ -89,7 +96,7 @@
 .arrival__input {
   display: block;
   width: 100%;
-  margin: 0;
+  margin: 8px 0 0 0;
   padding: 15px 30px;
   background-color: transparent;
   font-weight: 500;
@@ -110,7 +117,8 @@
   margin: 0;
 }
 
-.arrival__unti {
+.arrival__unit {
+  margin-left: auto;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
@@ -148,6 +156,8 @@
 }
 
 .arrival__calendar {
+  margin: 27px 0 0 0;
+
   @media (min-width: @tablet-width) {
     order: 6;
   }
@@ -159,6 +169,7 @@
 }
 
 .arrival__next-step {
+  margin: 22px 0 0 0;
   display: block;
   font-weight: 700;
   font-size: 17px;
@@ -173,6 +184,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin-top: 41px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 29px;
+    width: 284px;
     order: 7;
   }
 

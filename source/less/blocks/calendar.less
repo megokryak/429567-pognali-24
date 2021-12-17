@@ -1,6 +1,9 @@
 .clanedar__month {
   display: flex;
   justify-content: space-between;
+  padding: 12px;
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
 }
 
 .calendar__prev,
@@ -20,6 +23,10 @@
   transform: rotate(180deg);
 }
 
+.calendar__days {
+  margin: 22px 0 0 0;
+}
+
 .calendar__month-today {
   font-weight: 700;
   font-size: 20px;
@@ -32,11 +39,41 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(7, 31px);
-  grid-template-rows: repeat(6, 31px);
+  grid-template-columns: repeat(7, 32px);
+  grid-template-rows: repeat(6, 32px);
   align-items: center;
   justify-content: center;
   justify-items: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(7, 71px);
+    grid-template-rows: repeat(6, 71px);
+  }
+}
+
+.calendar__item {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: @tablet-width) {
+    width: 71px;
+    height: 71px;
+  }
+}
+
+.calendar__item:nth-child(7n) {
+  border-right: 1px solid #d6d9e6;
+}
+
+.calendar__item:nth-child(-n+7) {
+  border-left: none;
+  border-right: none;
 }
 
 .calendar__date {
@@ -46,4 +83,50 @@
   outline: none;
   text-align: center;
   box-sizing: border-box;
+  color: #444444;
+}
+
+.calendar__date--day-off {
+  color: #ff5c23;
+}
+
+.calendar__date--past {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.calendar__date--current {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #1d2e5b;
+  align-self: stretch;
+  flex-basis: 100%;
+}
+
+.calendar__item--selected {
+  border: 2px solid #ff5c23;
+}
+
+.calendar__item--selected + .calendar__item {
+  border-left: 1px solid #ff5c23;
+}
+
+.calendar__date--future {
+  align-self: stretch;
+  flex-basis: 100%;
+  font-weight: 500;
+  color: #1d2e5b;
+  background-color: #edeff6;
+}
+
+.calendar__item--future {
+  border-left: 1px solid #cbced9;
+  border-top: 1px solid #cbced9;
+}
+
+.calendar__item:nth-child(7n).calendar__item--future {
+  border-right: 1px solid #cbced9;
+}
+
+.calendar__item--future:nth-last-child(-n+7) {
+  border-bottom: 1px solid #cbced9;
 }

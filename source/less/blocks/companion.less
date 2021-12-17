@@ -5,6 +5,15 @@
   background-image: url("../img/back-companions.png");
   background-repeat: no-repeat;
   color: #ffffff;
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 134px;
+  }
 }
 
 .companion__container {
@@ -21,9 +30,21 @@
   font-size: 24px;
   line-height: 24px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .companion__description {
+  @media (min-width: @tablet-width) {
+    width: 427px;
+    font-size: 28px;
+    line-height: 34px;
+    padding-left: 25px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
   }
@@ -32,16 +53,37 @@
 .companion__text {
   font-weight: 700;
 
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+    padding-left: 25px;
+    width: 260px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
+  }
+}
+
+.companion__list {
+  margin-top: 54px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 59px;
   }
 }
 
 .companion__button {
   margin-top: 20px;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 81px;
+    margin-left: 25px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
     grid-row: 5/6;
+    width: 280px;
   }
 }

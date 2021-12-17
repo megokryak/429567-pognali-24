@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: center;
   justify-items: center;
+
+  @media (min-width: @desktop-width) {
+    width: 1320px;
+    grid-template-columns: repeat(5, 252px);
+  }
 }
 
 .alphabet__item {
@@ -22,6 +27,10 @@
   width: 100%;
   align-self: stretch;
   color: #1d2e5b;
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .alphabet__item:nth-child(5n) {
@@ -35,6 +44,10 @@
 .alphabet__item--current {
   background-color: #1d2e5b;
   color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .alphabet__link {
@@ -44,6 +57,13 @@
   line-height: 20px;
   color: inherit;
   text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    color: #192144;
+  }
 }
 
 ul.alphabet__country-letter {

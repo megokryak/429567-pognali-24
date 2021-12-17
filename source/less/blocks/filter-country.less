@@ -22,6 +22,10 @@
   @media (min-width: @tablet-width) {
     order: 2;
   }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
 }
 
 .filter-country__item {
@@ -77,6 +81,10 @@
     width: auto;
     height: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .filter-country__alphabet {
@@ -100,11 +108,28 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    padding: 0 50px 0 0;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     color: #192144;
     text-transform: uppercase;
+    position: relative;
+  }
+}
+
+.filter-country__button-text::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30px;
+    height: 6px;
+    background-image: url("../img/point.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -3px 0 0 0;
   }
 }
 

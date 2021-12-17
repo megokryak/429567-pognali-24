@@ -4,6 +4,11 @@
   border-radius: 0 0 30px 30px;
   position: relative;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .main__title {
@@ -13,6 +18,36 @@
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
+}
+
+.main__link-return {
+  display: none;
+  margin: 70px 20px 0 0;
+  padding: 0 60px 0 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main__link-return::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 32px;
+  height: 16px;
+  background-image: url("../img/icon_arrow_bend.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -16px 0 0 0;
 }
 
 .main__button-more {

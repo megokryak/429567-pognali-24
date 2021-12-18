@@ -26,6 +26,10 @@
   @media (min-width: @tablet-width) {
     display: flex;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .form-catalog__link-dropdown {
@@ -64,6 +68,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .form-catalog__interests-list-transport .form-catalog__interests-item:not(:last-child) {
@@ -81,12 +89,6 @@
 .form-catalog__interests-list--open,
 .form-catalog__range--open {
   display: block;
-}
-
-.range__wrapper-inputs {
-  @media (min-width: @tablet-width) {
-    order: 2;
-  }
 }
 
 .form-catalog__input-text {

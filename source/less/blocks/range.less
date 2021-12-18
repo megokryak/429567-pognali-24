@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin: 16px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .range__input {
@@ -51,6 +55,17 @@
   }
 }
 
+
+.range__wrapper-inputs {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+
 .range__label {
   @media (min-width: @tablet-width) {
     width: 74px;
@@ -63,6 +78,10 @@
   height: 2px;
   background-color: rgba(29, 46, 91, 0.2);
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
 }
 
 .range__bar {

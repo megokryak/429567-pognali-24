@@ -16,6 +16,12 @@
     grid-template-columns: 500px 128px;
     grid-template-rows: 120px 70px 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 500px 128px 100px;
+    grid-template-rows: 120px 70px;
+  }
 }
 
 .companion-catalog__profile {
@@ -150,6 +156,11 @@
     grid-column: 1/-1;
     grid-row: -1/-2;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
 }
 
 .companion-catalog__transport,
@@ -159,6 +170,11 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
 }
 
@@ -186,6 +202,10 @@
   background-color: #ffffff;
   position: relative;
   z-index: 1;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .companion-catalog__text-decoration {
@@ -210,6 +230,10 @@
 
 .companion-catalog__transport {
   flex-grow: 1;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+  }
 }
 
 .companion-catalog__country-list,
@@ -225,6 +249,10 @@
     margin-top: 0;
     display: flex;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .companion-catalog__transport-list {
@@ -232,6 +260,10 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
   }
 }
 

@@ -51,21 +51,32 @@
   position: absolute;
   top: 19px;
   left: 19px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 4px solid #ff8d30;
-  border-radius: 50%;
   box-sizing: border-box;
 }
 
+.user-card__circle {
+  transform: rotate(-90deg);
+  stroke: #ff8d30;
+  fill: #000000;
+  fill-opacity: 0.7;
+}
+
+.user-card svg {
+  width: 60px;
+  height: 60px;
+}
+
 .user-card__mark b {
-  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
   width: 30px;
   margin: 5px auto 0 auto;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  position: relative;
 }
 
 .user-card__mark b::after {
@@ -79,9 +90,11 @@
 }
 
 .user-card__mark span {
-  display: block;
-  width: 100%;
-  text-align: center;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;

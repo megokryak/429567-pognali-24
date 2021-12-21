@@ -324,18 +324,39 @@
 }
 
 .companion-catalog__mark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 45px;
   height: 45px;
-  border: 3px solid #ff8d30;
   box-sizing: border-box;
-  border-radius: 50%;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: #1d2e5b;
+  position: relative;
+}
+
+.companion-catalog__mark b {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  margin: 5px auto 0 auto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.companion-catalog__circle {
+  transform: rotate(-90deg);
+  stroke: #ff8d30;
+  fill: transparent;
+}
+
+.companion-catalog svg {
+  width: 45px;
+  height: 45px;
 }
 
 .companion-catalog__button-call {

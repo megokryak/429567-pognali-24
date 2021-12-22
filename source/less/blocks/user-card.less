@@ -1,5 +1,4 @@
 .user-card {
-  margin: 0;
   padding: 0;
   list-style-type: none;
 
@@ -52,19 +51,50 @@
   position: absolute;
   top: 19px;
   left: 19px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 4px solid #ff8d30;
-  border-radius: 50%;
   box-sizing: border-box;
 }
 
+.user-card__circle {
+  transform: rotate(-90deg);
+  stroke: #ff8d30;
+  fill: #000000;
+  fill-opacity: 0.7;
+}
+
+.user-card svg {
+  width: 60px;
+  height: 60px;
+}
+
 .user-card__mark b {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  margin: 5px auto 0 auto;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
+}
+
+.user-card__mark b::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .user-card__mark span {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -72,6 +102,7 @@
 
 .user-card__counries {
   display: flex;
+  flex-wrap: wrap;
   margin-top: -12px;
 }
 
@@ -115,10 +146,16 @@
   justify-content: center;
 }
 
-.user-card__icons img:not(:last-child) {
-  margin-right: 15px;
+.user-card__icon {
+  fill: #1d2e5b;
+  opacity: 0.15;
 }
 
-.user-card__icons img {
-  display: block;
+.user-card__icon--active {
+  fill: #101d41;
+  opacity: 1;
+}
+
+.user-card__icon:not(:last-child) {
+  margin-right: 15px;
 }

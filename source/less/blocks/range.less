@@ -1,3 +1,13 @@
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
 .range__input {
   display: block;
   width: 100%;
@@ -12,12 +22,87 @@
   outline: none;
   border: 1px solid #cbced9;
   box-sizing: border-box;
-  border-radius: 4px;
   appearance: textfield;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 10px;
+  }
+}
+
+.range__label:first-child .range__input {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.range__label:last-child .range__input {
+  border-radius: 0 4px 4px 0;
 }
 
 .range__input::-webkit-outer-spin-button,
 .range__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range__wrapper-inputs {
+  flex-grow: 1;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+
+.range__label {
+  @media (min-width: @tablet-width) {
+    width: 74px;
+  }
+}
+
+.range__scale {
+  margin: 20px 0 0 0;
+  width: 193px;
+  height: 2px;
+  background-color: rgba(29, 46, 91, 0.2);
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.range__bar {
+  height: 2px;
+  background-color: rgba(29, 46, 91, 1);
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 0;
+}
+
+.range__toggle {
+  width: 10px;
+  height: 10px;
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin: -5px 0 0 0;
+}
+
+.range__toggle-min {
+  left: -5px;
+}
+
+.range__toggle-max {
+  right: -5px;
 }

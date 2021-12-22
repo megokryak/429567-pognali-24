@@ -45,7 +45,38 @@
   margin-top: 32px;
 }
 
-.contacts__map {
-  display: block;
+.contacts__map,
+.contacts__map--tablet,
+.contacts__map--desktop {
+  margin: 0 auto;
   margin-top: -30px;
 }
+
+.contacts__map {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.contacts__map--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.contacts__map--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+

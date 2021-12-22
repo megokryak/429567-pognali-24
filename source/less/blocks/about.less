@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 30px 30px;
+  padding-bottom: 82px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 89px;
+  }
 }
 
 .about__title {
@@ -29,6 +34,7 @@
     max-width: 310px;
     font-size: 28px;
     line-height: 33px;
+    margin-top: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,11 +52,16 @@
     max-width: 310px;
     font-size: 21px;
     line-height: 25px;
+    margin-top: 31px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 620px;
   }
+}
+
+.about-link {
+  margin-top: 52px;
 }
 
 .about-link--active {

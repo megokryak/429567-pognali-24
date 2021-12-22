@@ -3,7 +3,7 @@
   padding: 0 0 38px 0;
   border-radius: 0 0 30px 30px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .profile__content {
@@ -17,6 +17,15 @@
   color: #ff8d30;
   margin: 53px 0 0 0;
   padding: 0 100px 0 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 
 .profile__list {
@@ -43,6 +52,11 @@
 .profile__price {
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .profile__link {
@@ -53,4 +67,9 @@
   line-height: 16px;
   text-decoration: none;
   color: #132576;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

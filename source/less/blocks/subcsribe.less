@@ -11,7 +11,7 @@
 
 .subscribe__input {
   display: block;
-  width: 100%;
+  width: 220px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -21,6 +21,10 @@
   border: 1px solid transparent;
   border-radius: 10px 0 0 10px;
   outline: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .subscribe__input::placeholder {
@@ -40,17 +44,20 @@
 }
 
 .subcsribe button {
-  width: 330px;
+  display: block;
+  width: 60px;
   background-color: #ffd74b;
   outline: none;
   border: 1px solid transparent;
   border-radius: 10px;
+  box-sizing: border-box;
   margin-left: -15px;
   position: relative;
   cursor: pointer;
 
   @media (min-width: @desktop-width) {
     border-radius: 0 10px 10px 0;
+    width: 330px;
   }
 }
 
@@ -63,7 +70,7 @@
   left: 50%;
   background-image: url("../img/polygon.svg");
   background-repeat: no-repeat;
-  margin: -7px 0 0 -7px;
+  margin: -6px 0 0 -6px;
 
   @media (min-width: @desktop-width) {
     left: auto;

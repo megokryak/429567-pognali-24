@@ -52,6 +52,8 @@
 }
 
 .calendar__item {
+  color: #1d2e5b;
+  background-color: #edeff6;
   width: 32px;
   height: 32px;
   box-sizing: border-box;
@@ -74,6 +76,7 @@
 .calendar__item:nth-child(-n+7) {
   border-left: none;
   border-right: none;
+  background-color: #ffffff;
 }
 
 .calendar__date {
@@ -83,50 +86,22 @@
   outline: none;
   text-align: center;
   box-sizing: border-box;
-  color: #444444;
+  color: inherit;
 }
 
 .calendar__date--day-off {
   color: #ff5c23;
 }
 
-.calendar__date--past {
+.calendar__item--disabled {
   color: rgba(68, 68, 68, 0.3);
+  background-color: #ffffff;
 }
 
-.calendar__date--current {
+.calendar__item--selected {
   font-weight: 500;
   color: #ffffff;
   background-color: #1d2e5b;
   align-self: stretch;
   flex-basis: 100%;
-}
-
-.calendar__item--selected {
-  border: 2px solid #ff5c23;
-}
-
-.calendar__item--selected + .calendar__item {
-  border-left: 1px solid #ff5c23;
-}
-
-.calendar__date--future {
-  align-self: stretch;
-  flex-basis: 100%;
-  font-weight: 500;
-  color: #1d2e5b;
-  background-color: #edeff6;
-}
-
-.calendar__item--future {
-  border-left: 1px solid #cbced9;
-  border-top: 1px solid #cbced9;
-}
-
-.calendar__item:nth-child(7n).calendar__item--future {
-  border-right: 1px solid #cbced9;
-}
-
-.calendar__item--future:nth-last-child(-n+7) {
-  border-bottom: 1px solid #cbced9;
 }

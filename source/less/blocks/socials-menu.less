@@ -1,11 +1,24 @@
 .socials-menu {
-  margin: 0;
+  margin: 41px 0 0 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 140px;
+  }
 }
 
 .socials-menu__link {
   display: block;
   fill: #192144;
+}
+
+.socials-menu__item:not(:last-child) {
+  margin: 0 26px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 37px;
+  }
 }

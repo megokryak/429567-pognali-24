@@ -1,5 +1,13 @@
 .header {
   background-color: rgb(22, 28, 54);
+
+  @media (min-width: @tablet-width) {
+    background-color: #182044;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgb(22, 28, 54);
+  }
 }
 
 .header__container {
@@ -8,9 +16,20 @@
   justify-content: space-between;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 75px;
+  }
+
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
+    align-items: center;
+    padding-top: 46px;
   }
+}
+
+.header--nojs .header__container {
+  flex-wrap: wrap;
 }
 
 .header--change-color {
@@ -19,15 +38,24 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 1;
   }
 }
 
-.header--activ-menu {
+.header--active-menu,
+.header--nojs {
   background-color: #ffffff;
 }
 
 .header__item-logo-link {
   margin: 19px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .header__item-logo-link-mobile {
@@ -50,11 +78,13 @@
   fill: #ffffff;
 }
 
-.header--activ-menu .header__item-logo-link-mobile {
+.header--active-menu .header__item-logo-link-mobile,
+.header--nojs .header__item-logo-link-mobile {
   fill: #192144;
 }
 
-.header--activ-menu .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
+.header--active-menu .header__item-logo-link-tablet g,
+.header--nojs .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
   fill: #192144;
 }
 
@@ -64,6 +94,10 @@
 
 .header__item__navigation {
   margin: 23px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .header__link-auth {
@@ -88,7 +122,8 @@
   }
 }
 
-.header--activ-menu .main-nav__wrapper-open-menu {
+.header--active-menu .main-nav__wrapper-open-menu,
+.header--nojs .main-nav__wrapper-open-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,40 +132,52 @@
   top: 41px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
-    top: 61px;
+    top: 157px;
+    align-items: flex-start;
+    padding-left: 97px;
+    padding-bottom: 90px;
+    width: calc(100% - 97px);
   }
 }
 
-.header--activ-menu .main-nav__toggle {
+.header--nojs .main-nav__wrapper-open-menu {
+  position: static;
+}
+
+.header--active-menu .main-nav__toggle {
   display: none;
 }
 
-.header--activ-menu .main-nav__close-menu {
+.header--active-menu .main-nav__close-menu {
   display: block;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 23px;
+    top: 50px;
     left: 50%;
   }
 }
 
-.header--activ-menu .main-nav__link--auth {
+.header--nojs .main-nav__close-menu {
+  display: none;
+}
+
+.header--active-menu .main-nav__link--auth {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: -52px;
+    top: -120px;
     right: 25px;
   }
 }
 
-header.header--activ-menu .main-nav__list,
-header.header--activ-menu .main-nav__contacts-list {
+header.header--active-menu .main-nav__list,
+header.header--active-menu .main-nav__contacts-list {
   display: block;
 }
 
-header.header--activ-menu .main-nav__socials-menu {
+header.header--active-menu .main-nav__socials-menu {
   display: flex;
 }

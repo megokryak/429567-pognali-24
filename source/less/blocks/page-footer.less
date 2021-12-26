@@ -10,6 +10,19 @@
   line-height: 16px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.page-footer__socials {
+  margin: 40px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__link svg {
@@ -18,10 +31,16 @@
 
 .page-footer__wrapper {
   width: 100%;
+  margin: 13px 0 0 0;
+  padding: 13px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f2f2f2;
 
   @media (min-width: @tablet-width) {
     max-width: 155px;
+    margin: 0;
+    border-top: none;
   }
 }

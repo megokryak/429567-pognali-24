@@ -4,15 +4,22 @@
   background-color: #192144;
   background-image: url("../img/back-companions.png");
   background-repeat: no-repeat;
+  background-position: center 70px;
   color: #ffffff;
   border-radius: 0 0 30px 30px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 87px;
+    background-image: url("../img/companion_back_tablet.png");
+    background-position: center 185px;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 134px;
+    background-image: url("../img/companion_back_desktop.png");
+    background-position: 150px 185px;
   }
 }
 
@@ -32,17 +39,44 @@
   color: #ff8d30;
 
   @media (min-width: @tablet-width) {
+    margin-top: 141px;
     font-size: 45px;
     line-height: 45px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.companion__title::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 212px;
+    height: 212px;
+    border-radius: 20px;
+    background-color: #141b3b;
+    z-index: -1;
   }
 }
 
 .companion__description {
+  margin: 19px 0 0 0;
+  padding: 0 25px;
+
   @media (min-width: @tablet-width) {
+    margin-top: 55px;
     width: 427px;
     font-size: 28px;
     line-height: 34px;
     padding-left: 25px;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,12 +86,15 @@
 
 .companion__text {
   font-weight: 700;
+  padding: 0 25px;
+  margin: 25px 0 0 0;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 24px;
     padding-left: 25px;
     width: 260px;
+    margin-top: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,6 +107,10 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 

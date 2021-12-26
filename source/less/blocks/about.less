@@ -2,12 +2,22 @@
   background-color: #192144;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   border-radius: 0 0 30px 30px;
   padding-bottom: 82px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 89px;
+    background-image: url("../img/img_tablet.png");
+    background-position: 40px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/img_back_desktop.png");
+    background-position: top 40px right 0;
+    padding-bottom: 163px;
+    position: relative;
+    z-index: 0;
   }
 }
 
@@ -22,6 +32,26 @@
   @media (min-width: @tablet-width) {
     font-size: 45px;
     line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.about__title::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    width: 212px;
+    height: 212px;
+    border-radius: 20px;
+    background-color: #141b3b;
+    z-index: -1;
   }
 }
 
@@ -39,6 +69,9 @@
 
   @media (min-width: @desktop-width) {
     max-width: 620px;
+    margin-top: 51px;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -57,11 +90,16 @@
 
   @media (min-width: @desktop-width) {
     max-width: 620px;
+    margin-top: 38px;
   }
 }
 
 .about-link {
   margin-top: 52px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 85px;
+  }
 }
 
 .about-link--active {

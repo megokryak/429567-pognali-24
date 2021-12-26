@@ -6,10 +6,27 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
-.info__logo-link svg {
+.info__logo-svg {
+  fill: #192144;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.info__logo-link-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.info__logo-link-tablet g {
   fill: #192144;
 }
 

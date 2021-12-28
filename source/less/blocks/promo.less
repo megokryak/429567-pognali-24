@@ -1,5 +1,5 @@
 .promo {
-  background-color: #192144;
+  background-color: #161c36;
   background-image: url("../img/globe-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center top;
@@ -9,6 +9,7 @@
   padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
+    background-color: #192144;
     padding-top: 0;
     padding-bottom: 96px;
     background-image: url("../img/globe_back_tablet.jpg");
@@ -25,12 +26,18 @@
   }
 }
 
-.promo_container {
+.promo__container {
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
+    width: auto;
+  }
+}
+
+.promo__container--author {
+  @media (min-width: @desktop-width) {
     width: 550px;
   }
 }
@@ -100,22 +107,6 @@
   }
 }
 
-.promo_wrapper_author {
-  margin: 0;
-  padding: 0 25px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 68px;
-    width: 300px;
-    padding: 0 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 345px;
-    margin: 0;
-  }
-}
-
 .promo__text,
 .promo__author {
   margin: 0;
@@ -139,5 +130,17 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 25px;
+  }
+}
+
+.promo_list {
+  margin: 29px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 177px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 100px;
   }
 }

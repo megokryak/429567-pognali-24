@@ -1,23 +1,63 @@
 .about {
   background-color: #192144;
-  background-image: url("../img/about-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center top;
   border-radius: 0 0 30px 30px;
-  padding-bottom: 82px;
+  padding: 0 0 82px 0;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+    padding-bottom: 163px;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 113px;
+  height: 132px;
+  border-radius: 0;
+  background-color: #141b3b;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    left: 50%;
+    border-radius: 20px;
+    margin-left: -344px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 212px;
+    height: 212px;
+    margin-left: -700px;
+    top: -30px;
+  }
+}
+
+.about__container {
+  padding-top: 33px;
+  background-image: url("../img/about-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/img_tablet.png");
-    background-position: 40px 0;
+    background-position: right 40px top 0;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/img_back_desktop.png");
     background-position: top 40px right 0;
-    padding-bottom: 163px;
-    position: relative;
-    z-index: 0;
   }
 }
 
@@ -27,31 +67,13 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding: 33px 25px 0 25px;
+  padding: 0 25px;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
     line-height: 45px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 41px;
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.about__title::before {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: -10px;
-    width: 212px;
-    height: 212px;
-    border-radius: 20px;
-    background-color: #141b3b;
-    z-index: -1;
   }
 }
 
@@ -59,6 +81,8 @@
   color: #ffffff;
   padding: 0 25px;
   margin: 19px 0 0 0;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     max-width: 310px;
@@ -70,8 +94,6 @@
   @media (min-width: @desktop-width) {
     max-width: 620px;
     margin-top: 51px;
-    position: relative;
-    z-index: 1;
   }
 }
 

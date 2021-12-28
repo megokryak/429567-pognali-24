@@ -56,6 +56,7 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1d2e5b;
+  position: relative;
 }
 
 .arrival__label-companion {
@@ -115,6 +116,29 @@
 .arrival__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.arrival__button {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.arrival__button--minus {
+  background-image: url("../img/minus.png");
+  left: 14px;
+}
+
+.arrival__button--plus {
+  background-image: url("../img/plus.png");
+  right: 14px;
 }
 
 .arrival__unit {

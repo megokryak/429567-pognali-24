@@ -28,6 +28,7 @@
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -65,7 +66,7 @@
 
 .country__slogan {
   margin: 2px 0 0 0;
-  flex-grow: 1;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     margin-top: 5px;
@@ -75,11 +76,16 @@
 .country__users {
   padding: 0 0 0 29px;
   position: relative;
+  margin-left: auto;
 
   @media (min-width: @tablet-width) {
     order: 3;
     padding-left: 32px;
     margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 

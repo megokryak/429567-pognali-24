@@ -1,11 +1,9 @@
 .sequence {
-  padding: 0 25px;
-  margin: 29px 0 0 0;
+  padding: 0;
   list-style-type: none;
   flex-grow: 1;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
     display: grid;
     grid-template-columns: 365px 355px;
     margin-top: 177px;
@@ -15,7 +13,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 345px 315px 375px 315px;
+    grid-template-columns: 345px 325px 325px 325px;
     margin-top: 100px;
   }
 }
@@ -34,6 +32,10 @@
 .sequence__item:nth-child(2n) {
   @media (min-width: @tablet-width) {
     width: 355px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
   }
 }
 

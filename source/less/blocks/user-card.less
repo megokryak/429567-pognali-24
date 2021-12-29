@@ -117,7 +117,6 @@
 
 .user-card__counries img {
   display: block;
-  margin-right: 20px;
 }
 
 .user-card__wrapper-name {
@@ -160,6 +159,11 @@
   justify-content: center;
 }
 
+.user-card__wrapper-icon:not(:last-child) {
+  margin-right: 15px;
+  position: relative;
+}
+
 .user-card__icon {
   fill: #1d2e5b;
   opacity: 0.15;
@@ -170,6 +174,51 @@
   opacity: 1;
 }
 
-.user-card__icon:not(:last-child) {
-  margin-right: 15px;
+.user-card__icon-description {
+  display: none;
+}
+
+.user-card__wrapper-icon:hover,
+.user-card__wrapper-countries:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.user-card__wrapper-countries {
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.user-card__wrapper-icon:hover .user-card__icon-description,
+.user-card__wrapper-countries:hover .user-card__icon-description {
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 25px 25px 18px 25px;
+    margin: 20px 0 0 0;
+    background-color: #101d41;
+    border-radius: 4px;
+  }
+}
+
+.user-card__icon-description::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin: 0 0 0 -8px;
+  box-sizing: border-box;
+  background-image: url("../img/tooltype.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }

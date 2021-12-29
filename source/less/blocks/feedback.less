@@ -34,11 +34,11 @@
   padding: 0 25px;
   margin: 20px 0 0 0;
   color: #ffffff;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
-    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,6 +46,10 @@
     width: 655px;
     text-align: center;
   }
+}
+
+.feedback__description br:first-child {
+  display: none;
 }
 
 .feedback__subscribe {

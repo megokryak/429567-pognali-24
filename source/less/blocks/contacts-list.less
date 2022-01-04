@@ -60,7 +60,6 @@
   background-color: #121936;
   border-radius: 50%;
   margin: 0 16px 0 0;
-  fill: #ffd74b;
 
   @media (min-width: @tablet-width) {
     width: 68px;
@@ -74,8 +73,8 @@
   }
 }
 
-.contacts-list__item:first-child .contacts-list__icon--feedback,
-.contacts-list__item:last-child .contacts-list__icon--feedback {
+.contacts-list__item--feedback:first-child .contacts-list__icon--feedback,
+.contacts-list__item--feedback:last-child .contacts-list__icon--feedback {
   @media (min-width: @desktop-width) {
     width: 90px;
     height: 90px;
@@ -84,21 +83,15 @@
   }
 }
 
-.contacts-list__svg-mobile {
+.contacts-list__item:nth-child(1) .contacts-list__svg-mobile {
   display: block;
   width: 19px;
   height: 17px;
+  fill: #ffd74b;
 
   @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.contacts-list__svg-table {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
+    width: 27px;
+    height: 26px;
   }
 
   @media (min-width: @desktop-width) {
@@ -106,9 +99,19 @@
   }
 }
 
-.contacts-list__icon--feedback .contacts-list__svg-table {
+.contacts-list__item:nth-child(2) .contacts-list__svg-mobile {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: #ffd74b;
+
+  @media (min-width: @tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+
   @media (min-width: @desktop-width) {
-    display: block;
+    display: none;
   }
 }
 
@@ -117,7 +120,24 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    fill: #161c35;
+  }
+}
+
+.contacts-list__item--feedback:nth-child(1) .contacts-list__svg-mobile {
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 36px;
+    height: 34px;
+    fill: #ffd74b;
+  }
+}
+
+.contacts-list__item--feedback:nth-child(2) .contacts-list__svg-mobile {
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 47px;
+    height: 50px;
+    fill: #ffd74b;
   }
 }
 

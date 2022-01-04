@@ -43,11 +43,12 @@
 }
 
 .my-plans__subtitle {
-  padding: 0;
+  padding: 0 0 0 18px;
   margin: 0;
   font-size: 16px;
   line-height: 16px;
   color: #1d2e5b;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
@@ -58,7 +59,34 @@
 
   @media (min-width: @desktop-width) {
     width: auto;
+    padding-left: 52px;
   }
+}
+
+.my-plans__subtitle::before {
+  content: "1.";
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1d2e5b;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    left: auto;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
+}
+
+.my-plans__item:nth-child(2) .my-plans__subtitle::before {
+  content: "2.";
 }
 
 .my-plans__companions,
@@ -84,6 +112,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-right: 32px;
   }
 }
 
@@ -99,6 +128,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-right: 116px;
   }
 }
 

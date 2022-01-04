@@ -18,9 +18,8 @@
   justify-content: space-between;
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 190px 47px 27px 105px;
+    margin-top: -210px;
+    z-index: 1;
   }
 }
 
@@ -39,8 +38,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 6/7;
-    grid-row: 1/2;
+    margin-left: auto;
+    margin-right: 44px;
   }
 }
 
@@ -63,7 +62,12 @@
   font-size: 38px;
   line-height: 38px;
   color: #161c35;
+  text-align: center;
   border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .user-profile__progress span {
@@ -77,6 +81,10 @@
   line-height: 18px;
   color: #444444;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .user-profile__wrapper-avatar {
@@ -89,8 +97,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 7/9;
-    grid-row: 1/2;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -110,6 +118,18 @@
   box-sizing: border-box;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 70px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-profile__avatar-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .user-profile__change-avatar {
@@ -131,6 +151,9 @@
 
   @media (min-width: @tablet-width) {
     order: 4;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 21px;
   }
 
   @media (min-width: @desktop-width) {
@@ -140,7 +163,7 @@
 
 .user-profile__change-photo {
   display: none;
-  width: 100%;
+  width: 190px;
   margin: 18px 0 0 0;
   font-weight: 500;
   font-size: 20px;
@@ -151,13 +174,16 @@
   outline: none;
   background-color: #dfe3f0;
   padding: 13px;
-  border-radius: 20px;
+  border-radius: 0 0 10px 10px;
   cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
 
   @media (min-width: @desktop-width) {
     display: block;
-    grid-column: 7/9;
-    grid-row: 2/3;
+    order: 4;
+    margin-top: 0;
+    margin-left: auto;
   }
 }
 
@@ -170,11 +196,23 @@
 
   @media (min-width: @tablet-width) {
     order: 5;
+    margin-top: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 1/5;
-    grid-row: 4/5;
+    width: 732px;
+    margin: 26px 0 0 0;
+  }
+}
+
+.user-profile__break {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    flex-basis: 100%;
+    height: 0;
+    order: 4;
   }
 }
 
@@ -191,6 +229,12 @@
   box-sizing: border-box;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .user-profile__label {
@@ -200,6 +244,11 @@
   margin: -9px 0 0 -35px;
   background-color: #edeff6;
   width: 70px;
+
+  @media (min-width: @tablet-width) {
+    top: auto;
+    bottom: -9px;
+  }
 }
 
 .user-profile__subtitle {
@@ -209,6 +258,11 @@
   margin: -9px 0 0 -55px;
   background-color: #edeff6;
   width: 110px;
+
+  @media (min-width: @tablet-width) {
+    top: auto;
+    bottom: -9px;
+  }
 }
 
 .user-profile__hashtags-description {
@@ -224,6 +278,12 @@
   box-sizing: border-box;
   border-radius: 10px;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .user-profile__wrapper-transport {
@@ -241,12 +301,13 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
-    width: auto;
+    width: 310px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 6/9;
-    grid-row: 4/5;
+    order: 6;
+    width: 384px;
+    margin: 26px 0 0 0;
   }
 }
 
@@ -290,6 +351,14 @@
 .user-profile__fieldset-add-plan-container {
   padding-top: 30px;
   padding-bottom: 73px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 75px 73px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 60px 73px 60px;
+  }
 }
 
 .user-profile__wrapper-add-plan {
@@ -298,8 +367,18 @@
   align-items: center;
 }
 
-.user-profile__arrival {
+.user-profile__arrival,
+.user-profile__rout {
   margin-top: 29px;
+  padding: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 160px;
+  }
 }
 
 .user-profile__title {
@@ -309,10 +388,19 @@
   font-size: 24px;
   line-height: 24px;
   color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .user-profile__wrapper-pagination {
   display: flex;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .user-profile__top-pagination {

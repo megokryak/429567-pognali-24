@@ -5,6 +5,10 @@
   border-radius: 0 0 30px 30px;
   position: relative;
   z-index: 1;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 139px;
+  }
 }
 
 .feedback__contacts-list {
@@ -30,11 +34,27 @@
   padding: 0 25px;
   margin: 20px 0 0 0;
   color: #ffffff;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 57px auto 0 auto;
+    width: 655px;
     text-align: center;
+  }
+}
+
+.feedback__description br:first-child {
+  display: none;
+}
+
+.feedback__subscribe {
+  @media (min-width: @desktop-width) {
+    margin-top: 59px;
   }
 }
 
@@ -46,6 +66,17 @@
   margin: 30px 0 0 0;
   padding: 0;
   color: #ffffff;
-  letter-spacing: 0.01;
+  letter-spacing: 0.01em;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+.feedback__text br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

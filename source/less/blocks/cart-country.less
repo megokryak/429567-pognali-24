@@ -3,10 +3,35 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+    margin-top: 104px;
+    position: relative;
+    z-index: 1;
+  }
+
   @media (min-width: @desktop-width) {
     max-width: 560px;
     grid-column: 1/2;
     grid-row: 1/5;
+  }
+}
+
+.cart-country::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -38px;
+    left: 0;
+    width: 141px;
+    height: 141px;
+    z-index: 0;
+    background-color: #e2e5f2;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -20px;
   }
 }
 
@@ -16,6 +41,8 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
   }
 }
 
@@ -27,6 +54,17 @@
   display: block;
 
   @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.cart-country__img--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
     order: 2;
+    width: auto;
+    height: 100%;
   }
 }

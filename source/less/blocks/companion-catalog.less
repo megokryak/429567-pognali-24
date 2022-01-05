@@ -76,7 +76,7 @@
   }
 }
 
-.companion-catalog__status-online--current {
+.companion-catalog__status-online--online {
   background-color: #bbf085;
 }
 
@@ -316,11 +316,23 @@
 }
 
 .companion-catalog__svg {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   background-color: #edeff6;
   border-radius: 50%;
+}
+
+.companion-catalog__icon {
+  fill: #1d2e5b;
+  opacity: 0.15;
+}
+
+.companion-catalog__icon--active {
+  fill: #101d41;
+  opacity: 1;
 }
 
 .companion-catalog__mark {
@@ -352,11 +364,6 @@
   transform: rotate(-90deg);
   stroke: #ff8d30;
   fill: transparent;
-}
-
-.companion-catalog svg {
-  width: 45px;
-  height: 45px;
 }
 
 .companion-catalog__button-call {

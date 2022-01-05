@@ -14,12 +14,23 @@
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.transport__title {
+  display: block;
 }
 
 .transport__control-svg {
   fill: #1d2e5b;
+  opacity: 0.15;
 }
 
-.transport__input:checked + .transport__control-makr svg.transport__control-svg {
+.transport__input[type="checkbox"]:checked + .transport__control-makr svg.transport__control-svg {
   fill: #101d41;
+  opacity: 1;
 }

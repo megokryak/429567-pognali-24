@@ -1,22 +1,88 @@
 .companion {
   margin-top: -30px;
-  padding: 105px 0 30px 0;
+  padding: 0 0 30px 0;
   background-color: #192144;
-  background-image: url("../img/back-companions.png");
-  background-repeat: no-repeat;
   color: #ffffff;
   border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 87px;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 134px;
+    background-position: 150px 185px;
+  }
+}
+
+.companion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 113px;
+  height: 132px;
+  border-radius: 20px;
+  background-color: #141b3b;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 212px;
+    height: 212px;
+    top: 168px;
+    left: calc(50% - 344px);
+
+    @media (min-width: @desktop-width) {
+      left: calc(50% - 670px);
+    }
+  }
+}
+
+.companion__img-back {
+  position: absolute;
+}
+
+.companion__img-back--smolov {
+  top: 40px;
+  right: 25px;
+
+  @media (min-width: @tablet-width) {
+    top: 426px;
+    left: calc(50% - 344px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% - 180px);
+    top: 164px;
+  }
+}
+
+.companion__img-back--rogovaya {
+  top: 305px;
+  left: -8px;
+
+  @media (min-width: @tablet-width) {
+    width: 243px;
+    height: 243px;
+    top: 109px;
+    left: calc(50% + 25px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    height: 285px;
+    top: 416px;
+    left: calc(50% - 500px);
   }
 }
 
 .companion__container {
+  padding-top: 105px;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -32,17 +98,30 @@
   color: #ff8d30;
 
   @media (min-width: @tablet-width) {
+    margin-top: 141px;
     font-size: 45px;
     line-height: 45px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 
 .companion__description {
+  margin: 19px 0 0 0;
+  padding: 0 25px;
+
   @media (min-width: @tablet-width) {
+    margin-top: 55px;
     width: 427px;
     font-size: 28px;
     line-height: 34px;
     padding-left: 25px;
+    position: relative;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,12 +131,17 @@
 
 .companion__text {
   font-weight: 700;
+  padding: 0 25px;
+  margin: 25px 0 0 0;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 24px;
     padding-left: 25px;
     width: 260px;
+    margin-top: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,6 +154,10 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 

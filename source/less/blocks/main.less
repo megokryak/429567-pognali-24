@@ -11,6 +11,7 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
+    background-color: #182044;
     display: flex;
     justify-content: space-between;
   }
@@ -35,6 +36,29 @@
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 150px;
+    padding-bottom: 60px;
+  }
+}
+
+.main__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 214px;
+  height: 5px;
+  background-color: #ff8d30;
+  border-radius: 4px;
+
+  @media (min-width: @desktop-width) {
+    width: 358px;
+  }
 }
 
 .main__link-return {

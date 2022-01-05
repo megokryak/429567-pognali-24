@@ -1,5 +1,8 @@
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
 }
 
 .socials__link {
@@ -10,4 +13,9 @@
   height: 45px;
   background-color: #ffd74b;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
 }

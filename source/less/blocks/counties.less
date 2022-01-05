@@ -2,6 +2,17 @@
   background-color: #edeff6;
   border-radius: 0 0 30px 30px;
   position: relative;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-position: top 0 right calc(50% - 200px);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: top 0 right calc(50% - 520px);
+  }
 }
 
 .countries__container {
@@ -10,6 +21,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 149px;
   }
 }
 
@@ -20,11 +32,31 @@
   font-size: 24px;
   line-height: 50px;
   color: #ff8d30;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    margin-top: 73px;
+    padding: 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 106px;
+  }
 }
 
 .countries__description {
   color: #444444;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 57px;
+    padding: 0 35px;
+  }
 }
 
 .countries__button {
@@ -32,5 +64,6 @@
 
   @media (min-width: @desktop-width) {
     grid-row: 4/5;
+    width: 275px;
   }
 }

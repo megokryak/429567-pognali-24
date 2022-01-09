@@ -3,6 +3,10 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: @tablet-width) {
+    width: 200px;
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -15,4 +19,9 @@
   line-height: 20px;
   color: #444444;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    line-height: 30px;
+  }
 }

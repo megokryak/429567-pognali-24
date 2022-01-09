@@ -5,6 +5,12 @@
   list-style-type: none;
 }
 
+.transport__item:not(:first-child) {
+  @media (min-width: @tablet-width) {
+    margin-left: 3px;
+  }
+}
+
 .transport__control-makr {
   display: flex;
   justify-content: center;

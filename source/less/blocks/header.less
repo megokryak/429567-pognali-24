@@ -5,14 +5,24 @@
 
   @media (min-width: @tablet-width) {
     background-color: #182044;
-    display: flex;
-    align-items: center;
     padding-top: 41px;
     padding-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: rgb(22, 28, 54);
+  }
+}
+
+.header__wrapper-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
   }
 }
 

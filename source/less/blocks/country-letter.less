@@ -1,6 +1,4 @@
 .country-letter {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
@@ -10,6 +8,10 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.country-letter__item:not(:first-child) {
+  margin-top: 4px;
 }
 
 .country-letter__link {

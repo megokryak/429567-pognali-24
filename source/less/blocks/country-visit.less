@@ -262,10 +262,12 @@
   display: block;
   width: 16px;
   height: 12px;
+  background-color: transparent;
   background-image: url("../img/arrow-back.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 10px;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -288,6 +290,21 @@
   }
 }
 
-.country-visit_wrapper-alphbet--invisible {
+.country-visit_wrapper-alphabet {
+  position: absolute;
+  width: 230px;
+  top: 46px;
+  left: 0;
+  z-index: 2;
+  background-color: #ffffff;
+  border: 1px solid #cbced9;
+}
+
+.country-visit_wrapper-alphabet--invisible {
   display: none;
+}
+
+.country-visit__country-letter {
+  margin: 20px 0 0 0;
+  padding-left: 18px;
 }

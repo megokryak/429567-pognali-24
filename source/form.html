@@ -172,8 +172,10 @@
                 <img src="img/demin-desktop-avatar.png" alt="Аватар пользователя" class="user-profile__avatar-desktop" width="190" height="190">
               </div>
               <div class="user-profile__break"></div>
-              <label class="user-profile__change-avatar" for="id-photo">Сменить фото</label>
-              <label class="user-profile__change-photo" for="id-photo">Фото</label>
+              <label class="user-profile__change-avatar" for="id-photo">
+                <span class="user-profile__change-avatar-mobile">Сменить фото</span>
+                <span class="user-profile__change-avatar-desktop">фото</span>
+              </label>
               <div class="user-profile__break"></div>
               <div class="user-profile__hashtags">
                 <label for="hashtags" class="user-profile__label">Тэги</label>
@@ -288,7 +290,7 @@
               <!--arrival start-->
               <div class="user-profile__arrival arrival">
                 <div class="arrival__wrapper-text">
-                  <p class="arrival__title">Шаг 1.<br/>Даты пребывания</p>
+                  <p class="arrival__title" id="step1">Шаг 1.<br/>Даты пребывания</p>
                   <p class="arrival__descriptions">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
                   <div class="arrival__pagination">
                     <a href="#" class="arrival__pagination-link arrival__pagination-link--active">Даты</a>
@@ -492,7 +494,7 @@
                   </div>
                 </div>
                 <!--calendar end-->
-                <a href="#" class="arrival__next-step">Следующий шаг</a>
+                <a href="#step2" class="arrival__next-step">Следующий шаг</a>
               </div>
               <!--arrival end-->
             </div>
@@ -504,7 +506,7 @@
               <!-- rout start -->
               <div class="user-profile__rout rout">
                 <div class="rout__wrapper-text">
-                  <p class="rout__title">Шаг 2.<br/>Маршрут</p>
+                  <p class="rout__title" id="step2">Шаг 2.<br/>Маршрут</p>
                   <p class="rout__descriptions">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
                   <div class="rout__pagination">
                     <a href="#" class="rout__pagination-link">Даты</a>
@@ -523,7 +525,6 @@
                       <button class="country-visit__close-button" type="button">
                         <span class="visually-hidden">Убрать страну</span>
                       </button>
-                      <span class="country-visit__mark"></span>
                     </li>
                     <li class="country-visit__item">
                       <a href="#" class="country-visit__country">Чехия</a>
@@ -537,9 +538,125 @@
                     <li class="country-visit__item">
                       <a href="#" class="country-visit__country-add">Выберите страну</a>
                       <div class="country-visit__wrapper-img country-visit__wrapper-img--select-country">
-                        <span class="country-visit__dropdown"></span>
+                        <button class="country-visit__dropdown" type="button">
+                          <span class="visually-hidden">Раскрыть список</span>
+                        </button>
                       </div>
-                      <button class="country-visit__close-button" type="button">
+                      <!--alphabet start-->
+                      <div class="country-visit_wrapper-alphabet country-visit_wrapper-alphabet--invisible">
+                        <ul class="country-visit__alphabet alphabet">
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link alphabet__link--current">А</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Б</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">В</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Г</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Д</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Е</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">З</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">И</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">К</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Л</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">М</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Н</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">О</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">П</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Р</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">С</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Т</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">У</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Ф</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Х</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Ч</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Ш</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Щ</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Э</a>
+                          </li>
+                          <li class="alphabet__item">
+                            <a href="#" class="alphabet__link">Ю</a>
+                          </li>
+                        </ul>
+
+                        <ul class="country-visit__country-letter country-letter">
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Афганистан</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Албания</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Алжир</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Андорра</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Андорра</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Аргентина</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Армения</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Австралия</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Австрия</a>
+                          </li>
+                          <li class="country-letter__item">
+                            <a href="#" class="country-letter__link">Азербайджан</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!--alphabet start-->
+                          <button class="country-visit__close-button" type="button">
                         <span class="visually-hidden">Убрать страну</span>
                       </button>
                     </li>
@@ -547,129 +664,18 @@
                   <div class="country-visit__wrapper-add-button">
                     <a href="#" class="country-visit__add-country">Добавить стану</a>
                     <div class="country-visit__wrapper-img country-visit__wrapper-img--select-country country-visit__wrapper-img--add-country">
-                      <span class="country-visit__plus"></span>
+                      <button class="country-visit__plus" type="button">
+                        <span class="visually-hidden">Добавть страну</span>
+                      </button>
                     </div>
                   </div>
-                  <!--alphabet start-->
-                  <div class="country-visit_wrapper-alphbet country-visit_wrapper-alphbet--invisible">
-                    <ul class="country-visit__alphabet alphabet">
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link alphabet__link--current">А</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Б</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">В</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Г</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Д</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Е</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">З</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">И</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">К</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Л</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">М</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Н</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">О</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">П</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Р</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">С</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Т</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">У</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Ф</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Х</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Ч</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Ш</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Щ</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Э</a>
-                      </li>
-                      <li class="alphabet__item">
-                        <a href="#" class="alphabet__link">Ю</a>
-                      </li>
-                    </ul>
 
-                    <ul class="country-visit__country-letter country-letter">
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Афганистан</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Албания</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Алжир</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Андорра</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Андорра</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Аргентина</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Армения</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Австралия</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Австрия</a>
-                      </li>
-                      <li class="country-letter__item">
-                        <a href="#" class="country-letter__link">Азербайджан</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!--alphabet start-->
 
                 </div>
 
                 <!--country-visit end-->
-                <a href="#" class="rout__next-step">Следующий шаг</a>
-                <a href="#" class="rout__prev-step">на шаг назад</a>
+                <a href="#step3" class="rout__next-step">Следующий шаг</a>
+                <a href="#step1" class="rout__prev-step">на шаг назад</a>
               </div>
               <!-- rout end -->
             </div>
@@ -681,7 +687,7 @@
               <!-- entertainment start -->
               <div class="user-profile__entertainment entertainment">
                 <div class="entertainment__wrapper-text">
-                  <p class="entertainment__title">Шаг 3.<br/>Развлечения</p>
+                  <p class="entertainment__title" id="step3">Шаг 3.<br/>Развлечения</p>
                   <p class="entertainment__descriptions">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
                   <div class="entertainment__pagination">
                     <a href="#" class="entertainment__pagination-link">Даты</a>
@@ -708,7 +714,7 @@
                   </li>
                 </ul>
                 <button class="entertainment__submit" type="submit">Отправить</button>
-                <a href="#" class="entertainment__prev-step">на шаг назад</a>
+                <a href="#step2" class="entertainment__prev-step">на шаг назад</a>
               </div>
               <!-- entertainment end -->
 
@@ -829,6 +835,8 @@
   var navMain = document.querySelector('.header');
   var navToggle = document.querySelector('.header__toggle');
   var navToggleClose = document.querySelector('.main-nav__close-menu');
+  var dropDown = document.querySelector('.country-visit__dropdown');
+  var dropDownAlphabet = document.querySelector('.country-visit_wrapper-alphabet');
 
   navMain.classList.remove('header--nojs');
 
@@ -841,6 +849,15 @@
       navToggle.classList.add('header__toggle--close-menu');
     }
   });
+
+  dropDown.addEventListener('click', function() {
+    if (dropDownAlphabet.classList.contains('country-visit_wrapper-alphabet--invisible')) {
+      dropDownAlphabet.classList.remove('country-visit_wrapper-alphabet--invisible');
+    } else {
+      dropDownAlphabet.classList.add('country-visit_wrapper-alphabet--invisible');
+    }
+  });
+
 </script>
 
   </body>

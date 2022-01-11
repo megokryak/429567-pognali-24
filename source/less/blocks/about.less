@@ -1,7 +1,7 @@
 .about {
   background-color: #192144;
   border-radius: 0 0 30px 30px;
-  padding: 0 0 82px 0;
+  padding: 0;
   position: relative;
   z-index: 1;
 
@@ -44,10 +44,16 @@
 }
 
 .about__container {
-  padding-top: 33px;
+  padding-top: 30px;
+  padding-bottom: 82px;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: right calc(50% - 7px) top;
+  background-size: 292px 353px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/img_tablet.png");
@@ -80,7 +86,7 @@
 .about__text {
   color: #ffffff;
   padding: 0 25px;
-  margin: 19px 0 0 0;
+  margin: 20px 0 0 0;
   position: relative;
   z-index: 1;
 
@@ -101,7 +107,7 @@
   font-weight: 700;
   color: #ffffff;
   padding: 0 25px;
-  margin: 20px 0 0 0;
+  margin: 19px 0 0 0;
 
   @media (min-width: @tablet-width) {
     max-width: 310px;

@@ -18,13 +18,29 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid #f3c72b;
+    border-bottom: 1px solid #f3c72b;
+  }
+}
+
+.form-catalog__item {
+  border-top: 1px solid #f3c72b;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .form-catalog__interests-group {
   border: none;
+  margin: 0;
+  padding: 12px 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,12 +56,24 @@
   color: #1d2e5b;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 120px;
+  }
 }
 
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-music,
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-hobby,
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-eat {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-transport,
@@ -80,10 +108,21 @@
 
 .form-catalog__range {
   width: 100%;
+  margin: 16px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .form-catalog__interests-item {
   position: relative;
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    margin-top: 0;
+  }
 }
 
 .form-catalog__interests-list--open,
@@ -176,4 +215,11 @@ input[type="checkbox"]:checked + .form-catalog__control-mark {
   background-color: #ffffff;
   border: none;
   border-radius: 25px;
+}
+
+.form-catalog__container {
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 0 45px;
+  }
 }

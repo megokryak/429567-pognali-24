@@ -5,8 +5,6 @@
 
   @media (min-width: @tablet-width) {
     background-color: #182044;
-    display: flex;
-    align-items: center;
     padding-top: 41px;
     padding-bottom: 75px;
   }
@@ -16,12 +14,24 @@
   }
 }
 
+.header__wrapper-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .header__container {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-top: 19px;
+  padding-top: 18px;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
@@ -56,7 +66,7 @@
 
 .header__toggle {
   display: block;
-  margin: 4px 0 0 0;
+  margin: 5px 0 0 0;
   width: 25px;
   height: 11px;
   background-color: transparent;
@@ -79,17 +89,14 @@
 .header__toggle--close-menu {
   width: 18px;
   height: 19px;
-  background-color: transparent;
   background-image: url("../img/icon_menu_mobile_close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   margin-top: 0;
 }
 
 .header__item__navigation {
   position: absolute;
   display: none;
-  padding: 76px 0 0 0;
+  padding: 115px 0 0 0;
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -132,6 +139,8 @@
 }
 
 .header--active-menu .header__container {
+  padding-top: 26px;
+
   @media (min-width: @tablet-width) {
     width: 50%;
     flex-grow: 0;
@@ -230,6 +239,7 @@
 header.header--active-menu .main-nav__list,
 header.header--active-menu .main-nav__contacts-list {
   display: block;
+  width: 270px;
 }
 
 header.header--active-menu .main-nav__socials-menu {

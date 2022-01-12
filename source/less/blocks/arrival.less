@@ -146,7 +146,10 @@
 }
 
 .arrival__label-box {
+  display: block;
   margin: 28px 0 0 0;
+  padding: 5px 0;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     order: 2;
@@ -203,13 +206,13 @@
 
 .arrival__button {
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   border: none;
   position: absolute;
   top: 50%;
-  margin: -7px 0 0 0;
+  margin: -20px 0 0 0;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -217,12 +220,12 @@
 
 .arrival__button--minus {
   background-image: url("../img/minus.png");
-  left: 14px;
+  left: 5px;
 }
 
 .arrival__button--plus {
   background-image: url("../img/plus.png");
-  right: 14px;
+  right: 5px;
 }
 
 .arrival__unit {

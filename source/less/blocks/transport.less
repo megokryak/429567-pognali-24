@@ -5,6 +5,12 @@
   list-style-type: none;
 }
 
+.transport__item:not(:first-child) {
+  @media (min-width: @tablet-width) {
+    margin-left: 3px;
+  }
+}
+
 .transport__control-makr {
   display: flex;
   justify-content: center;
@@ -30,7 +36,7 @@
   opacity: 0.15;
 }
 
-.transport__input[type="checkbox"]:checked + .transport__control-makr svg.transport__control-svg {
+.transport__input[type="checkbox"]:checked + .transport__control-makr .transport__control-svg { //про вложенность помню, но другого решения не нашел
   fill: #101d41;
   opacity: 1;
 }

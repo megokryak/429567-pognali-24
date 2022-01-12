@@ -139,8 +139,12 @@
 
 .rout__next-step {
   margin-top: 22px;
-  padding: 28px 77px 28px 34px;
+  padding: 7px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 28px 77px 28px 34px;
+  }
 }
 
 .rout__next-step::before {

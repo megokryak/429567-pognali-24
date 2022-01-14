@@ -1,18 +1,29 @@
 .feedback {
   background-color: #192144;
-  margin: -30px 0 0 0;
   padding: 100px 0 29px 0;
   border-radius: 0 0 30px 30px;
   position: relative;
   z-index: 1;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    border-radius: 0 0 60px 60px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-top: 139px;
+    padding-top: 164px;
+    padding-bottom: 105px;
   }
 }
 
 .feedback__contacts-list {
-  margin: 0;
+  margin: 18px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 43px;
+    margin-left: 35px;
+  }
 }
 
 .feedback__title {
@@ -28,6 +39,10 @@
     line-height: 45px;
     text-align: center;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 30px 0 30px;
+  }
 }
 
 .feedback__description {
@@ -39,12 +54,15 @@
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
+    padding-top: 43px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 57px auto 0 auto;
     width: 655px;
     text-align: center;
+    padding-left: 48px;
+    padding-top: 2px;
   }
 }
 
@@ -54,14 +72,36 @@
   }
 }
 
+.feedback__description span {
+  @media (min-width: @tablet-width) {
+    margin-left: -20px;
+  }
+}
+
 .feedback__subscribe {
+  margin: 31px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    padding: 0 35px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-top: 59px;
+    margin-top: 61px;
+    padding: 0 73px;
   }
 }
 
 .feedback__auth {
   color: #ffd74b;
+
+  &:hover {
+    color: #ff8d30;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .feedback__text {
@@ -71,14 +111,20 @@
   letter-spacing: 0.01em;
   text-align: center;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 30px;
+    margin-top: 60px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
   }
 }
 
 .feedback__text br {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }

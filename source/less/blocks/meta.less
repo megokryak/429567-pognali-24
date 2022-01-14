@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 46px;
 }
 
 .meta--catalog-type {
@@ -27,4 +26,8 @@
 
 .meta__link:not(:last-child) {
   margin-right: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 4px;
+  }
 }

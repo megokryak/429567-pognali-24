@@ -27,6 +27,8 @@
 
 .main-nav--change-color::before {
   background-color: #192144;
+  left: 55px;
+  width: 45px;
 }
 
 .main-nav--closed .main-nav__list,
@@ -50,6 +52,7 @@
 .main-nav--closed .main-nav__list {
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     order: 1;
   }
 }
@@ -83,12 +86,12 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 12px 39px;
+    padding: 15px 12px;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.03em;
-    width: 190px;
+    width: 188px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,7 +108,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  color: #192144;
+  color: rgba(22, 28, 53, 1);
 }
 
 .main-nav__link--auth {
@@ -115,6 +118,16 @@
 
   @media (min-width: @desktop-width) {
     order: 3;
+    margin-right: 20px;
+  }
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    background-color: #ffbd30;
+    color: rgba(22, 28, 53, 0.3);
   }
 }
 

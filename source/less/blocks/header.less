@@ -1,17 +1,32 @@
 .header {
+  width: 100%;
   background-color: rgb(22, 28, 54);
   position: relative;
   z-index: 10;
+  transition: 1s;
 
   @media (min-width: @tablet-width) {
     background-color: #182044;
-    padding-top: 41px;
-    padding-bottom: 75px;
+    padding-top: 28px;
+    padding-bottom: 71px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: rgb(22, 28, 54);
+    z-index: 0;
   }
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.header--fixed .header__toggle {
+  background-image: url("../img/icon_menu_mobile_fix.svg");
 }
 
 .header__wrapper-container {
@@ -37,13 +52,14 @@
     padding-right: 0;
     margin: 0;
     width: auto;
-    flex-grow: 0.5;
+    flex-grow: 0.55;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
     align-items: center;
+    flex-grow: 0;
   }
 }
 
@@ -57,8 +73,9 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-right: 0;
     position: relative;
     z-index: 1;
   }
@@ -100,8 +117,13 @@
 
   @media (min-width: @tablet-width) {
     position: static;
+    margin-top: 12px;
     padding: 0 40px 0 0;
     flex-grow: 0.5;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 22px;
   }
 }
 
@@ -132,6 +154,11 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+    height: 50px;
+  }
 }
 
 .header__item-logo-link-tablet g {
@@ -142,8 +169,9 @@
   padding-top: 26px;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: calc(50% + 9px);
     flex-grow: 0;
+    padding-top: 17px;
   }
 }
 
@@ -159,6 +187,10 @@
 
 .header--change-color .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
   fill: #192144;
+}
+
+.header--change-color .main-nav {
+  margin-top: 0;
 }
 
 .header__link-auth {
@@ -201,8 +233,8 @@
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 189px;
-    padding-left: 97px;
+    padding-top: 168px;
+    padding-left: 98px;
   }
 }
 
@@ -231,8 +263,8 @@
 .header--active-menu .main-nav__link--auth {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 40px;
-    right: 25px;
+    top: 29px;
+    right: 40px;
   }
 }
 
@@ -242,7 +274,18 @@ header.header--active-menu .main-nav__contacts-list {
   width: 270px;
 }
 
+header.header--active-menu .main-nav__contacts-list {
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-top: 135px;
+  }
+}
+
 header.header--active-menu .main-nav__socials-menu {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 133px;
+  }
 }

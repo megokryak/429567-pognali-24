@@ -12,10 +12,25 @@
   background-color: #ffd74b;
   border: 3px solid transparent;
   border-radius: 10px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 24px;
+    padding: 25px 30px;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -29,6 +44,11 @@
   background-image: url("../img/polygon.svg");
   background-repeat: no-repeat;
   margin: -7px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    right: 30px;
+    margin-top: -6px;
+  }
 }
 
 .button--border {
@@ -36,5 +56,22 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
+  }
+
+  &:hover {
+    background-color: #192144;
+    color: #ffffff;
+  }
+
+  &:hover::after {
+    background-image: url("../img/polygon-active.svg");
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active::after {
+    background-image: url("../img/polygon-active2.svg");
   }
 }

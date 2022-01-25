@@ -10,21 +10,29 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7px;
+  }
 }
 
 .my-plans__list {
-  margin: 20px 0 0 0;
+  margin: 29px 0 0 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    margin-top: 48px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
   }
 }
 
 .my-plans__item {
   margin: 10px 0 0 0;
-  padding: 24px;
+  padding: 24px 24px 23px 24px;
   font-weight: 700;
   line-height: 16px;
   color: #1d2e5b;
@@ -34,11 +42,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 39px 31px 17px 23px;
+    margin-top: 9px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 36px 94px;
+    padding: 35px 42px 38px 42px;
+    margin-top: 15px;
   }
 }
 
@@ -74,13 +84,16 @@
   left: 0;
 
   @media (min-width: @tablet-width) {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 20px;
     left: auto;
-    right: 0;
+    right: 1px;
+    top: 2px;
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
     left: 0;
   }
 }
@@ -101,18 +114,19 @@
 }
 
 .my-plans__companions {
-  margin-top: 30px;
+  margin-top: 21px;
 
   @media (min-width: @tablet-width) {
     margin-top: 54px;
+    padding-left: 17px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
-    margin-right: 32px;
+    margin-top: 3px;
+    margin-right: 39px;
   }
 }
 
@@ -121,14 +135,16 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 54px;
+    margin-left: auto;
+    margin-right: 31px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
-    margin-right: 116px;
+    margin-top: 3px;
+    margin-right: 128px;
   }
 }
 
@@ -144,12 +160,15 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 54px;
+    margin-left: auto;
+    margin-right: 11px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
+    margin-top: 3px;
+    margin-right: 0;
   }
 }

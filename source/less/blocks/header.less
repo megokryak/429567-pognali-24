@@ -8,7 +8,7 @@
   @media (min-width: @tablet-width) {
     background-color: #182044;
     padding-top: 28px;
-    padding-bottom: 71px;
+    padding-bottom: 12px;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,16 +17,54 @@
   }
 }
 
+.header--color-back {
+  background-color: #182044;
+
+  @media (min-width: @desktop-width) {
+    background-color: #192144;
+  }
+}
+
+.header--catalog {
+  background-color: #182044;
+}
+
 .header--fixed {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #ffffff;
   z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.header--fixed .header__item-logo-link-mobile {
+  fill: #192144;
+}
+
+.header--fixed .header__container {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .header--fixed .header__toggle {
   background-image: url("../img/icon_menu_mobile_fix.svg");
+}
+
+.header--fixed .header__item__navigation {
+  @media (min-width: @tablet-width) {
+    margin-top: -4px;
+  }
+}
+
+.header--fixed .header__item-logo-link-tablet--color {
+  @media (min-width: @tablet-width) {
+    fill: #192144;
+  }
 }
 
 .header__wrapper-container {
@@ -47,6 +85,7 @@
   justify-content: space-between;
   position: relative;
   padding-top: 18px;
+  padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
@@ -117,13 +156,13 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    margin-top: 12px;
+    margin-top: -22px;
     padding: 0 40px 0 0;
     flex-grow: 0.5;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 22px;
+    margin-top: -6px;
   }
 }
 

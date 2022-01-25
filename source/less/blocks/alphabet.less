@@ -1,7 +1,7 @@
 .alphabet {
   display: grid;
   grid-template-columns: repeat(5, 44px);
-  grid-template-rows: repeat(5, 43px);
+  grid-template-rows: repeat(5, 41px);
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -11,13 +11,13 @@
 
   @media (min-width: @tablet-width) {
     width: 350px;
-    grid-template-columns: repeat(5, 70px);
-    grid-template-rows: repeat(5, 70px);
+    grid-template-columns: repeat(5, 77px);
+    grid-template-rows: repeat(5, 83px);
   }
 
   @media (min-width: @desktop-width) {
     width: 1320px;
-    grid-template-columns: repeat(5, 252px);
+    grid-template-columns: repeat(5, 250px);
     grid-template-rows: repeat(5, auto);
   }
 }
@@ -77,6 +77,18 @@
   color: #ffffff;
 }
 
+.alphabet__item:nth-child(11) .alphabet__country-letter {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 85px;
+  }
+}
+
+.alphabet__item:nth-child(-n+5) .alphabet__country-letter {
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+  }
+}
+
 .alphabet__link {
   display: block;
   font-weight: 500;
@@ -112,8 +124,9 @@ ul.alphabet__country-letter {
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin-top: 30px;
-    padding-bottom: 51px;
+    margin-top: 34px;
+    margin-left: 0;
+    padding: 0 0 44px 0;
   }
 }
 

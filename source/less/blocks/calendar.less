@@ -1,30 +1,67 @@
 .clanedar__month {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 11px 0;
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 0 24px 0;
+  }
 }
 
 .calendar__prev,
 .calendar__next {
   display: block;
-  width: 9px;
-  height: 18px;
+  width: 15px;
+  height: 21px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/arrow-back.png");
+  background-image: url("../img/arrow-back-form.svg");
+  background-size: 15px 21px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 36px;
+    background-size: 30px 36px;
+  }
+}
+
+.calendar__prev {
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -6px;
+  }
 }
 
 .calendar__next {
   transform: rotate(180deg);
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -6px;
+  }
 }
 
 .calendar__days {
-  margin: 22px 0 0 0;
+  margin: 17px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+  }
 }
 
 .calendar__month-today {
@@ -44,27 +81,29 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(7, 32px);
-  grid-template-rows: repeat(6, 32px);
+  grid-template-columns: repeat(7, 31px);
+  grid-template-rows: repeat(6, 31px);
   align-items: center;
   justify-content: center;
   justify-items: center;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(7, 77px);
-    grid-template-rows: repeat(6, 71px);
+    grid-template-rows: 36px repeat(5, 69px);
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(7, 142px);
+    grid-template-columns: repeat(7, 143px);
+    grid-template-rows: 42px repeat(5, 71px);
+    align-items: flex-start;
   }
 }
 
 .calendar__item {
   color: #1d2e5b;
   background-color: #edeff6;
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -74,11 +113,14 @@
 
   @media (min-width: @tablet-width) {
     width: 77px;
-    height: 71px;
+    height: 69px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 142px;
+    width: 143px;
+    align-items: start;
+    justify-content: start;
+    height: 71px;
   }
 }
 
@@ -90,9 +132,18 @@
   border-left: none;
   border-right: none;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 42px;
+  }
 }
 
-.calendar__date {
+.calendar__date,
+.calendar__date-week {
   display: block;
   background-color: transparent;
   border: none;
@@ -105,9 +156,35 @@
     font-weight: 400;
     font-size: 18px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }
 
-.calendar__date--day-off {
+.calendar__date-week {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.calendar__date-week-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 2px;
+    margin-left: 17px;
+  }
+}
+
+.calendar__date-week--day-off {
   color: #ff5c23;
 }
 
@@ -122,4 +199,34 @@
   background-color: #1d2e5b;
   align-self: stretch;
   flex-basis: 100%;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.calendar__item--selected-first {
+  border: 4px solid #ff5c23;
+}
+
+.calendar__item--selected-first::after {
+  @media (min-width: @desktop-width) {
+    content: "Заезд";
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    top: 37px;
+    left: 14px;
+  }
+}
+
+.calendar__item--selected-last::after {
+  @media (min-width: @desktop-width) {
+    content: "Выезд";
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    top: 37px;
+    left: 14px;
+  }
 }

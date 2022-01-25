@@ -20,12 +20,18 @@
   width: 270px;
   height: 270px;
   border-radius: 15px 15px 0 0;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     width: 285px;
     height: 285px;
     overflow: hidden;
     border-radius: 20px 20px 0 0;
+  }
+
+  &:focus .user-card__avatar {
+    transform: scale(1.1);
+    transition: 1s;
   }
 }
 
@@ -37,6 +43,7 @@
   background-color: #ffffff;
   position: relative;
   border-radius: 15px;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     max-width: 285px;
@@ -44,8 +51,10 @@
     border-radius: 20px;
   }
 
-  &:hover .user-card__avatar {
+  &:hover .user-card__avatar,
+  &:focus .user-card__avatar {
     transform: scale(1.1);
+    transition: 1s;
   }
 }
 
@@ -64,10 +73,12 @@
 .user-card__avatar {
   display: block;
   width: 100%;
-  height: 285px;
+  height: 270px;
   border-radius: 15px 15px 0 0;
+  transition: 1s;
 
   @media (min-width: @tablet-width) {
+    height: 285px;
     border-radius: 20px 20px 0 0;
   }
 }
@@ -76,9 +87,14 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 19px;
-  left: 21px;
+  top: 18px;
+  left: 18px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    top: 21px;
+    left: 21px;
+  }
 }
 
 .user-card__circle {
@@ -141,6 +157,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     margin-top: 9px;
@@ -148,7 +165,8 @@
     margin-left: 57px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.7;
   }
 
@@ -190,10 +208,15 @@
   color: #1d2e5b;
   text-decoration: none;
   padding: 0;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  &:focus {
+    opacity: 0.7;
   }
 }
 

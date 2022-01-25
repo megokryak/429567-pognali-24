@@ -13,6 +13,7 @@
   border: 3px solid transparent;
   border-radius: 10px;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -21,7 +22,8 @@
     border-radius: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #ffbd30;
   }
 
@@ -58,7 +60,8 @@
     border-radius: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #192144;
     color: #ffffff;
   }

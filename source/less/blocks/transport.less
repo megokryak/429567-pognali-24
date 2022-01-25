@@ -6,12 +6,6 @@
   list-style-type: none;
 }
 
-.transport__item:not(:first-child) {
-  @media (min-width: @tablet-width) {
-    margin-left: 3px;
-  }
-}
-
 .transport__control-makr {
   display: flex;
   justify-content: center;
@@ -35,9 +29,20 @@
 .transport__control-svg {
   fill: #1d2e5b;
   opacity: 0.15;
+
+  @media (min-width: @desktop-width) {
+    width: 25px;
+    height: 24px;
+  }
 }
 
 .transport__input[type="checkbox"]:checked + .transport__control-makr .transport__control-svg { //про вложенность помню, но другого решения не нашел
   fill: #101d41;
   opacity: 1;
+}
+
+.transport__item:not(:first-child) {
+  @media (min-width: @desktop-width) {
+    margin-left: 1px;
+  }
 }

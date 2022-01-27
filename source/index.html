@@ -69,7 +69,7 @@
           </button>
           <!--Main Menu start-->
         </div>
-        <nav class="header__item__navigation main-nav main-nav--closed">
+        <nav class="header__item-navigation main-nav main-nav--closed">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#" class="site-list__link" >
@@ -387,7 +387,7 @@
             </li>
           </ul>
           <!--Cart-country end-->
-          <a href="#" class="countries__button button">Показать все</a>
+          <a href="/form.html" class="countries__button button">Показать все</a>
         </div>
       </section>
       <!--Countries end-->
@@ -553,7 +553,7 @@
             </li>
           </ul>
           <!-- User-card end -->
-          <a href="" class="companion__button button">Показать всех</a>
+          <a href="/catalog.html" class="companion__button button">Показать всех</a>
         </div>
       </section>
       <!-- Companion end -->
@@ -576,7 +576,7 @@
               <p class="profile__price">59 руб./мес</p>
             </li>
           </ul>
-          <a href="#" class="profile__link">Показать тарифы для бизнеса</a>
+          <a href="/price.html" class="profile__link">Показать тарифы для бизнеса</a>
         </div>
       </section>
       <!-- Profile end -->
@@ -585,7 +585,7 @@
       <section class="main__feedback feedback">
         <div class="container">
           <h2 class="feedback__title">Заинтересовались?</h2>
-          <p class="feedback__description"><span>Зарегистрируйтесь, <br/>это быстро и бесплатно!</span> <br/>Уже зарегистрированы? Тогда скорее <a href="#" class="feedback__auth">авторизуйтесь.</a></p>
+          <p class="feedback__description"><span>Зарегистрируйтесь, <br/>это быстро и бесплатно!</span> <br/>Уже зарегистрированы? Тогда скорее <a href="/auth.html" class="feedback__auth">авторизуйтесь.</a></p>
           <!-- Subscribe start -->
           <form action="https://echo.htmlacademy.ru/" class="feedback__subscribe subcsribe" method="post">
             <label for="subscribe__input" class="subscribe__label">
@@ -632,11 +632,7 @@
             <a href="#" class="contacts__link button button--border">Проложить маршрут</a>
           </div>
         </div>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/background_map-desktop.jpg 1x, img/background_map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/background_map-tablet.jpg 1x, img/background_map-tablet@2x.jpg 2x">
-          <img src="img/background_map.jpg" srcset="img/background_map@2x.jpg 2x" alt="Адресс на карате" class="contacts__map" width="320" height="424">
-        </picture>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1643282831751!5m2!1sru!2sru" allowfullscreen title="Адресс html Academy" class="contacts__map"></iframe>
       </section>
       <!-- contacts end -->
     </main>
@@ -743,6 +739,32 @@
       </div>
       <!-- info end  -->
     </footer>
+
+    <div class="modal-price modal-price--close">
+      <div class="modal-price__container">
+        <h2 class="modal-price__title">Бизнес-тарифы</h2>
+        <ul class="modal-price__list">
+          <li class="modal-price__item">
+            <span class="modal-price__description">Реклама у блоггера</span>
+            <span class="modal-price__price">300 000 руб./пост</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Накрутка подписчиков</span>
+            <span class="modal-price__price">от 1 руб./шт.</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Лайки от ботов</span>
+            <span class="modal-price__price">от 20 коп./лайк</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Ваш продакт-плейсмент</span>
+            <span class="modal-price__price">Индивидуально</span>
+          </li>
+        </ul>
+      </div>
+      <button class="modal-price__close">Закрыть окно</button>
+    </div>
+
     <script>
       var navMain = document.querySelector('.header');
       var navToggle = document.querySelector('.header__toggle');
@@ -762,18 +784,37 @@
 
       //scroll
 
-      // var headerTop = document.querySelector('.header');
+      var headerTop = document.querySelector('.header');
 
-      // window.addEventListener('scroll', function (e) {
-      //     e.preventDefault();
+      window.addEventListener('scroll', function (e) {
+          e.preventDefault();
 
-      //     if (window.pageYOffset >= 50) {
-      //       headerTop.classList.add('header--fixed');
+          if (window.pageYOffset >= 50) {
+            headerTop.classList.add('header--fixed');
 
-      //     } else {
-      //       headerTop.classList.remove('header--fixed');
-      //     }
-      //   });
+          } else {
+            headerTop.classList.remove('header--fixed');
+          }
+        });
+
+        // modal
+
+        var modalLink = document.querySelector('.profile__link');
+        var modal = document.querySelector('.modal-price');
+        var modalClose = document.querySelector('.modal-price__close');
+
+        modalLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (modal.classList.contains('modal-price--close')) {
+            modal.classList.remove('modal-price--close');
+        } else {
+          modal.classList.add('modal-price--close');
+        }
+        });
+
+        modalClose.addEventListener('click', function(){
+          modal.classList.add('modal-price--close');
+        });
 
 
     </script>

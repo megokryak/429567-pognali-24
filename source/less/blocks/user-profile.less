@@ -73,9 +73,9 @@
 
 .user-profile__circle circle {
   @media (min-width: @tablet-width) {
-    r: 45.5;
-    cx: 47;
-    cy: 47;
+    r: 45.5px;
+    cx: 47px;
+    cy: 47px;
     stroke-dashoffset: 80;
   }
 }
@@ -105,8 +105,8 @@
   position: absolute;
   z-index: 1;
   left: 50%;
+  top: 62px;
   transform: translateX(-50%);
-  margin-top: 62px;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -115,8 +115,6 @@
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
-    width: 94px;
-    height: 94px;
   }
 }
 
@@ -360,6 +358,17 @@
     line-height: 22px;
     padding: 35px 15px 13px 38px;
   }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #aeb4cb;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid#161C35;
+    color: rgba(68, 68, 68, 1);
+  }
 }
 
 .user-profile__wrapper-transport {
@@ -440,7 +449,7 @@
   color: #1d2e5b;
   border-radius: 0 0 0 0;
   margin: 0 0 0 0;
-  padding: 10px 0 73px 0;
+  padding: 10px 0 45px 0;
   border: none;
 
   @media (min-width: @tablet-width) {

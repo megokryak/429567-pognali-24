@@ -172,7 +172,9 @@
 }
 
 .contacts-list__item--feedback:first-child:hover .contacts-list__svg-mobile,
-.contacts-list__item--feedback:last-child:hover .contacts-list__svg-mobile {
+.contacts-list__item--feedback:first-child:focus .contacts-list__svg-mobile,
+.contacts-list__item--feedback:last-child:hover .contacts-list__svg-mobile,
+.contacts-list__item--feedback:last-child:focus .contacts-list__svg-mobile {
   fill: #ffbd30;
 }
 
@@ -183,6 +185,8 @@
 
 
 .contacts-list__item--feedback:first-child:hover .contacts-list__icon--feedback,
-.contacts-list__item--feedback:last-child:hover .contacts-list__icon--feedback {
+.contacts-list__item--feedback:last-child:hover .contacts-list__icon--feedback,
+.contacts-list__item--feedback:first-child:focus .contacts-list__icon--feedback,
+.contacts-list__item--feedback:last-child:focus .contacts-list__icon--feedback {
   background-color: #121936;
 }

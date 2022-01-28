@@ -8,7 +8,7 @@
   @media (min-width: @tablet-width) {
     background-color: #182044;
     padding-top: 28px;
-    padding-bottom: 71px;
+    padding-bottom: 12px;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,21 +17,77 @@
   }
 }
 
+.header--color-back {
+  background-color: #182044;
+
+  @media (min-width: @desktop-width) {
+    background-color: #192144;
+  }
+}
+
+.header--catalog {
+  background-color: #182044;
+}
+
 .header--fixed {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #ffffff;
-  z-index: 10;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.header--fixed .header__item-logo-link-mobile {
+  fill: #192144;
+}
+
+.header--fixed .header__container {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .header--fixed .header__toggle {
   background-image: url("../img/icon_menu_mobile_fix.svg");
 }
 
+.header--fixed .header__item-navigation {
+  @media (min-width: @tablet-width) {
+    margin-top: -4px;
+  }
+}
+
+.header--fixed .main-nav::before {
+  @media (min-width: @desktop-width) {
+    background-color: #192144;
+  }
+}
+
+.header--fixed .header__item-logo-link-tablet--color {
+  @media (min-width: @tablet-width) {
+    fill: #192144;
+  }
+}
+
+.header--fixed .site-list__link-text {
+  @media (min-width: @desktop-width) {
+    color: #192144;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffd74b;
+  }
+}
+
 .header__wrapper-container {
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -47,6 +103,7 @@
   justify-content: space-between;
   position: relative;
   padding-top: 18px;
+  padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
@@ -61,10 +118,6 @@
     align-items: center;
     flex-grow: 0;
   }
-}
-
-.header--nojs .header__container {
-  flex-wrap: wrap;
 }
 
 .header--change-color {
@@ -110,26 +163,30 @@
   margin-top: 0;
 }
 
-.header__item__navigation {
+.header__item-navigation {
   position: absolute;
   display: none;
   padding: 115px 0 0 0;
 
   @media (min-width: @tablet-width) {
     position: static;
-    margin-top: 12px;
+    margin-top: -22px;
     padding: 0 40px 0 0;
     flex-grow: 0.5;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 22px;
+    margin-top: -6px;
   }
 }
 
 .header--active-menu,
 .header--nojs {
   background-color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    background-color: #161c36;
+  }
 }
 
 .header__item-logo-link {
@@ -165,7 +222,8 @@
   fill: #ffffff;
 }
 
-.header--active-menu .header__container {
+.header--active-menu .header__container,
+.header--nojs .header__container {
   padding-top: 26px;
 
   @media (min-width: @tablet-width) {
@@ -175,14 +233,33 @@
   }
 }
 
+
+.header--nojs .header__container {
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
 .header--active-menu .header__item-logo-link-mobile,
 .header--nojs .header__item-logo-link-mobile {
   fill: #192144;
+
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+  }
 }
 
 .header--active-menu .header__item-logo-link-tablet g,
 .header--nojs .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
   fill: #192144;
+}
+
+.header--nojs .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+  }
 }
 
 .header--change-color .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
@@ -215,8 +292,7 @@
   }
 }
 
-.header--active-menu .header__item__navigation,
-.header--nojs .header__item__navigation {
+.header--active-menu .header__item-navigation {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -238,8 +314,56 @@
   }
 }
 
-.header--nojs .main-nav__wrapper-open-menu {
+.header--nojs .header__item-navigation {
   position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 43px;
+  z-index: auto;
+  padding-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-left: 98px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    padding-left: 145px;
+    padding-top: 0;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -6px;
+    height: auto;
+    background-color: transparent;
+    width: 995px;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+}
+
+header.header--nojs .main-nav__list,
+header.header--nojs .main-nav__contacts-list {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+header.header--nojs .main-nav__contacts-list {
+  @media (min-width: @tablet-width) {
+    margin-top: 135px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .header--active-menu .main-nav__toggle {
@@ -260,18 +384,39 @@
   display: none;
 }
 
-.header--active-menu .main-nav__link--auth {
+.header--active-menu .main-nav__link--auth,
+.header--nojs .main-nav__link--auth {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 29px;
+    top: 60px;
     right: 40px;
   }
+}
+
+.header--nojs .main-nav__link--auth {
+  @media (min-width: @tablet-width) {
+    top: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
+}
+
+.header--nojs .header__toggle {
+  width: 18px;
+  height: 19px;
+  background-image: url("../img/icon_menu_mobile_close.svg");
+  margin-top: 0;
 }
 
 header.header--active-menu .main-nav__list,
 header.header--active-menu .main-nav__contacts-list {
   display: block;
-  width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 header.header--active-menu .main-nav__contacts-list {
@@ -281,7 +426,8 @@ header.header--active-menu .main-nav__contacts-list {
   }
 }
 
-header.header--active-menu .main-nav__socials-menu {
+header.header--active-menu .main-nav__socials-menu,
+header.header--nojs .main-nav__socials-menu {
   display: flex;
   flex-wrap: wrap;
 
@@ -289,3 +435,14 @@ header.header--active-menu .main-nav__socials-menu {
     margin-top: 133px;
   }
 }
+
+header.header--nojs .main-nav__socials-menu {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+

@@ -1,30 +1,73 @@
 .form-catalog__filter-group {
-  margin: 21px 0 0 0;
-  background-color: #ffd74b;
+  margin: 0;
   border: none;
-  border-radius: 30px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-bottom: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     width: auto;
+    padding: 0;
+  }
+}
+
+.form-catalog__container {
+  width: 270px;
+  box-sizing: border-box;
+  background-color: #ffd74b;
+  border-radius: 25px;
+  padding: 25px 25px 22px 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding-left: 36px;
+    padding-top: 35px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    padding-left: 47px;
+    padding-top: 44px;
+    padding-bottom: 48px;
   }
 }
 
 .fotm-catalog__title {
+  margin: 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
   color: #1d2e5b;
   letter-spacing: 0.02em;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
 }
 
 .form-catalog__list {
-  margin: 0;
+  margin: 24px 0 0 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
     border-top: 1px solid #f3c72b;
     border-bottom: 1px solid #f3c72b;
+    margin-top: 39px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 34px;
+    padding-left: 1px;
+    border-top: none;
+    border-bottom: none;
   }
 }
 
@@ -34,20 +77,42 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 23px;
+  }
 }
 
 .form-catalog__interests-group {
   border: none;
   margin: 0;
-  padding: 12px 0;
+  padding: 13px 0 11px 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
+    padding: 24px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+    padding-top: 0;
+  }
+}
+
+.form-catalog__item:first-child .form-catalog__interests-group {
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.form-catalog__item:last-child .form-catalog__interests-group {
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
   }
 }
 
@@ -61,7 +126,36 @@
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
-    width: 120px;
+    width: 125px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    position: relative;
+  }
+}
+
+.form-catalog__link-dropdown::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    margin: -3px 0 0 0;
+    background-image: url("../img/polygon_3.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+  }
+}
+
+.form-catalog__link-dropdown--open::after {
+  @media (min-width: @desktop-width) {
+    transform: rotate(180deg);
   }
 }
 
@@ -69,19 +163,36 @@
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-hobby,
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-eat {
   display: block;
+  margin-top: 12px;
+  padding-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 27px 0 0 0;
+    padding: 0 0 6px 0;
   }
 }
 
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-transport,
 .form-catalog__link-dropdown--open + div.form-catalog__range {
   display: flex;
+  margin-top: 14px;
+  padding-bottom: 8px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-top: 18px;
+    padding-bottom: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .form-catalog__interests-list-music,
@@ -105,13 +216,19 @@
   }
 }
 
+.form-catalog__interests-list-transport {
+  @media (min-width: @tablet-width) {
+    margin-left: -4px;
+  }
+}
+
 .form-catalog__interests-list-transport .form-catalog__interests-item:not(:last-child) {
   margin-right: 2px;
 }
 
 .form-catalog__range {
   width: 100%;
-  margin: 16px 0 0 0;
+  margin: 13px 0 0 0;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -120,11 +237,26 @@
 
 .form-catalog__interests-item {
   position: relative;
-  margin-top: 12px;
 
   @media (min-width: @tablet-width) {
-    width: 145px;
+    width: 170px;
     margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.form-catalog__interests-item:not(:first-child) {
+  margin-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 16px;
   }
 }
 
@@ -134,10 +266,17 @@
 }
 
 .form-catalog__input-text {
+  padding-left: 9px;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 12px;
+  }
 }
 
 .form-catalog__label {
@@ -150,6 +289,11 @@
   height: 18px;
   background-color: #ffffff;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 input[type="checkbox"]:checked + .form-catalog__control-mark {
@@ -207,10 +351,11 @@ input[type="checkbox"]:checked + .form-catalog__control-mark {
 }
 
 .form-catalog__submit {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   display: block;
-  width: 100%;
-  margin: 25px 0 0 0;
-  padding: 14px;
+  width: 230px;
+  margin: 7px 0 0 -5px;
+  padding: 13px;
   font-weight: 700;
   font-size: 17px;
   line-height: 17px;
@@ -218,11 +363,19 @@ input[type="checkbox"]:checked + .form-catalog__control-mark {
   background-color: #ffffff;
   border: none;
   border-radius: 25px;
-}
+  box-sizing: border-box;
+  text-transform: uppercase;
 
-.form-catalog__container {
+  @media (min-width: @tablet-width) {
+    width: 617px;
+    margin: 38px 0 0 0;
+    padding: 16px;
+  }
+
   @media (min-width: @desktop-width) {
-    width: auto;
-    padding: 0 45px;
+    font-size: 20px;
+    line-height: 20px;
+    width: 194px;
+    margin-top: 6px;
   }
 }

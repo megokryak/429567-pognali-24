@@ -1,7 +1,6 @@
 .user-profile {
   background-color: #edeff6;
   color: #161c35;
-  padding-top: 20px;
 }
 
 .user-profile__fieldset-profile {
@@ -10,6 +9,14 @@
   border: none;
   margin: 0;
   padding: 0 0 34px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 64px;
+  }
 }
 
 .user-profile__container {
@@ -17,15 +24,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-top: -210px;
+    margin-top: -254px;
     z-index: 2;
   }
 }
 
 .user-profile__progress {
   width: 100px;
-  margin-right: auto;
+  margin-left: 17px;
   height: 100px;
   background-color: transparent;
   box-sizing: border-box;
@@ -35,11 +46,15 @@
   @media (min-width: @tablet-width) {
     order: 1;
     margin-right: 0;
+    margin-left: 36px;
+    width: 94px;
+    height: 94px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: auto;
     margin-right: 44px;
+    margin-top: 43px;
   }
 }
 
@@ -49,15 +64,31 @@
   transform: rotate(-90deg);
   stroke: #ff8d30;
   fill: transparent;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+.user-profile__circle circle {
+  @media (min-width: @tablet-width) {
+    r: 45.5px;
+    cx: 47px;
+    cy: 47px;
+    stroke-dashoffset: 80;
+  }
 }
 
 .user-profile__progress b {
   position: absolute;
   z-index: 1;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 51px;
-  margin: 10px auto 0 auto;
+  margin: 16px auto 0 auto;
+  padding-bottom: 2px;
   font-weight: 700;
   font-size: 38px;
   line-height: 38px;
@@ -74,8 +105,8 @@
   position: absolute;
   z-index: 1;
   left: 50%;
+  top: 62px;
   transform: translateX(-50%);
-  margin-top: 50px;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -91,14 +122,20 @@
   position: relative;
   width: 100px;
   height: 100px;
+  margin-right: 18px;
 
   @media (min-width: @tablet-width) {
     order: 3;
+    margin-left: 62px;
+    width: 94px;
+    height: 94px;
   }
 
   @media (min-width: @desktop-width) {
     width: auto;
     height: auto;
+    margin-right: 95px;
+    margin-left: 0;
   }
 }
 
@@ -114,13 +151,25 @@
 
 .user-profile__avatar {
   display: block;
+  width: 100px;
+  height: 100px;
   border: 1px solid #000000;
   box-sizing: border-box;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 70px;
+  border-radius: 50px;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: none;
+  }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    width: 190px;
+    height: 190px;
+    border-radius: 15px 15px 0 0;
   }
 }
 
@@ -135,7 +184,7 @@
 .user-profile__change-avatar {
   display: block;
   width: 100%;
-  margin: 18px 0 0 0;
+  margin: 16px 0 0 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
@@ -145,25 +194,42 @@
   border: none;
   outline: none;
   background-color: #dfe3f0;
-  padding: 13px;
+  padding: 12px 13px;
   border-radius: 20px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
+    width: 618px;
     order: 4;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 47px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 21px;
+    box-sizing: border-box;
+    letter-spacing: 0.09em;
   }
 
   @media (min-width: @desktop-width) {
     order: 4;
     margin-top: 0;
     margin-left: auto;
+    margin-right: 95px;
+    padding: 16px 21px 15px 21px;
     width: 190px;
     border-radius: 0 0 10px 10px;
     text-align: center;
     box-sizing: border-box;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    background-color: #dfe3f0;
+    color: rgba(22, 28, 53, 0.3);
   }
 }
 
@@ -193,11 +259,15 @@
   @media (min-width: @tablet-width) {
     order: 5;
     margin-top: 52px;
+    width: 618px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 732px;
-    margin: 26px 0 0 0;
+    margin: 20px 0 0 63px;
   }
 }
 
@@ -230,6 +300,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 0.08em;
   }
 }
 
@@ -246,6 +317,10 @@
     top: auto;
     bottom: -9px;
   }
+
+  @media (min-width: @desktop-width) {
+    left: 64px;
+  }
 }
 
 .user-profile__subtitle {
@@ -258,7 +333,8 @@
 
   @media (min-width: @tablet-width) {
     top: auto;
-    bottom: -9px;
+    bottom: -10px;
+    margin-left: -65px;
   }
 }
 
@@ -280,6 +356,18 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 22px;
+    padding: 35px 15px 13px 38px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #aeb4cb;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid#161C35;
+    color: rgba(68, 68, 68, 1);
   }
 }
 
@@ -288,7 +376,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 25px;
-  padding: 16px;
+  padding: 15px;
   align-items: center;
   background-color: transparent;
   border: 1px solid #cbced9;
@@ -298,13 +386,17 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
-    width: 310px;
+    width: 308px;
+    padding: 25px 15px 25px 15px;
+    margin-top: 0;
+    margin-left: 58px;
   }
 
   @media (min-width: @desktop-width) {
     order: 6;
     width: 384px;
-    margin: 26px 0 0 0;
+    padding: 23px 15px 20px 15px;
+    margin: 23px 0 0 auto;
   }
 }
 
@@ -315,15 +407,22 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .user-profile__fieldset-plans-container {
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 60px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 57px;
-    padding-bottom: 106px;
+    padding: 55px 75px 106px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 52px 60px 106px 123px;
   }
 }
 
@@ -338,6 +437,11 @@
 .user-profile__fieldset-add-plan--first-element {
   border-radius: 30px 30px 0 0;
   margin-top: -30px;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px 60px 0 0;
+    margin-top: -40px;
+  }
 }
 
 .user-profile__fieldset-entertainment {
@@ -345,12 +449,26 @@
   color: #1d2e5b;
   border-radius: 0 0 0 0;
   margin: 0 0 0 0;
-  padding: 10px 0 73px 0;
+  padding: 10px 0 45px 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 52px;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 129px;
+    padding-top: 45px;
+  }
 }
 
 .user-profile__fieldset-add-plan--first-element .user-profile__fieldset-add-plan-container {
-  padding-top: 30px;
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 50px;
+  }
 }
 
 .user-profile__fieldset-add-plan-container {
@@ -367,20 +485,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 67px;
+  }
 }
 
 .user-profile__arrival,
 .user-profile__rout,
 .user-profile__entertainment {
-  margin-top: 29px;
-  padding: 24px;
+  margin-top: 10px;
+  padding: 24px 24px 22px 24px;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 40px;
+    padding: 46px 40px 54px 40px;
+    margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 100px 160px;
+    padding: 97px 160px 105px 160px;
+    margin-top: 43px;
+  }
+}
+
+.user-profile__rout {
+  padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 96px;
+  }
+}
+
+.user-profile__entertainment {
+  margin-top: 0;
+  padding-bottom: 3px;
+}
+
+.user-profile__fieldset-add-plan-container .user-profile__arrival {
+  margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px;
   }
 }
 
@@ -400,6 +553,12 @@
 
 .user-profile__wrapper-pagination {
   display: flex;
+  margin-right: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: -2px;
+    margin-top: 1px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -415,10 +574,19 @@
   background-color: rgba(29, 46, 91, 0.3);
   border-radius: 50%;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .user-profile__top-pagination:not(:last-child) {
-  margin-right: 19px;
+  margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 29px;
+  }
 }
 
 .user-profile__top-pagination--current {

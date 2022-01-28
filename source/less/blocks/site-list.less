@@ -13,9 +13,7 @@
   @media (min-width: @tablet-width) {
     text-align: left;
   }
-}
 
-.site-list__item:not(:last-child) {
   @media (min-width: @desktop-width) {
     margin-right: 38px;
   }
@@ -30,6 +28,8 @@
   color: #192144;
   text-decoration: none;
   text-transform: uppercase;
+  overflow: hidden;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     font-weight: 500;
@@ -44,8 +44,14 @@
     color: #ffffff;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #ffd74b;
+  }
+
+  &:hover .site-list__link-text,
+  &:focus .site-list__link-text {
+    transform: translateY(-100%);
   }
 
   &:active {
@@ -57,4 +63,20 @@
 .site-list__link--change-color {
   color: #192144;
   font-weight: 500;
+}
+
+.site-list__link-text {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.site-list__link-text::before {
+  @media (min-width: @desktop-width) {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+  }
 }

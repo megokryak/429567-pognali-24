@@ -2,28 +2,35 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    width: 200px;
+    width: 170px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: none;
+    width: auto;
   }
 }
 
 .country-letter__item:not(:first-child) {
   margin-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .country-letter__link {
   display: block;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
   color: #444444;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
+    font-size: 20px;
     line-height: 30px;
   }
 }

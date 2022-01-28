@@ -1,5 +1,4 @@
 .range {
-  display: flex;
   flex-wrap: wrap;
 
   @media (min-width: @desktop-width) {
@@ -11,7 +10,7 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 15px 30px;
+  padding: 8px 30px;
   background-color: #ffffff;
   font-weight: 500;
   font-size: 15px;
@@ -26,7 +25,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    padding: 15px 10px;
+    padding: 10px 10px;
   }
 }
 
@@ -52,6 +51,7 @@
   @media (min-width: @tablet-width) {
     flex-grow: 0;
     order: 2;
+    margin-right: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -63,17 +63,29 @@
   @media (min-width: @tablet-width) {
     width: 74px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 95px;
+  }
 }
 
 .range__scale {
-  margin: 20px 0 0 0;
-  width: 193px;
+  margin: 23px 0 0 0;
+  width: 216px;
   height: 2px;
   background-color: rgba(29, 46, 91, 0.2);
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 24px;
+    width: 273px;
+  }
+
   @media (min-width: @desktop-width) {
     order: 2;
+    width: 187px;
+    margin: 37px 0 0 0;
   }
 }
 
@@ -82,8 +94,16 @@
   background-color: rgba(29, 46, 91, 1);
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 71px;
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    left: 104px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 64px;
+  }
 }
 
 .range__toggle {
@@ -96,6 +116,12 @@
   position: absolute;
   top: 50%;
   margin: -5px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+    margin-top: -7px;
+  }
 }
 
 .range__toggle-min {

@@ -51,7 +51,9 @@
 
   &:hover .site-list__link-text,
   &:focus .site-list__link-text {
-    transform: translateY(-100%);
+    @media (min-width: @desktop-width) {
+      transform: translateY(-100%);
+    }
   }
 
   &:active {

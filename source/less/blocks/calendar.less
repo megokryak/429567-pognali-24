@@ -218,14 +218,21 @@
   border: 4px solid #ff5c23;
 }
 
+.calendar__item--selected-first .calendar__date {
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+}
+
 .calendar__item--selected-first::after {
   @media (min-width: @desktop-width) {
     content: "Заезд";
     font-size: 18px;
     line-height: 20px;
     position: absolute;
-    top: 37px;
-    left: 14px;
+    top: 34px;
+    left: 12px;
   }
 }
 

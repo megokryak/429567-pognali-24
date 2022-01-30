@@ -741,10 +741,7 @@
                       <img src="img/czech-flag.jpg" alt="Флаг Чехии" class="entertainment__flag" width="35" height="24">
                     </div>
                     <div class="entertainment__break"></div>
-                    <textarea class="entertainment__plan" id="entertainment__plan2">Пить пиво и лазить
-по старым замкам,
-наслаждаться архитектурой
-и вот это все.</textarea>
+                    <textarea class="entertainment__plan" id="entertainment__plan2">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
                   </li>
                 </ul>
                 <button class="entertainment__submit" type="submit">Отправить</button>
@@ -777,7 +774,7 @@
             <path d="M64.0219 4.46201C66.0459 4.46201 71.4392 4.49207 71.4392 4.49207C71.4392 4.49207 71.4433 11.0831 71.4433 13.3863C71.4433 13.8287 71.2612 14.2101 70.8972 14.5305C70.5497 14.8356 70.2353 14.9882 69.7058 14.9882C69.1763 14.9882 68.9064 15.0283 68.5424 14.7232C68.1949 14.4028 67.8752 13.8287 67.8752 13.3863V7.43679H65.4188C65.4188 11.7016 65.4189 12.6387 63.8482 14.1644C63.269 14.7136 62.5244 14.9882 61.6143 14.9882C61.0683 14.9882 60.7474 14.8573 60.4 14.5522C60.0525 14.2318 59.7828 13.7205 59.7828 13.2476C59.7828 12.2296 59.9964 11.8245 60.5424 11.1604C62.1091 11.1604 62.0413 10.7809 61.943 7.89444V6.06381C61.9596 5.62141 62.0413 4.46201 62.0413 4.46201C62.0413 4.46201 63.542 4.46201 64.0219 4.46201Z" />
             <path d="M93.1598 12.7451C93.1598 13.9835 92.1101 14.9875 90.8153 14.9875C89.5204 14.9875 88.4707 13.9835 88.4707 12.7451C88.4707 11.5066 89.5204 10.5027 90.8153 10.5027C92.1101 10.5027 93.1598 11.5066 93.1598 12.7451Z" />
           </svg>
-          <svg class="info__logo-svg-tablet" width="168" height="42" xmlns="http://www.w3.org/2000/svg">
+          <svg class="info__logo-svg-tablet" width="168" height="42" viewBox="0 0 168 42" xmlns="http://www.w3.org/2000/svg">
             <path d="M78.02 10.62 44.74 42 32.59 1.77l45.43 8.85Z" fill="#FF8D30" />
             <ellipse cx="78.62" cy="28.47" rx="3.61" ry="3.57" fill="#88BFEB" />
             <ellipse cx="92.85" cy="18.09" rx="12.59" ry="12.45" fill="#EB9898" />
@@ -905,18 +902,18 @@
 
       //scroll
 
-      // var headerTop = document.querySelector('.header');
+      var headerTop = document.querySelector('.header');
 
-      // window.addEventListener('scroll', function (e) {
-      //   e.preventDefault();
+      window.addEventListener('scroll', function (e) {
+        e.preventDefault();
 
-      //   if (window.pageYOffset >= 50) {
-      //     headerTop.classList.add('header--fixed');
+        if (window.pageYOffset >= 50) {
+          headerTop.classList.add('header--fixed');
 
-      //   } else {
-      //     headerTop.classList.remove('header--fixed');
-      //   }
-      // });
+        } else {
+          headerTop.classList.remove('header--fixed');
+        }
+      });
 
     </script>
   </body>

@@ -18,6 +18,19 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
+}
+
+//styleForDev
+
+const stylesDev = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
@@ -84,7 +97,8 @@ export const build = gulp.series(
   gulp.parallel(
     html,
     images,
-    svg
+    svg,
+    stylesDev
   )
 );
 

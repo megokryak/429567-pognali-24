@@ -45,11 +45,27 @@ const cleaner = () => {
   return del('build');
 }
 
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+
 //html
 
 const html = () => {
   return gulp.src('source/*html')
   .pipe(gulp.dest('build'));
+}
+
+// Fonts
+
+const fonts = () => {
+  return gulp.src('source/fonts/*.{woff2,woff}')
+  .pipe(gulp.dest('build/fonts'));
 }
 
 //IMG
@@ -61,13 +77,20 @@ const images = () => {
 }
 
 //svg
+// Так как не делал в проекте спрайт, то я закоментировал таск, место нее поставлю копию svg
+
+// const svg = () => {
+//   return gulp.src('source/img/**/*.svg')
+//   .pipe(svgstore({
+//     inlineSvg: true
+//   }))
+//   .pipe(rename('sprite.svg'))
+//   .pipe(gulp.dest('build/img'));
+// }
 
 const svg = () => {
   return gulp.src('source/img/**/*.svg')
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
+  .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 }
 
@@ -98,7 +121,9 @@ export const build = gulp.series(
     html,
     images,
     svg,
-    stylesDev
+    stylesDev,
+    fonts,
+    scripts
   )
 );
 

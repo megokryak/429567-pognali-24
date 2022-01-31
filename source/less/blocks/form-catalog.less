@@ -1,14 +1,14 @@
 .form-catalog__filter-group {
-  margin: 0;
+  margin: 0 auto;
   border: none;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     padding-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     width: auto;
     padding: 0;
   }
@@ -161,7 +161,10 @@
 
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-music,
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-hobby,
-.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-eat {
+.form-catalog__link-dropdown--open + ul.form-catalog__interests-list-eat,
+.form-catalog__link-dropdown--nojs + ul.form-catalog__interests-list-music,
+.form-catalog__link-dropdown--nojs + ul.form-catalog__interests-list-hobby,
+.form-catalog__link-dropdown--nojs + ul.form-catalog__interests-list-eat {
   display: block;
   margin-top: 12px;
   padding-bottom: 4px;
@@ -182,7 +185,9 @@
 }
 
 .form-catalog__link-dropdown--open + ul.form-catalog__interests-list-transport,
-.form-catalog__link-dropdown--open + div.form-catalog__range {
+.form-catalog__link-dropdown--open + div.form-catalog__range,
+.form-catalog__link-dropdown--nojs + ul.form-catalog__interests-list-transport,
+.form-catalog__link-dropdown--nosj + div.form-catalog__range {
   display: flex;
   margin-top: 0;
   padding-bottom: 0;

@@ -2,7 +2,7 @@
   width: 100%;
   background-color: rgb(22, 28, 54);
   position: relative;
-  z-index: 10;
+  z-index: 20;
   transition: 1s;
 
   @media (min-width: @tablet-width) {
@@ -40,10 +40,6 @@
   @media (min-width: @tablet-width) {
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 12px;
   }
 }
 
@@ -98,11 +94,23 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 768px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     width: 1440px;
-    margin: 0 auto;
+  }
+}
+
+.header--active-menu .header__wrapper-container,
+.header--no-js .header__wrapper-container {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
   }
 }
 
@@ -199,11 +207,24 @@
   }
 }
 
+.header--nojs-color-back {
+  @media (min-width: @desktop-width) {
+    background-color: #192144;
+  }
+}
+
 .header__item-logo-link {
   margin: 0;
+}
 
+.header--active-menu .header__item-logo-link,
+.header--nojs .header__item-logo-link {
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin-right: 167px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -237,11 +258,25 @@
   padding-top: 26px;
 
   @media (min-width: @tablet-width) {
-    width: calc(50% + 9px);
+    width: 768px;
+    margin: 0 auto;
+    justify-content: flex-start;
     flex-grow: 0;
     padding-top: 17px;
     position: relative;
     z-index: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    margin: 0;
+    padding-right: 0;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 32px;
   }
 }
 
@@ -274,6 +309,10 @@
 .header--active-menu .header__item-logo-link-tablet g,
 .header--nojs .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
   fill: #192144;
+
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+  }
 }
 
 .header--nojs .header__item-logo-link-tablet g { //про вложенность помню, но это исключение, чтобы не плодить классы
@@ -313,10 +352,9 @@
 }
 
 .header--active-menu .header__item-navigation {
-  display: flex;
+  display: block;
+  padding-top: 0;
   box-sizing: border-box;
-  flex-direction: column;
-  padding: 44px 25px 36px 25px;
   background-color: #ffffff;
   position: absolute;
   top: 72px;
@@ -327,11 +365,18 @@
   z-index: -1;
 
   @media (min-width: @tablet-width) {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 142px;
-    padding-left: 98px;
+    padding-right: 0;
     top: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: auto;
+    width: auto;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    top: auto;
+    padding-right: 40px;
   }
 }
 
@@ -355,9 +400,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    padding-left: 98px;
-    padding-top: 83px;
-    padding-bottom: 72px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -380,6 +423,10 @@
 .header--nojs .main-nav {
   @media (min-width: @tablet-width) {
     align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
   }
 }
 
@@ -429,11 +476,52 @@ header.header--nojs .main-nav__contacts-list {
     top: 0;
     right: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    order: 3;
+    margin-right: 20px;
+    top: auto;
+    right: auto;
+  }
+}
+
+.header--active-menu .main-nav__wrapper,
+.header--nojs .main-nav__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 44px 25px 36px 25px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 768px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 142px;
+    padding-left: 98px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.header--active-menu .main-nav__wrapper {
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .header--nojs .main-nav__link--auth {
   @media (min-width: @tablet-width) {
-    top: 13px;
+    top: -60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -452,12 +540,24 @@ header.header--active-menu .main-nav__contacts-list {
   @media (min-width: @tablet-width) {
     width: auto;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+  }
 }
 
 header.header--active-menu .main-nav__contacts-list {
   @media (min-width: @tablet-width) {
     width: auto;
     margin-top: 135px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    order: 2;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -480,6 +580,26 @@ header.header--nojs .main-nav__socials-menu {
     margin-left: 25px;
   }
 
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header--active-menu .header__container {
+  @media (min-width: @desktop-width) {
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    margin: 0;
+    padding-right: 0;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 32px;
+  }
+}
+
+header.header--active-menu .main-nav__socials-menu {
   @media (min-width: @desktop-width) {
     display: none;
   }

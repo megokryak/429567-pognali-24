@@ -395,6 +395,12 @@
   }
 }
 
+.filter-country__wrapper-filter--nojs .filter-country__wrapper-filter {
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
+}
+
 .filter-country__container--open-filter .filter-country__wrapper {
   @media (min-width: @tablet-width) {
     order: 1;
@@ -419,5 +425,117 @@
     position: absolute;
     top: -85px;
     left: 71px;
+  }
+}
+
+.filter-country__wrapper-filter--nojs .filter-country__alphabet {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    order: 3;
+    margin-top: 11px;
+    margin-left: 0;
+  }
+}
+
+.filter-country__wrapper-filter--nojs .filter-country__close-button {
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.filter-country__wrapper-filter--nojs .filter-counrty__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 390px;
+    order: 1;
+    padding: 0;
+    position: absolute;
+    top: -85px;
+    left: 0;
+    margin-top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 27px 0 0 323px;
+  }
+}
+
+.filter-country__container--nojs .filter-country__wrapper-filter {
+  display: block;
+  position: static;
+  top: 25px;
+  background-color: #e2e5f2;
+  padding: 0 0 28px 0;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+  order: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    position: relative;
+  }
+}
+
+.filter-country__container--nojs {
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.filter-country__container--nojs .filter-country__button {
+  display: none;
+}
+
+.filter-country__container--nojs .filter-country__button-text { // про вложенность помню - это исключение
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.filter-country__container--nojs .filter-country__alphabet {
+  justify-content: flex-start;
+  margin-left: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 15px;
+  }
+}
+
+.filter-country__container--nojs .filter-country__close-button {
+  display: none;
+}
+
+.filter-country__container--nojs .filter-country__button-text--roll-up { // про вложенность помню - это исключение
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.filter-country__container--nojs .filter-country__wrapper {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 7px;
+    right: auto;
+    left: 80px;
+    order: 1;
+  }
+}
+
+.filter-country__container--nojs .filter-country__country-letter {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

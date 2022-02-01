@@ -184,7 +184,7 @@
   }
 }
 
-.filter-counrty__list {
+.filter-country__list {
   margin: 27px 0 0 0;
   padding: 0 0 0 24px;
   list-style-type: none;
@@ -252,7 +252,7 @@
 }
 
 .filter-country__button-text,
-.filter-country__button-text--roll-up {
+.filter-country__button-text-roll-up {
   display: none;
   font-family: "Blogger Sans", "Arial", sans-serif;
 
@@ -274,12 +274,12 @@
   }
 }
 
-.filter-country__button-text--roll-up {
+.filter-country__button-text-roll-up {
   display: none;
 }
 
 .filter-country__button-text::after,
-.filter-country__button-text--roll-up::after {
+.filter-country__button-text-roll-up::after {
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
@@ -294,7 +294,7 @@
   }
 }
 
-.filter-country__button-text--roll-up::after {
+.filter-country__button-text-roll-up::after {
   background-image: url("../img/icon_close_filter.svg");
   width: 22px;
   height: 24px;
@@ -405,7 +405,7 @@
 }
 
 
-.filter-country__wrapper-filter--close .filter-counrty__list {
+.filter-country__wrapper-filter--close .filter-country__list {
   @media (min-width: @tablet-width) {
     margin: 0;
   }
@@ -464,7 +464,7 @@
 }
 
 
-.filter-country__container--open-filter .filter-country__button-text--roll-up {
+.filter-country__container--open-filter .filter-country__button-text-roll-up {
   @media (min-width: @tablet-width) {
     display: block;
   }
@@ -476,7 +476,7 @@
   }
 }
 
-.filter-country__container--open-filter .filter-counrty__list {
+.filter-country__container--open-filter .filter-country__list {
   @media (min-width: @tablet-width) {
     position: absolute;
     top: -86px;
@@ -504,7 +504,7 @@
   }
 }
 
-.filter-country__wrapper-filter--nojs .filter-counrty__list {
+.filter-country__wrapper-filter--nojs .filter-country__list {
   @media (min-width: @tablet-width) {
     display: flex;
     width: 390px;
@@ -578,7 +578,7 @@
   display: none;
 }
 
-.filter-country__container--nojs .filter-country__button-text--roll-up { // про вложенность помню - это исключение
+.filter-country__container--nojs .filter-country__button-text-roll-up { // про вложенность помню - это исключение
   @media (min-width: @tablet-width) {
     display: block;
   }

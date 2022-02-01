@@ -2,9 +2,9 @@ var navMain = document.querySelector('.header');
 var navToggle = document.querySelector('.header__toggle');
 var navToggleClose = document.querySelector('.main-nav__close-menu');
 var dropDown = document.querySelector('.country-visit__dropdown');
-var dropDownAlphabet = document.querySelector('.country-visit_wrapper-alphabet');
+var dropDownAlphabet = document.querySelector('.country-visit__wrapper-alphabet');
 var selectCountry = document.querySelector('.country-visit__country-add');
-var countries = document.querySelector('.country-visit_wrapper-alphabet');
+var countries = document.querySelector('.country-visit__wrapper-alphabet');
 
 navMain.classList.remove('header--nojs');
 navMain.classList.remove('header--nojs-color-back');
@@ -20,20 +20,20 @@ navToggle.addEventListener('click', function() {
 });
 
 dropDown.addEventListener('click', function() {
-  if (dropDownAlphabet.classList.contains('country-visit_wrapper-alphabet--invisible')) {
-    dropDownAlphabet.classList.remove('country-visit_wrapper-alphabet--invisible');
+  if (dropDownAlphabet.classList.contains('country-visit__wrapper-alphabet--invisible')) {
+    dropDownAlphabet.classList.remove('country-visit__wrapper-alphabet--invisible');
   } else {
-    dropDownAlphabet.classList.add('country-visit_wrapper-alphabet--invisible');
+    dropDownAlphabet.classList.add('country-visit__wrapper-alphabet--invisible');
   }
 });
 
 selectCountry.addEventListener('click', function(e) {
   e.preventDefault();
-  if (countries.classList.contains('country-visit_wrapper-alphabet--invisible')) {
-    countries.classList.remove('country-visit_wrapper-alphabet--invisible');
+  if (countries.classList.contains('country-visit__wrapper-alphabet--invisible')) {
+    countries.classList.remove('country-visit__wrapper-alphabet--invisible');
     selectCountry.classList.add('country-visit__country-add--active');
   } else {
-    countries.classList.add('country-visit_wrapper-alphabet--invisible');
+    countries.classList.add('country-visit__wrapper-alphabet--invisible');
     selectCountry.classList.remove('country-visit__country-add--active');
   }
 });

@@ -5,24 +5,9 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
-import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
 import del from 'del';
-
-// Styles
-
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
 
 //styleForDev
 
@@ -53,7 +38,6 @@ const scripts = () => {
     .pipe(browser.stream());
 }
 
-
 //html
 
 const html = () => {
@@ -76,17 +60,14 @@ const images = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-//svg
-// Так как не делал в проекте спрайт, то я закоментировал таск, место нее поставлю копию svg
+//COPY IMAGES
 
-// const svg = () => {
-//   return gulp.src('source/img/**/*.svg')
-//   .pipe(svgstore({
-//     inlineSvg: true
-//   }))
-//   .pipe(rename('sprite.svg'))
-//   .pipe(gulp.dest('build/img'));
-// }
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+}
+
+//svg
 
 const svg = () => {
   return gulp.src('source/img/**/*.svg')
@@ -99,7 +80,7 @@ const svg = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -108,11 +89,18 @@ const server = (done) => {
   done();
 }
 
+// Reload
+const reload = (done) => {
+  browser.reload ();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/less/**/*.less', gulp.series(stylesDev, reload));
+  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 export const build = gulp.series(
@@ -128,5 +116,16 @@ export const build = gulp.series(
 );
 
 export default gulp.series(
-  styles, server, watcher
-);
+  cleaner,
+  gulp.parallel(
+    html,
+    copyImages,
+    svg,
+    stylesDev,
+    fonts,
+    scripts
+  ),
+  gulp.series(
+    server,
+    watcher
+));

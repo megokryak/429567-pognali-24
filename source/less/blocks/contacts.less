@@ -24,9 +24,9 @@
 .contacts__container {
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin: 59px 0 0 0;
+    margin: 59px auto 0 auto;
     padding: 0 135px;
   }
 }
@@ -50,9 +50,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    padding-right: 148px;
     padding-left: 120px;
-    margin-left: auto;
+    margin-left: calc(50% - 437px);
     margin-top: 0;
   }
 }
@@ -98,8 +97,7 @@
 
   @media (min-width: @desktop-width) {
     width: 324px;
-    align-self: flex-end;
-    margin: 0;
+    margin: 0 0 0 83px;
   }
 }
 

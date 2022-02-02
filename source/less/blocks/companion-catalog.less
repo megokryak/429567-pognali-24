@@ -33,6 +33,7 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 13px 20px 22px 19px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -46,6 +47,17 @@
     grid-template-columns: 672px 170px 80px;
     grid-template-rows: repeat(2, auto);
     padding: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .companion-catalog__img,
+  &:focus .companion-catalog__img {
+    transform: scale(1.1);
+    transition: 1s;
   }
 }
 
@@ -222,10 +234,12 @@
   border-radius: 50%;
   width: 70px;
   height: 70px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     width: 190px;
     height: 190px;
+    border-radius: 0;
     grid-column: 1/2;
     grid-row: 1/-1;
     margin-top: 1px;
@@ -275,6 +289,24 @@
     font-size: 30px;
     line-height: 30px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:hover ~ .companion-catalog__status-online,
+  &:focus ~ .companion-catalog__status-online {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active ~ .companion-catalog__status-online {
+    opacity: 0.3;
+  }
 }
 
 .companion-catalog__user-name a {
@@ -319,6 +351,15 @@
 .companion-catalog__button-like--current {
   background-color: #f9eaea;
   background-image: url("../img/icon_heart-fill.svg");
+
+  &:hover,
+  &:focus {
+    background-color: #f9d8d8;
+  }
+
+  &:active {
+    background-image: url("../img/icon_heart-fill-active.svg");
+  }
 }
 
 .companion-catalog__meta {
@@ -725,6 +766,15 @@
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
   }
 }
 

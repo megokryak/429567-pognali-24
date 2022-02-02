@@ -136,6 +136,15 @@
   @media (min-width: @desktop-width) {
     width: auto;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .form-catalog__link-dropdown::after {
@@ -300,6 +309,15 @@
 
 .form-catalog__label {
   display: flex;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form-catalog__control-mark {
@@ -396,5 +414,15 @@ input[type="checkbox"]:checked + .form-catalog__control-mark {
     line-height: 20px;
     width: 194px;
     margin-top: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    color: rgba(22, 28, 53, 0.3);
   }
 }

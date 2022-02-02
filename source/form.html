@@ -556,6 +556,9 @@
                     </li>
                     <li class="country-visit__item">
                       <a href="#" class="country-visit__country-add">Выберите страну</a>
+                      <button class="country-visit__button-close" type="button">
+                        <span class="visually-hidden">Закрыть список</span>
+                      </button>
                       <div class="country-visit__wrapper-img country-visit__wrapper-img--select-country">
                         <button class="country-visit__dropdown" type="button">
                           <span class="visually-hidden">Раскрыть список</span>
@@ -712,7 +715,8 @@
                       <img src="img/bosnia-and-herzegovina-flag.jpg" alt="Флаг Боснии" class="entertainment__flag" width="35" height="24">
                     </div>
                     <div class="entertainment__break"></div>
-                    <textarea class="entertainment__plan" id="entertainment__plan1" placeholder="План действий"></textarea>
+                    <textarea class="entertainment__plan entertainment__plan--error" id="entertainment__plan1" placeholder="План действий"></textarea>
+                    <span class="entertainment__error">Это поле должно быть заполнено</span>
                   </li>
                   <li class="entertainment__item">
                     <label for="entertainment__plan2" class="entertainment__country"><span>Чехия</span></label>
@@ -721,6 +725,7 @@
                     </div>
                     <div class="entertainment__break"></div>
                     <textarea class="entertainment__plan" id="entertainment__plan2">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                    <span class="entertainment__error">Это поле должно быть заполнено</span>
                   </li>
                 </ul>
                 <button class="entertainment__submit" type="submit">Отправить</button>

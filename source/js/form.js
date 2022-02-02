@@ -5,6 +5,7 @@ var dropDown = document.querySelector('.country-visit__dropdown');
 var dropDownAlphabet = document.querySelector('.country-visit__wrapper-alphabet');
 var selectCountry = document.querySelector('.country-visit__country-add');
 var countries = document.querySelector('.country-visit__wrapper-alphabet');
+var buttonCloseList = document.querySelector('.country-visit__button-close');
 
 navMain.classList.remove('header--nojs');
 navMain.classList.remove('header--nojs-color-back');
@@ -36,6 +37,11 @@ selectCountry.addEventListener('click', function(e) {
     countries.classList.add('country-visit__wrapper-alphabet--invisible');
     selectCountry.classList.remove('country-visit__country-add--active');
   }
+});
+
+buttonCloseList.addEventListener('click', function() {
+  countries.classList.add('country-visit__wrapper-alphabet--invisible');
+  selectCountry.classList.remove('country-visit__country-add--active');
 });
 
 //scroll

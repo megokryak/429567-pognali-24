@@ -315,6 +315,15 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(25, 33, 68, 0.6);
+  }
+
+  &:active {
+    color: rgba(25, 33, 68, 1);
+  }
 }
 
 .filter-country__link-part-world--current {
@@ -355,6 +364,19 @@
     padding: 41px 70px 39px 111px;
     width: 1320px;
     margin-left: -20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: rgba(25, 33, 68, 0.6);
+  }
+
+  &:active::before {
+    opacity: 0.6;
   }
 }
 

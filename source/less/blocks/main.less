@@ -185,6 +185,15 @@
     margin: 63px auto 0 346px;
     padding-left: 49px;
   }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .main__button-more::before {
@@ -254,9 +263,19 @@
   outline: none;
   background-color: #ffffff;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 26px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
 
@@ -356,6 +375,15 @@
   line-height: 20px;
   color: #1d2e5b;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: #1d2e5b;
+  }
 }
 
 .main__pagination-catalog-items--active {

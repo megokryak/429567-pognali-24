@@ -21,21 +21,34 @@
   border: 1px solid #cbced9;
   box-sizing: border-box;
   appearance: textfield;
+  cursor: pointer;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     padding: 10px 10px;
   }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #959bb2;
+    z-index: 1;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+    z-index: 1;
+  }
 }
 
 .range__label:first-child .range__input {
   border-radius: 4px 0 0 4px;
-  border-right: none;
 }
 
 .range__label:last-child .range__input {
   border-radius: 0 4px 4px 0;
+  margin-left: -1px;
 }
 
 .range__input::-webkit-outer-spin-button,
@@ -121,6 +134,15 @@
     width: 13px;
     height: 13px;
     margin-top: -7px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.46);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
   }
 }
 

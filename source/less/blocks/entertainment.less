@@ -422,6 +422,7 @@
   margin-top: 20px;
   padding: 6px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding: 23px 97px 28px 10px;
@@ -432,6 +433,19 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 60px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
 

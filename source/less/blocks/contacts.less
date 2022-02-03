@@ -101,6 +101,34 @@
   }
 }
 
+.contacts__wrapper-map {
+  background-image: url("../img/background_map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background_map@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background_map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background_map-desktop.jpg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_map-desktop@2x.jpg");
+    }
+  }
+}
+
 .contacts__map {
   margin: 0 auto;
   display: block;

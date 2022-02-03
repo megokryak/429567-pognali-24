@@ -81,6 +81,27 @@
   @media (min-width: @desktop-width) {
     margin-top: 23px;
   }
+
+  &:focus-within ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 27px 0 0;
+    padding: 0 0 6px;
+  }
+
+  &:focus-within .form-catalog__range {
+    display: flex;
+    margin: 13px 0 0 0;
+    padding-bottom: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &:focus-within .form-catalog__interests-list-transport {
+    flex-direction: row;
+  }
 }
 
 .form-catalog__interests-group {
@@ -311,7 +332,8 @@
   display: flex;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-within {
     opacity: 0.6;
   }
 

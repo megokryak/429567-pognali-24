@@ -81,27 +81,6 @@
   @media (min-width: @desktop-width) {
     margin-top: 23px;
   }
-
-  &:focus-within ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 27px 0 0;
-    padding: 0 0 6px;
-  }
-
-  &:focus-within .form-catalog__range {
-    display: flex;
-    margin: 13px 0 0 0;
-    padding-bottom: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  &:focus-within .form-catalog__interests-list-transport {
-    flex-direction: row;
-  }
 }
 
 .form-catalog__interests-group {
@@ -134,6 +113,10 @@
 .form-catalog__item:last-child .form-catalog__interests-group {
   @media (min-width: @tablet-width) {
     padding-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
   }
 }
 
@@ -186,6 +169,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
+    right: 21px;
   }
 }
 
@@ -242,6 +226,14 @@
 
 .form-catalog__link-dropdown--open + div.form-catalog__range {
   margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+  }
 }
 
 .form-catalog__interests-list-music,

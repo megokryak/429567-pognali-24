@@ -5,6 +5,8 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import csso from 'postcss-csso';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
 import del from 'del';
@@ -67,7 +69,27 @@ const copyImages = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-//svg
+// WebP
+
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
+// SVG
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    // .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
 const svg = () => {
   return gulp.src('source/img/**/*.svg')
@@ -111,6 +133,8 @@ export const build = gulp.series(
     svg,
     stylesDev,
     fonts,
+    sprite,
+    createWebp,
     scripts
   )
 );
@@ -123,6 +147,8 @@ export default gulp.series(
     svg,
     stylesDev,
     fonts,
+    sprite,
+    createWebp,
     scripts
   ),
   gulp.series(

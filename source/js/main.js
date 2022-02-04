@@ -1,8 +1,10 @@
 var navMain = document.querySelector('.header');
 var navToggle = document.querySelector('.header__toggle');
 var navToggleClose = document.querySelector('.main-nav__close-menu');
+var map = document.querySelector('.contacts__img-map');
 
 navMain.classList.remove('header--nojs');
+map.classList.remove('contacts__img-map--nojs');
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('header--active-menu')) {

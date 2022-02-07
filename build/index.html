@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page">
+    <!--Header start-->
+    <header class="header header--nojs"><!--header--active-menu при открытом меню-->
+      <div class="header__wrapper-container">
+        <div class="header__container container">
+          <a class="header__item-logo-link" href="index.html">
+            <svg class="header__item-logo-link-mobile" aria-hidden="true" focusable="false" width="96" height="15" viewBox="0 0 96 15" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            </svg>
+            <svg class="header__item-logo-link-tablet" width="168" height="42" viewBox="0 0 168 42" xmlns="http://www.w3.org/2000/svg">
+              <path d="M78.02 10.62 44.74 42 32.59 1.77l45.43 8.85Z" fill="#FF8D30" />
+              <ellipse cx="78.62" cy="28.47" rx="3.61" ry="3.57" fill="#88BFEB" />
+              <ellipse cx="92.85" cy="18.09" rx="12.59" ry="12.45" fill="#EB9898" />
+              <path fill="#72A73E" d="m85.44 19.57 43.82-16.03 8.26 22.06L93.7 41.63z" />
+              <ellipse cx="91.33" cy="34.14" rx="2.12" ry="2.09" fill="#FFBD30" />
+              <ellipse rx="18.92" ry="7.59" transform="matrix(.97025 .24212 -.24742 .9689 132.05 28.05)" fill="#8EC7F5" />
+              <ellipse cx="146.38" cy="10.26" rx="2.15" ry="2.13" fill="#FFBD30" />
+              <ellipse cx="153.1" cy="7.73" rx="2.15" ry="2.13" fill="#FFBD30" />
+              <path d="M3.34 35.35h5v2.32a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-2.32ZM34.2 35.35h5v2.32a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-2.32Z" fill="#1D2959" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.92 2.94a8.18 8.18 0 0 0-2.8-.68 8.2 8.2 0 0 0-2.64.7c-.5.21-1 .44-1.49.7-.58.32-1.3.11-1.61-.46-.32-.57-.11-1.28.46-1.6a15.1 15.1 0 0 1 1.74-.82C18.53.4 19.87.02 21.07 0c1.27-.02 2.7.35 3.72.75.64.25 1.26.52 1.86.85.58.3.8 1.02.48 1.6a1.2 1.2 0 0 1-1.6.47 13 13 0 0 0-1.61-.73Z" fill="#8A4A38" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.45a.96.96 0 0 0-.97.96v.62c0 .44.36.8.8.8h.02v3.06h.84V3.81h-.22a1.19 1.19 0 0 0-.22-2.36h-.26ZM26.51 1.45c.53 0 .96.43.96.96v.62a.8.8 0 0 1-.8.8h-.02v3.06h-.84V3.81h.22a1.19 1.19 0 0 1 .23-2.36h.25Z" fill="#F6EF3E" />
+              <path d="M0 15.52a9 9 0 0 1 9-9h24.54a9 9 0 0 1 9 9v19.83H0V15.52Z" fill="#8A4A38" />
+              <ellipse cx="6.68" cy="27.93" rx="4.17" ry="4.12" fill="#EF9A9A" />
+              <ellipse rx="4.02" ry="7.73" transform="matrix(.70085 -.71331 .72133 .69259 32.77 28.07)" fill="#93C6EB" />
+              <path fill="#C2DEA3" d="m16.4 17.9 9.43-9.92 5.59 5.2-9.43 9.92z" />
+              <rect width="6.96" height="5.22" rx="1" transform="matrix(.7339 .67927 -.68766 .72603 8.78 11.14)" fill="#C49A6C" />
+              <path fill="#F57B20" d="M8.33 19.36h5.87v16.8H8.33z" />
+              <path d="M8.33 5.43h5.87v14.55a2.93 2.93 0 0 1-5.87 0V5.43Z" fill="#F6A725" />
+              <path fill="#F6EF3E" d="M7.52 18.04h7.5v1.65h-7.5z" />
+              <path fill="#F57B20" d="M28.35 19.36h5.87v16.8h-5.87z" />
+              <path d="M28.35 5.43h5.86v14.55a2.93 2.93 0 0 1-5.86 0V5.43Z" fill="#F6A725" />
+              <path fill="#F6EF3E" d="M27.53 18.04h7.5v1.65h-7.5z" />
+              <g class="header__item-logo-change-color">
+                <path d="M164.79 19.06c.8-.51 1.21-1.3 1.21-2.35 0-1.38-.58-2.47-1.74-3.26a6.72 6.72 0 0 0-4-1.2 7 7 0 0 0-4.11 1.3c-1.23.87-1.85 2.02-1.85 3.46 0 .53.17.98.51 1.33.34.34.83.5 1.46.5.6 0 1.08-.16 1.4-.5.34-.35.5-.8.5-1.33-.02-.41.11-.83.42-1.25.3-.44.86-.66 1.67-.66.68.02 1.16.19 1.45.51.31.32.45.65.42.97 0 .23-.09.45-.25.68-.16.23-.33.4-.5.53-.17.13-.43.3-.8.55l-.78.5a2.83 2.83 0 0 0-1.26 2.42c0 .49.18.9.53 1.24.38.33.87.49 1.48.49s1.1-.16 1.45-.49c.38-.33.56-.75.56-1.24 0-.22.04-.41.12-.6.08-.18.21-.35.39-.5l.48-.38c.15-.1.36-.23.63-.38.3-.16.5-.27.6-.34ZM144.1 23.5l4.29-5.24a2.36 2.36 0 0 1 1.79-1.06 2.6 2.6 0 0 1 1.98.54c.56.45.83 1.04.8 1.8v7.51c0 .48-.19.88-.57 1.21-.36.32-.8.48-1.32.48-.51 0-.96-.16-1.34-.48a1.58 1.58 0 0 1-.54-1.2v-4.67l-4.3 5.25c-.43.63-1.03.98-1.78 1.05a2.6 2.6 0 0 1-1.98-.54 2.05 2.05 0 0 1-.8-1.79v-7.5c0-.47.18-.87.54-1.2.38-.34.82-.5 1.34-.5.52 0 .96.16 1.32.5.38.33.57.73.57 1.2v4.65Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M124.82 26.98v-8.16c0-.47-.2-.87-.6-1.2a1.93 1.93 0 0 0-1.35-.54c-.51 0-.95.18-1.34.53-.38.34-.57.74-.57 1.21v-.2a2.42 2.42 0 0 0-1.14-1.12 3.9 3.9 0 0 0-1.95-.48c-1.43 0-2.74.52-3.95 1.56a5.43 5.43 0 0 0-1.76 4.29c0 1.86.58 3.3 1.74 4.33a5.82 5.82 0 0 0 3.97 1.54c.73 0 1.37-.13 1.93-.4.55-.28.96-.6 1.21-.99.1.4.32.73.67 1a2 2 0 0 0 1.19.37c.52 0 .97-.17 1.35-.51.4-.34.6-.75.6-1.23Zm-6.09-1.5c1.3 0 2.36-1.13 2.36-2.52 0-1.4-1.06-2.52-2.36-2.52-1.3 0-2.35 1.13-2.35 2.52 0 1.4 1.05 2.52 2.35 2.52Z" />
+                <path d="M107.15 21.31v-2.36c0-.48.2-.88.59-1.22a2 2 0 0 1 1.37-.52 2 2 0 0 1 1.38.52c.39.34.59.74.59 1.22v8.08c0 .48-.2.89-.6 1.22a2 2 0 0 1-1.37.5c-.54 0-1-.17-1.4-.5a1.57 1.57 0 0 1-.56-1.22v-2.4h-4.25v2.4c0 .48-.2.89-.58 1.22a2 2 0 0 1-1.38.5c-.54 0-1-.17-1.4-.5a1.57 1.57 0 0 1-.56-1.22v-8.08c0-.48.2-.88.59-1.22a2 2 0 0 1 1.37-.52 2 2 0 0 1 1.38.52c.39.34.59.74.59 1.22v2.36h4.24ZM97 17.21c.4 0 .72.15 1 .43.27.3.41.96.41 1.36 0 .4-.14.82-.41 1.11-.28.3-.6.4-1 .4h-3.28v6.56c0 1.25-1.1 1.68-2.21 1.68-1.03 0-2.01-.55-2.01-1.67l.03-9.87h7.48ZM73.54 12.25v14.67c0 .48-.27.89-.64 1.23-.35.33-.9.5-1.41.5-.5 0-1.24-.17-1.6-.5a1.64 1.64 0 0 1-.53-1.23V15.56h-5.92v11.36c0 .48-.19.89-.56 1.23-.35.33-1.07.5-1.57.5s-1.17-.17-1.54-.5a1.64 1.64 0 0 1-.53-1.23V12.25h14.3ZM86.64 26.95a6.78 6.78 0 0 1-4.8 1.67c-2.01 0-3.6-.56-4.79-1.67a5.54 5.54 0 0 1-1.82-4.23c0-1.7.6-3.12 1.82-4.23 1.18-1.11 2.78-1.67 4.78-1.67 2.01 0 3.61.56 4.81 1.67a5.58 5.58 0 0 1 1.8 4.23c0 1.7-.6 3.1-1.8 4.23Zm-3.12-5.97a2.05 2.05 0 0 0-1.24-.63 2.57 2.57 0 0 0-1.37.13c-.42.17-.78.45-1.08.85-.29.4-.4.86-.37 1.39 0 .7.22 1.28.66 1.74.45.45 1.03.68 1.71.68.7 0 1.28-.22 1.72-.65.44-.45.66-1.04.66-1.77 0-.7-.23-1.28-.69-1.74ZM130.44 17.16l8.25.03v9.79c0 .48-.2.9-.6 1.26-.4.33-.74.5-1.33.5-.59 0-.89.04-1.3-.3a2.3 2.3 0 0 1-.74-1.46v-6.55H132c0 4.7 0 5.72-1.75 7.4-.64.6-1.47.9-2.48.9-.6 0-.96-.14-1.35-.47a2.08 2.08 0 0 1-.69-1.44c0-1.12.24-1.56.85-2.3 1.74 0 1.67-.41 1.56-3.59v-2.01c.01-.49.1-1.76.1-1.76h2.2ZM162.84 26.27a2.54 2.54 0 0 1-2.6 2.47c-1.45 0-2.61-1.1-2.61-2.47a2.54 2.54 0 0 1 2.6-2.47c1.44 0 2.61 1.1 2.61 2.47Z" />
+              </g>
+              <defs>
+                <filter x="57.24" y="11.25" width="110.76" height="20.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                  <feOffset dy="1" />
+                  <feGaussianBlur stdDeviation="1" />
+                  <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                  <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_13528_717" />
+                  <feBlend in="SourceGraphic" in2="effect1_dropShadow_13528_717" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+          </a>
+          <button class="header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню/Закрыть меню</span>
+          </button>
+          <!--Main Menu start-->
+        </div>
+        <nav class="header__item-navigation main-nav main-nav--closed">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" >
+                  <span class="site-list__link-text" data-hover="О сервисе">О сервисе</span>
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html" class="site-list__link">
+                  <span class="site-list__link-text" data-hover="Направления">Направления</span>
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html" class="site-list__link">
+                  <span class="site-list__link-text" data-hover="Попутчики">Попутчики</span>
+                </a>
+              </li>
+            </ul>
+
+            <a href="#" class="main-nav__link main-nav__link--auth">Авторизация</a>
+
+            <!--contacts-list start-->
+            <ul class="main-nav__contacts-list contacts-list">
+              <li class="contacts-list__item">
+                <a href="tel:88005558628" class="contacts-list__link">
+                  <span class="contacts-list__icon">
+                    <svg class="contacts-list__svg-mobile" aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-phone-mobile"></use>
+                    </svg>
+                    <svg class="contacts-list__svg-desktop" width="18" height="18" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-phone-desk"></use>
+                    </svg>
+                  </span>
+                  <span class="contacts-list__text">8 800 555-86-28</span>
+                </a>
+              </li>
+              <li class="contacts-list__item">
+                <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">
+                  <span class="contacts-list__icon">
+                    <svg class="contacts-list__svg-mobile" aria-hidden="true" focusable="false" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-mail-mobile"></use>
+                    </svg>
+                    <svg class="contacts-list__svg-desktop" width="16" height="14" viewBox="0 0 16 14"  xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-mail-desk"></use>
+                    </svg>
+                  </span>
+                  <span class="contacts-list__text">mail@htmlacademy.ru</span>
+                </a>
+              </li>
+            </ul>
+            <!--contacts list end-->
+
+            <!-- socials-menu start -->
+            <ul class="main-nav__socials-menu socials-menu">
+              <li class="socials-menu__item">
+                <a href="#" class="socials-menu__link">
+                  <span class="visually-hidden">Мы в Facebook</span>
+                  <svg aria-hidden="true" focusable="false" width="10" height="20" viewBox="0 0 14 28" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-menu__item">
+                <a href="#" class="socials-menu__link">
+                  <span class="visually-hidden">Мы в Вконтакте</span>
+                  <svg aria-hidden="true" focusable="false" width="23" height="12" viewBox="0 0 31 16" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-menu__item">
+                <a href="#" class="socials-menu__link">
+                  <span class="visually-hidden">Мы в Инстаграм</span>
+                  <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <!-- socials-menu end -->
+          </div>
+        </nav>
+        <!--Main Menu end-->
+      </div>
+    </header>
+    <!--Header end-->
+
+    <!--Main start-->
+    <main class="main">
+      <h1 class="visually-hidden">Погнали - Сервис для поиска попутчиков для путешествий</h1>
+      <!--Promo block start-->
+      <section class="main__promo promo">
+        <div class="promo__main-wrapper">
+          <div class="promo__container container">
+            <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
+            <!--additional-contacts start-->
+            <ul class="promo__additional-contacts additional-contacts">
+              <li class="additional-contacts__item">
+                <a href="tel:88005558628" class="additional-contacts__link additional-contacts__link--phone">
+                  <span class="visually-hidden">800 555-86-28</span>
+                  <svg aria-hidden="true" focusable="false" width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-cellphone"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="additional-contacts__item">
+                <a href="mailto:mail@htmlacademy.ru" class="additional-contacts__link additional-contacts__link--mail">
+                  <span class="visually-hidden">mail@htmlacademy.ru</span>
+                  <svg aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-mail-main"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="additional-contacts__item">
+                <a href="№" class="additional-contacts__link additional-contacts__link--button">Авторизация</a>
+              </li>
+            </ul>
+          </div>
+          <!--additional-contacts end-->
+          <div class="promo__wrapper-content">
+            <div class="promo__container promo__container--author container">
+              <p class="promo__text">«Лучшее приложение,<br/>что я видел в жизни!»</p>
+              <p class="promo__author">Мурат Эльтазин</p>
+              <p class="promo__author promo__author--profession">главный редактор <br/>газеты «гаджетлайф»</p>
+            </div>
+          </div>
+          <!--Sequence start-->
+          <div class="promo__container promo__container--sequence">
+            <ul class="promo__list sequence">
+              <li class="sequence__item">
+                <p class="sequence__description">Выберите<br/>направление</p>
+              </li>
+              <li class="sequence__item">
+                <p class="sequence__description">Изучите идеи<br/>путешественников</p>
+              </li>
+              <li class="sequence__item">
+                <p class="sequence__description">Находите тех,<br/>кто похож на вас</p>
+              </li>
+              <li class="sequence__item">
+                <p class="sequence__description">Путешествуйте<br/>вместе!</p>
+              </li>
+            </ul>
+            <!--Sequence end-->
+          </div>
+        </div>
+      </section>
+      <!--Promo block end-->
+
+      <!--About block-->
+      <section class="main__about about">
+        <div class="about__container container">
+          <h2 class="about__title">О сервисе</h2>
+          <p class="about__text">Любое путешествие веселее <br/>с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий <span>и черпайте вдохновение в чужих.</span></p>
+          <p class="about__description">А если найдете кого-то близкого по духу — <br/>скорее зовите в совместный трип!</p>
+          <a href="#" class="about-link button about-link--active">Подробнее</a>
+        </div>
+      </section>
+      <!--About block end-->
+
+      <!--Countries start-->
+      <section class="main__countries countries">
+        <div class="countries__container container">
+          <h2 class="countries__title">Направления</h2>
+          <p class="countries__description">Мы не продаем туры <br>и ничего не рекламируем. <br>Люди сами пишут о странах, куда хотели бы отправиться <br>и чем можно там заняться.</p>
+          <!--Cart-country start-->
+          <ul class="countries__list cart-country">
+            <li class="cart-country__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop_card.webp 1x, img/thailand-desktop_card@2x.webp 2x">
+                <source type="image/webp" srcset="img/thailand-mobile.webp 1x, img/thailand-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop_card.png 1x, img/thailand-desktop_card@2x.png 2x">
+                <img src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.jpg" alt="Тайланд" class="cart-country__img" width="270" height="110">
+              </picture>
+              <!--Country start-->
+              <div class="cart-country__description country">
+                <img src="img/thailand-flag.jpg" alt="Флаг Тайланд" class="country__flag" width="35" height="24">
+                <h3 class="country__title">Таиланд</h3>
+                <span class="country__users">18321</span>
+                <p class="country__slogan">Джунгли зовут!</p>
+              </div>
+              <!--Country end-->
+            </li>
+            <li class="cart-country__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop_card.webp 1x, img/france-desktop_card@2x.webp 2x">
+                <source type="image/webp" srcset="img/france-mobile.webp 1x, img/france-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/france-desktop_card.png 1x, img/france-desktop_card@2x.png 2x">
+                <img src="img/france-mobile.jpg" alt="Франция" class="cart-country__img" width="270" height="110">
+              </picture>
+              <!--Country start-->
+              <div class="cart-country__description country">
+                <img src="img/france-flag.jpg" alt="Флаг Франции" class="country__flag" width="35" height="24">
+                <h3 class="country__title">Франция</h3>
+                <span class="country__users">12518</span>
+                <p class="country__slogan">Трэ бьен, манифик!</p>
+              </div>
+              <!--Country end-->
+            </li>
+            <li class="cart-country__item">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-desktop_card.webp 1x, img/czech-desktop_card@2x.webp 2x">
+                <source type="image/webp" srcset="img/czech-mobile.webp 1x, img/czech-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/czech-desktop_card.png 1x, img/czech-desktop_card@2x.png 2x">
+                <img src="img/czech-mobile.jpg" alt="Чехия" class="cart-country__img" width="270" height="110">
+              </picture>
+              <!--Country start-->
+              <div class="cart-country__description country">
+                <img src="img/czech-flag.jpg" alt="Флаг Чехии" class="country__flag" width="35" height="24">
+                <h3 class="country__title">Чехия</h3>
+                <span class="country__users">5326</span>
+                <p class="country__slogan">Закоулки старой Европы</p>
+              </div>
+              <!--Country end-->
+            </li>
+          </ul>
+          <!--Cart-country end-->
+          <a href="/form.html" class="countries__button button">Показать все</a>
+        </div>
+      </section>
+      <!--Countries end-->
+
+      <!-- Companion start -->
+      <section class="main__companion companion">
+        <div class="companion__container container">
+          <h2 class="companion__title">Попутчики</h2>
+          <p class="companion__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br/>а другому маршрут для хайкинга.</p>
+          <p class="companion__text">Теперь можно легко <br/>найти единомышленников!</p>
+          <!-- User-card start -->
+          <ul class="companion__list user-card">
+            <li class="user-card__item">
+              <a class="user-card__wrapper-img" href="#">
+                <span class="visually-hidden">Фотография Тани Фирсовой</span>
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova_tablet.webp 1x, img/firsova_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/avatar_01.webp 1x, img/avatar_01@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova_tablet.jpg 1x, img/firsova_tablet@2x.jpg 2x">
+                  <img src="img/avatar_01.jpg" srcset="img/avatar_01@2x.jpg 2x" alt="Фотография Тани Фирсовой" class="user-card__avatar">
+                </picture>
+              </a>
+              <div class="user-card__mark">
+                <svg class="user-card__circle" width="60" height="60">
+                  <use xlink:href="img/sprite.svg#card-circle"></use>
+                </svg>
+                <b>99</b>
+                <span>level</span>
+              </div>
+              <div class="user-card__counries">
+                <div class="user-card__wrapper-countries" data-tooltip="Sri-Lanka">
+                  <img src="img/sri-Lanka-flag.jpg" alt="Sri-Lanka" width="35" height="25">
+                  <span class="user-card__icon-description">Sri-Lanka</span>
+                </div>
+                <div class="user-card__wrapper-countries" data-tooltip="Thailand">
+                  <img src="img/thailand-flag.jpg" alt="Thailand" width="35" height="25">
+                </div>
+                <div class="user-card__wrapper-countries" data-tooltip="Seychelles">
+                  <img src="img/seychelles-flag.jpg" alt="Seychelles" width="35" height="25">
+                </div>
+              </div>
+              <div class="user-card__wrapper-name">
+                <span class="user-card__status"></span>
+                <h3 class="user-card__user-name">
+                  <a href="#">Таня Фирсова</a>
+                </h3>
+              </div>
+              <p class="user-card__meta meta">
+                <a href="#" class="meta__link">#ЗОЖ</a>
+                <a href="#" class="meta__link">#ПП</a>
+                <a href="#" class="meta__link">#Фитнес</a>
+                <a href="#" class="meta__link">#пляж</a>
+                <a href="#" class="meta__link">#авокадо</a>
+                <a href="#" class="meta__link">#смузи</a>
+              </p>
+              <div class="user-card__icons">
+                <div class="user-card__wrapper-icon" data-tooltip="Авиаперелет">
+                  <svg width="21" height="23" class="user-card__icon user-card__icon--active" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#airplane"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Автотранспорт">
+                  <svg width="18" height="21" class="user-card__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#auto"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Велосипед">
+                  <svg width="25" height="24" class="user-card__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#bycicle"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Пешком">
+                  <svg width="21" height="24" class="user-card__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#pedestrian"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li class="user-card__item">
+              <a class="user-card__wrapper-img" href="#">
+                <span class="visually-hidden">Фотография Петя Демин</span>
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet.webp 1x, img/demin-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/avatar_02.webp 1x, img/avatar_02@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img src="img/avatar_02.jpg" srcset="img/avatar_02@2x.jpg 2x" alt="Фотография Петя Демин" class="user-card__avatar">
+                </picture>
+              </a>
+              <div class="user-card__mark">
+                <svg class="user-card__circle" width="60" height="60">
+                  <use xlink:href="img/sprite.svg#card-circle2"></use>
+                </svg>
+                <b>80</b>
+                <span>level</span>
+              </div>
+              <div class="user-card__counries">
+                <div class="user-card__wrapper-countries" data-tooltip="Belgium">
+                  <img src="img/belgium-flag.svg" alt="Belgium" width="35" height="25">
+                </div>
+                <div class="user-card__wrapper-countries" data-tooltip="Чехия">
+                  <img src="img/czech-flag.svg" alt="Чехия" width="35" height="25">
+                </div>
+              </div>
+              <div class="user-card__wrapper-name">
+                <span class="user-card__status"></span>
+                <h3 class="user-card__user-name">
+                  <a href="#">Петя Демин</a>
+                </h3>
+              </div>
+              <p class="user-card__meta meta">
+                <a href="#" class="meta__link">#бургер</a>
+                <a href="#" class="meta__link">#бар</a>
+                <a href="#" class="meta__link">#футбол</a>
+                <a href="#" class="meta__link">#концерт</a>
+                <a href="#" class="meta__link">#крафт</a>
+              </p>
+              <div class="user-card__icons">
+                <div class="user-card__wrapper-icon" data-tooltip="Авиаперелет">
+                  <svg width="21" height="23" class="user-card__icon user-card__icon--active" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#airplane"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Автотранспорт">
+                  <svg width="18" height="21" class="user-card__icon user-card__icon--active" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#auto"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Велосипед">
+                  <svg width="25" height="24" class="user-card__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#bycicle"></use>
+                  </svg>
+                </div>
+                <div class="user-card__wrapper-icon" data-tooltip="Пешком">
+                  <svg width="21" height="24" class="user-card__icon user-card__icon--active" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#pedestrian"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- User-card end -->
+          <a href="/catalog.html" class="companion__button button">Показать всех</a>
+        </div>
+      </section>
+      <!-- Companion end -->
+
+      <!-- Profile start -->
+      <section class="main__profile profile">
+        <div class="profile__content container">
+          <h2 class="profile__title">Добавьте свой профиль</h2>
+          <ul class="profile__list">
+            <li class="profile__item">
+              <p class="profile__benefit">Базовое размещение</p>
+              <p class="profile__price">Бесплатно</p>
+            </li>
+            <li class="profile__item">
+              <p class="profile__benefit">Вывод на первых позициях</p>
+              <p class="profile__price">99 руб./мес</p>
+            </li>
+            <li class="profile__item">
+              <p class="profile__benefit">Кастомный цвет карточки</p>
+              <p class="profile__price">59 руб./мес</p>
+            </li>
+          </ul>
+          <a href="/price.html" class="profile__link">Показать тарифы для бизнеса</a>
+        </div>
+      </section>
+      <!-- Profile end -->
+
+      <!-- Feedback start -->
+      <section class="main__feedback feedback">
+        <div class="container">
+          <h2 class="feedback__title">Заинтересовались?</h2>
+          <p class="feedback__description"><span>Зарегистрируйтесь, <br/>это быстро и бесплатно!</span> <br/>Уже зарегистрированы? Тогда скорее <a href="/auth.html" class="feedback__auth">авторизуйтесь.</a></p>
+          <!-- Subscribe start -->
+          <form action="https://echo.htmlacademy.ru/" class="feedback__subscribe subscribe" method="post">
+            <label for="subscribe__input" class="subscribe__label">
+              <span class="visually-hidden">Регисрация</span>
+              <input type="email" class="subscribe__input subscribe__input--error" id="subscribe__input" placeholder="E-mail"> <!--subscribe__input--error класс ошибки-->
+            </label>
+            <button type="submit" class="subscribe__submit">
+              <span class="subscribe__registration">Регистрация</span>
+            </button>
+          </form>
+          <!-- Subscribe end -->
+          <p class="feedback__text">Остались вопросы?<br/> Мы с радостью на них ответим!</p>
+
+          <!--contacts-list start-->
+          <ul class="feedback__contacts-list contacts-list contacts-list--color-text">
+            <li class="contacts-list__item contacts-list__item--feedback">
+              <a href="tel:88005558628" class="contacts-list__link">
+                <span class="contacts-list__icon contacts-list__icon--feedback">
+                  <svg class="contacts-list__svg-mobile" aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#contacts-phone"></use>
+                  </svg>
+                </span>
+                <span class="contacts-list__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts-list__item contacts-list__item--feedback">
+              <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">
+                <span class="contacts-list__icon contacts-list__icon--feedback" >
+                  <svg class="contacts-list__svg-mobile" aria-hidden="true" focusable="false" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#contacts-mail"></use>
+                  </svg>
+                </span>
+                <span class="contacts-list__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <!--contacts list end-->
+        </div>
+      </section>
+      <!-- Feedback end -->
+
+      <!-- contacts start  -->
+      <section class="main__contacts contacts">
+        <h2 class="visually-hidden">Контактные данные</h2>
+        <div class="contacts__wrapper-container">
+          <div class="contacts__container container">
+            <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
+            <a href="https://www.google.com/maps/dir/59.9690248,30.4114778/HTML+Academy,+%D0%BD%D0%B0%D0%B1.+P%D0%B5%D0%BA%D0%B8+%D0%9A%D0%B0%D1%80%D0%BF%D0%BE%D0%B2%D0%BA%D0%B8,+5%D0%9F,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197022/@59.964112,30.3182281,13.25z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4696310fca5afc31:0x5f2ac55f567b2400!2m2!1d30.3174089!2d59.968266" class="contacts__link button button--border">Проложить маршрут</a>
+          </div>
+        </div>
+        <div class="contacts__wrapper-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1643282831751!5m2!1sru!2sru" allowfullscreen title="Адресс html Academy" class="contacts__map"></iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/background_map-desktop.webp 1x, img/background_map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/background_map-tablet.webp 1x, img/background_map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/background_map.webp 1x, img/background_map@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/background_map-desktop.jpg 1x, img/background_map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/background_map-tablet.jpg 1x, img/background_map-tablet@2x.jpg 2x">
+            <img src="img/background_map.jpg" srcset="img/background_map@2x.jpg" alt="Карта" class="contacts__img-map contacts__img-map--nojs" width="320" height="424">
+          </picture>
+        </div>
+      </section>
+      <!-- contacts end -->
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer class="page-footer page-footer--index">
+      <!-- info start  -->
+      <div class="container info">
+        <a class="info__logo-link" href="index.html">
+          <svg class="info__logo-svg" aria-hidden="true" focusable="false" width="96" height="15" viewBox="0 0 96 15" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo-mobile"></use>
+          </svg>
+          <svg class="info__logo-svg-tablet" width="168" height="42" viewBox="0 0 168 42" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo-tablet"></use>
+          </svg>
+        </a>
+        <!-- socials start -->
+        <div class="page-footer__socials socials">
+          <a href="#" class="socials__link">
+            <span class="visually-hidden">Мы в Facebook</span>
+            <svg aria-hidden="true" focusable="false" width="11" height="20" viewBox="0 0 14 28" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__link">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+            <svg aria-hidden="true" focusable="false" width="23" height="12" viewBox="0 0 31 16" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+          <a href="#" class="socials__link">
+            <span class="visually-hidden">Мы в Инстаграм</span>
+            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- Socials end  -->
+        <div class="page-footer__wrapper">
+          <p class="page-footer__text">Разработано</p>
+          <a class="page-footer__link" href="https://htmlacademy.ru/">
+            <span class="visually-hidden">html academy</span>
+            <svg width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#html"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <!-- info end  -->
+    </footer>
+
+    <div class="modal-price modal-price--close">
+      <div class="modal-price__container">
+        <h2 class="modal-price__title">Бизнес-тарифы</h2>
+        <ul class="modal-price__list">
+          <li class="modal-price__item">
+            <span class="modal-price__description">Реклама у блоггера</span>
+            <span class="modal-price__price">300 000 руб./пост</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Накрутка подписчиков</span>
+            <span class="modal-price__price">от 1 руб./шт.</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Лайки от ботов</span>
+            <span class="modal-price__price">от 20 коп./лайк</span>
+          </li>
+          <li class="modal-price__item">
+            <span class="modal-price__description">Ваш продакт-плейсмент</span>
+            <span class="modal-price__price">Индивидуально</span>
+          </li>
+        </ul>
+      </div>
+      <button class="modal-price__close">Закрыть окно</button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
